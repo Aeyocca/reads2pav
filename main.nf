@@ -4,7 +4,7 @@ nextflow.enable.dsl=2
 
 params.input = 'sra_list.txt'
 
-if (params.input_type == 'sra')     include { SRA     } from './workflows/sra'
+include { SRA     } from './workflows/sra'
 
 workflow NFCORE_FETCHNGS {
 
