@@ -2,7 +2,27 @@
 
 nextflow.enable.dsl=2
 
-params.list = 'sra_list.txt'
+params.input = 'sra_list.txt'
 
 if (params.input_type == 'sra')     include { SRA     } from './workflows/sra'
+
+workflow NFCORE_FETCHNGS {
+
+    take:
+    ids // channel: database ids read in from --input
+
+    main:
+
+    ch_versions = Channel.empty()
+
+    //
+    // WORKFLOW: Download FastQ files for SRA / ENA / GEO / DDBJ ids
+    //
+    
+    SRA ( ids )
+    ch_versions = SRA.out.versions
+
+    emit:
+    versions = ch_versions
+}
 
