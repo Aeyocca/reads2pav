@@ -26,6 +26,9 @@ workflow NFCORE_FETCHNGS {
     versions = ch_versions
 }
 
+include { PIPELINE_INITIALISATION } from './subworkflows/local/nf_core_fetchngs_utils'
+include { PIPELINE_COMPLETION     } from './subworkflows/local/nf_core_fetchngs_utils'
+
 workflow {
 
     //
