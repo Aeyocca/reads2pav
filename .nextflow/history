@@ -2,3 +2,6 @@
 2023-12-19 15:50:49	-	elated_church	-	59f32996c44ba7750faff978040f55c3	0e7f3fd9-1945-434e-9093-1efb5432a78f	nextflow main.nf
 2023-12-19 15:51:37	-	clever_kirch	-	14a5c49993e70163a3d8b38c4acd9f38	c8c1d05e-8f72-4404-b285-479dd9e6a431	nextflow main.nf
 2023-12-19 15:51:53	-	elegant_kimura	-	d243ab6e0ae528e8e8cf4819777393f0	7a034474-489c-47a7-9639-919d0dd3c6df	nextflow main.nf
+2023-12-20 14:54:26	2s	loving_linnaeus	OK	aae628af35abdd1fd5547c30b34b7a30	47886fdc-3802-4779-a726-b89fed356ec5	nextflow run main.nf --input sra_list.txt
+2023-12-20 15:03:18	5.7s	magical_snyder	OK	44f0a03ec5002961430e718d7e874414	384f5c51-c8f1-4d08-87d3-e6078f8840fd	nextflow run main.nf --input sra_list.txt
+2023-12-20 15:21:59	4.6s	hungry_spence	OK	44f0a03ec5002961430e718d7e874414	705ad658-1549-40c5-b1a0-64a66633b058	nextflow run main.nf --input sra_list.csv --output tmp_dir
