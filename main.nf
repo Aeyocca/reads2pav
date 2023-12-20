@@ -26,3 +26,29 @@ workflow NFCORE_FETCHNGS {
     versions = ch_versions
 }
 
+workflow {
+
+    //
+    // SUBWORKFLOW: Run initialisation tasks
+    //
+    PIPELINE_INITIALISATION ()
+
+    //
+    // WORKFLOW: Run primary workflows for the pipeline
+    //
+    NFCORE_FETCHNGS (
+        PIPELINE_INITIALISATION.out.ids
+    )
+
+    //
+    // SUBWORKFLOW: Run completion tasks
+    //
+    PIPELINE_COMPLETION (
+        NFCORE_FETCHNGS.out.versions,
+        params.input_type,
+        params.email,
+        params.email_on_fail,
+        params.hook_url,
+        PIPELINE_INITIALISATION.out.summary_params
+    )
+}
