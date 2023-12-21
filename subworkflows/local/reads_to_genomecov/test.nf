@@ -23,6 +23,6 @@ def meta = [:]
 meta.id = "read"
 
 workflow {
-    BWAMEM2_ALIGNER(meta, reads_ch, genome)
+    BWAMEM2_ALIGNER(reads_ch, genome)
     GENOMECOV(meta, BWAMEM2_ALIGNER.out.bam, scale)
 }
