@@ -1,1 +1,9 @@
 2023-12-21 09:28:05	-	soggy_hugle	-	0dbeeffc0c34feeb33158d8042fb9666	700ebb2b-78aa-4e22-bb97-bc4e493f5909	nextflow run test.nf --sra read
+2023-12-21 09:45:58	-	happy_agnesi	-	0dbeeffc0c34feeb33158d8042fb9666	bfb53299-795c-4709-b1aa-e78d66c3615f	nextflow run test.nf
+2023-12-21 09:46:36	-	irreverent_poitras	-	62dc953105d6d949898257ee3507c0cb	9cc932bd-d1d8-4d9c-8297-7471daf0184c	nextflow run main.nf
+2023-12-21 09:50:30	-	zen_legentil	-	38219c0daf0d9481656dbf23b69142a1	370357aa-d947-4dca-b374-1c10f44ded76	nextflow run test.nf
+2023-12-21 09:52:09	-	thirsty_brahmagupta	-	38219c0daf0d9481656dbf23b69142a1	52bdf24e-c9a3-420c-b973-ef32d13b57c4	nextflow run test.nf
+2023-12-21 09:57:35	-	high_gilbert	-	a9caea9172a7d5cadd0a6192500a65be	925ad87e-cc9d-4d94-9d92-dbbed0a128a2	nextflow run test.nf
+2023-12-21 09:59:06	-	cranky_bhaskara	-	a9caea9172a7d5cadd0a6192500a65be	7fb14734-8b8f-4738-b004-0fe8979629df	nextflow run test.nf
+2023-12-21 09:59:42	-	jolly_volta	-	a9caea9172a7d5cadd0a6192500a65be	71648ce1-188e-43ec-b1e9-fc31a3685cad	nextflow run test.nf
+2023-12-21 10:00:07	-	special_curie	-	a9caea9172a7d5cadd0a6192500a65be	35556e3a-75b3-433a-9118-79f9b4941884	nextflow run test.nf
