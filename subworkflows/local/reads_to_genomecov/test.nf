@@ -8,6 +8,8 @@
 ========================================================================================
 */
 
+nextflow.enable.dsl = 2
+
 include { READS_TO_GENOMECOV                } from '../reads_to_genomecov'
 
 params.raw = "test/*{1,2}.fastq.gz"
