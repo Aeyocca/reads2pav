@@ -17,14 +17,14 @@ include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
 
 params.raw = "test/*{1,2}.fastq.gz"
 reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
-genome = file("test/Athal_chr1.fasta")
+genome = path("test/Athal_chr1.fasta")
 genome_fai = "test/Athal_chr1.fasta.fai"
 scale = 1
 def meta = [:]
 meta.id = "read"
 
 workflow {
-    BWAMEM2_INDEX( meta, genome )
+    BWAMEM2_INDEX( genome )
     //  BWAMEM2_ALIGNER(reads_ch, genome)
     sort_bam = true
     BWAMEM2_MEM ( reads_ch, BWAMEM2_INDEX.out.index, sort_bam )
