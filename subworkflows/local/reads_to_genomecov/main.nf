@@ -52,12 +52,12 @@ workflow GENOMECOV {
     bed
 }
 
-params.raw = "test/*{1,2}.fastq.gz"
-reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
-genome = "test/Athal_chr1.fasta"
-genome = "test/Athal_chr1.fasta.fai"
-
-workflow {
-    BWAMEM2_ALIGNER(reads_ch, genome)
+workflow READS_TO_GENOMECOV {
+    input:
+    reads
+    genome
+    genome_fai
+    
+    BWAMEM2_ALIGNER(reads, genome)
     GENOMECOV(BWAMEM2_ALIGNER.out.bam, genome_fai)
 }

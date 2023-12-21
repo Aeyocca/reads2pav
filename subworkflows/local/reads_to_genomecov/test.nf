@@ -10,12 +10,11 @@
 
 include { READS_TO_GENOMECOV                } from '../reads_to_genomecov'
 
+params.raw = "test/*{1,2}.fastq.gz"
+reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
+genome = "test/Athal_chr1.fasta"
+genome_fai = "test/Athal_chr1.fasta.fai"
+
 workflow {
-    input:
-    reads = [path("test/" + params.sra + "_1.fastq.gz"),
-             path("test/" + params.sra + "_2.fastq.gz")]
-    genome
-    genome_fai
-    
-    READS_TO_GENOMECOV(reads, genome, genome_fai)
+    READS_TO_GENOMECOV(reads_ch, genome, genome_fai)
 }
