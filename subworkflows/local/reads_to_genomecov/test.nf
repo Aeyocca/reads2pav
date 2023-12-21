@@ -18,8 +18,10 @@ params.raw = "test/*{1,2}.fastq.gz"
 reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
 genome = "test/Athal_chr1.fasta"
 genome_fai = "test/Athal_chr1.fasta.fai"
+scale = 1
+meta.id = "read"
 
 workflow {
     BWAMEM2_ALIGNER(reads_ch, genome)
-    GENOMECOV(BWAMEM2_ALIGNER.out.bam, genome_fai)
+    GENOMECOV(meta, BWAMEM2_ALIGNER.out.bam, scale)
 }

@@ -41,8 +41,9 @@ workflow BWAMEM2_ALIGNER {
 
 workflow GENOMECOV {
     take:
+    meta
     bam
-    genome_fai
+    scale
     
     main:
     
