@@ -16,7 +16,7 @@ include { GENOMECOV                      } from '../reads_to_genomecov'
 
 params.raw = "test/*{1,2}.fastq.gz"
 reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
-genome = "test/Athal_chr1.fasta"
+genome = channel.fromPath("test/Athal_chr1.fasta")
 genome_fai = "test/Athal_chr1.fasta.fai"
 scale = 1
 def meta = [:]
