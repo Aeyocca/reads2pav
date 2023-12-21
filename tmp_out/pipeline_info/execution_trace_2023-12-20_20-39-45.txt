@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	cb/a2d1c6	-	NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO (ERR11202896)	FAILED	-	-	-	-	-	-	-	-	-

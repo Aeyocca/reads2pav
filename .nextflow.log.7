@@ -1,15 +1,85 @@
-Dec-19 15:49:29.359 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf
-Dec-19 15:49:29.437 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-19 15:49:29.458 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-19 15:49:29.467 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-19 15:49:29.468 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-19 15:49:29.470 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-19 15:49:29.479 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-19 15:49:29.561 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=1 by probing script field
-Dec-19 15:49:29.563 [main] DEBUG nextflow.cli.Launcher - Operation aborted
-nextflow.exception.AbortOperationException: Nextflow DSL1 is no longer supported — Update your script to DSL2, or use Nextflow 22.10.x or earlier
-	at nextflow.NextflowMeta.enableDsl(NextflowMeta.groovy:152)
-	at nextflow.cli.CmdRun.launchInfo(CmdRun.groovy:396)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:327)
+Dec-20 15:26:20.989 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --output tmp_dir
+Dec-20 15:26:21.149 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-20 15:26:21.187 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-20 15:26:21.207 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-20 15:26:21.207 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-20 15:26:21.210 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-20 15:26:21.230 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-20 15:26:21.375 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-20 15:26:21.420 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [furious_ptolemy] DSL2 - revision: 95b6d13a75
+Dec-20 15:26:21.420 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-20 15:26:21.421 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-20 15:26:21.439 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-20 15:26:21.444 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@529cfee5] - activable => nextflow.secret.LocalSecretsProvider@529cfee5
+Dec-20 15:26:21.555 [main] DEBUG nextflow.Session - Session UUID: 55cee9d5-29c0-4124-814a-8100c4d97882
+Dec-20 15:26:21.556 [main] DEBUG nextflow.Session - Run name: furious_ptolemy
+Dec-20 15:26:21.558 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-20 15:26:21.573 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-20 15:26:21.578 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-20 15:26:21.634 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (10:07 CDT)
+  System: Linux 4.18.0-477.21.1.el8_8.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.9-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1455912@int0001 [172.24.232.110]
+  CPUs: 1 - Mem: 10 GB (9.8 GB) - Swap: 0 (0)
+Dec-20 15:26:21.817 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
+Dec-20 15:26:21.876 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-20 15:26:21.915 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-20 15:26:21.936 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-20 15:26:21.956 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-20 15:26:22.149 [main] DEBUG nextflow.Session - Session start
+Dec-20 15:26:23.203 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-20 15:26:26.048 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_acdf5c75414b64a7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/multiqc_mappings_config/main.nf
+  Script_90e12e5e619ed13c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/main.nf
+  Script_b5d28dc53c9ba9cf: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/custom/sratoolsncbisettings/main.nf
+  Script_7fead60763b2b030: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_ids_to_runinfo/main.nf
+  Script_8e47246e1eaac81c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_to_samplesheet/main.nf
+  Script_e5ba8a094a115fb2: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/fasterqdump/main.nf
+  Script_3dd57d452669545a: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf
+  Script_4d74e68032fdab1d: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_merge_samplesheet/main.nf
+  Script_46c9316bb7b4fc97: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/prefetch/main.nf
+  Script_6a015540c3896a72: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_fastq_ftp/main.nf
+  Script_2cc524859f51d32a: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
+  Script_a9ea706fbcc7c682: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_runinfo_to_ftp/main.nf
+Dec-20 15:26:26.061 [main] DEBUG nextflow.Session - Session aborted -- Cause: Missing process or function PIPELINE_INITIALISATION()
+Dec-20 15:26:26.078 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.MissingProcessException: Missing process or function PIPELINE_INITIALISATION()
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:191)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
 	at nextflow.cli.Launcher.run(Launcher.groovy:499)
 	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+Caused by: groovy.lang.MissingMethodException: No signature of method: nextflow.script.WorkflowBinding.PIPELINE_INITIALISATION() is applicable for argument types: () values: []
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:110)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at Script_2cc524859f51d32a$_runScript_closure2$_closure4.doCall(Script_2cc524859f51d32a:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	... 13 common frames omitted

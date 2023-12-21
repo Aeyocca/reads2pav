@@ -1,109 +1,252 @@
-Dec-19 15:51:36.915 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf
-Dec-19 15:51:37.018 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-19 15:51:37.038 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-19 15:51:37.047 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-19 15:51:37.048 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-19 15:51:37.050 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-19 15:51:37.067 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-19 15:51:37.151 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Dec-19 15:51:37.167 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [clever_kirch] DSL2 - revision: 14a5c49993
-Dec-19 15:51:37.168 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Dec-19 15:51:37.168 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Dec-19 15:51:37.177 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
-Dec-19 15:51:37.183 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5cf87cfd] - activable => nextflow.secret.LocalSecretsProvider@5cf87cfd
-Dec-19 15:51:37.231 [main] DEBUG nextflow.Session - Session UUID: c8c1d05e-8f72-4404-b285-479dd9e6a431
-Dec-19 15:51:37.232 [main] DEBUG nextflow.Session - Run name: clever_kirch
-Dec-19 15:51:37.234 [main] DEBUG nextflow.Session - Executor pool size: 2
-Dec-19 15:51:37.239 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Dec-19 15:51:37.243 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Dec-19 15:51:37.295 [main] DEBUG nextflow.cli.CmdRun - 
+Dec-20 15:31:38.777 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --output tmp_dir --input_type sra
+Dec-20 15:31:38.938 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-20 15:31:38.974 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-20 15:31:38.993 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-20 15:31:38.994 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-20 15:31:38.997 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-20 15:31:39.018 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-20 15:31:39.168 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-20 15:31:39.192 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [amazing_brattain] DSL2 - revision: a7d4f01efb
+Dec-20 15:31:39.193 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-20 15:31:39.193 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-20 15:31:39.211 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-20 15:31:39.216 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@22d1886d] - activable => nextflow.secret.LocalSecretsProvider@22d1886d
+Dec-20 15:31:39.327 [main] DEBUG nextflow.Session - Session UUID: db3c0b60-65be-4da0-8934-e72318650bce
+Dec-20 15:31:39.327 [main] DEBUG nextflow.Session - Run name: amazing_brattain
+Dec-20 15:31:39.329 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-20 15:31:39.350 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-20 15:31:39.355 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-20 15:31:39.400 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 23.10.0 build 5889
   Created: 15-10-2023 15:07 UTC (10:07 CDT)
   System: Linux 4.18.0-477.21.1.el8_8.x86_64
   Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.9-internal+0-adhoc..src
   Encoding: UTF-8 (UTF-8)
-  Process: 1340858@int0001 [172.24.232.110]
+  Process: 1456468@int0001 [172.24.232.110]
   CPUs: 1 - Mem: 10 GB (9.8 GB) - Swap: 0 (0)
-Dec-19 15:51:37.345 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
-Dec-19 15:51:37.356 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Dec-19 15:51:37.364 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Dec-19 15:51:37.380 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Dec-19 15:51:37.389 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Dec-19 15:51:37.468 [main] DEBUG nextflow.Session - Session start
-Dec-19 15:51:37.888 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-Dec-19 15:51:37.898 [main] ERROR nextflow.cli.Launcher - Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'input:' @ line 21, column 3.
-     file data_file from file_list
-     ^
+Dec-20 15:31:39.477 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
+Dec-20 15:31:39.535 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-20 15:31:39.573 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-20 15:31:39.609 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-20 15:31:39.625 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-20 15:31:39.796 [main] DEBUG nextflow.Session - Session start
+Dec-20 15:31:40.869 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-20 15:31:44.392 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Dec-20 15:31:45.008 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Dec-20 15:31:45.010 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Dec-20 15:31:45.029 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Dec-20 15:31:45.030 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp, paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, validateParameters:validateParameters]; plugin Id: nf-validation
+Dec-20 15:31:45.348 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `version` -- Initialise it to a default value eg. `params.version = some_value`
+Dec-20 15:31:45.352 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `outdir` -- Initialise it to a default value eg. `params.outdir = some_value`
+Dec-20 15:31:45.378 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `monochrome_logs` -- Initialise it to a default value eg. `params.monochrome_logs = some_value`
+Dec-20 15:31:45.384 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `help` -- Initialise it to a default value eg. `params.help = some_value`
+Dec-20 15:31:45.388 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `validate_params` -- Initialise it to a default value eg. `params.validate_params = some_value`
+Dec-20 15:31:45.391 [main] DEBUG nextflow.Nextflow - Using schema file: nextflow_schema.json
+Dec-20 15:31:45.403 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `monochromeLogs` -- Initialise it to a default value eg. `params.monochromeLogs = some_value`
+Dec-20 15:31:45.416 [main] INFO  nextflow.Nextflow - 
 
-Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'output:' @ line 24, column 3.
-     file('data_file.md5sum') into md5sum_files
-     ^
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  null [0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName    : [0;32mamazing_brattain[0m
+  [0;34mlaunchDir  : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
+  [0;34mworkDir    : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work[0m
+  [0;34mprojectDir : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
+  [0;34muserName   : [0;32mayocca[0m
+  [0;34mprofile    : [0;32mstandard[0m
+  [0;34mconfigFiles: [0;32m[0m
 
-Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'output:' @ line 26, column 3.
-     """
-     ^
+[1mInput/output options[0m
+  [0;34minput      : [0;32msra_list.csv[0m
 
-3 errors
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use null for your analysis please cite:
 
-nextflow.exception.ScriptCompilationException: Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'input:' @ line 21, column 3.
-     file data_file from file_list
-     ^
+* The pipeline
+  null
 
-Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'output:' @ line 24, column 3.
-     file('data_file.md5sum') into md5sum_files
-     ^
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
 
-Script compilation error
-- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
-- cause: Unknown execution scope 'output:' @ line 26, column 3.
-     """
-     ^
+* Software dependencies
+  https://github.com/null/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Dec-20 15:31:45.422 [main] WARN  nextflow.Nextflow - [null] You are attempting to run the pipeline without any custom configuration!
 
-3 errors
+This will be dependent on your local compute environment but can be achieved via one or more of the following:
+   (1) Using an existing pipeline profile e.g. `-profile docker` or `-profile singularity`
+   (2) Using an existing nf-core/configs for your Institution e.g. `-profile crick` or `-profile uppmax`
+   (3) Using your own local custom config e.g. `-c /path/to/your/custom.config`
 
-	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:196)
-	at nextflow.script.ScriptParser.parse(ScriptParser.groovy:206)
-	at nextflow.script.ScriptRunner.parseScript(ScriptRunner.groovy:228)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:135)
+Please refer to the quick start section and usage docs for the pipeline.
+ 
+Dec-20 15:31:45.449 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `ena_metadata_fields` -- Initialise it to a default value eg. `params.ena_metadata_fields = some_value`
+Dec-20 15:31:45.745 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:45.747 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:45.751 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-20 15:31:45.766 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=10 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
+Dec-20 15:31:45.768 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Dec-20 15:31:45.909 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:45.909 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:45.934 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `skip_fastq_download` -- Initialise it to a default value eg. `params.skip_fastq_download = some_value`
+Dec-20 15:31:45.970 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:45.970 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:45.976 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `dbgap_key` -- Initialise it to a default value eg. `params.dbgap_key = some_value`
+Dec-20 15:31:45.980 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:45.985 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:45.992 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:46.002 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:46.009 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 15:31:46.009 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 15:31:46.023 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `nf_core_pipeline` -- Initialise it to a default value eg. `params.nf_core_pipeline = some_value`
+Dec-20 15:31:46.189 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `nf_core_rnaseq_strandedness` -- Initialise it to a default value eg. `params.nf_core_rnaseq_strandedness = some_value`
+Dec-20 15:31:46.190 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `sample_mapping_fields` -- Initialise it to a default value eg. `params.sample_mapping_fields = some_value`
+Dec-20 15:31:46.195 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_acdf5c75414b64a7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/multiqc_mappings_config/main.nf
+  Script_23a8e28974e45be5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfcore_pipeline_utils/main.nf
+  Script_90e12e5e619ed13c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/main.nf
+  Script_e5ba8a094a115fb2: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/fasterqdump/main.nf
+  Script_4d74e68032fdab1d: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_merge_samplesheet/main.nf
+  Script_46c9316bb7b4fc97: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/prefetch/main.nf
+  Script_98c167865477f3d5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfvalidation_plugin_utils/main.nf
+  Script_9053ce6a78a54d3e: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nextflowpipelineutils/main.nf
+  Script_b5d28dc53c9ba9cf: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/custom/sratoolsncbisettings/main.nf
+  Script_7fead60763b2b030: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_ids_to_runinfo/main.nf
+  Script_8e47246e1eaac81c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_to_samplesheet/main.nf
+  Script_3dd57d452669545a: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf
+  Script_2f42a67a9624366c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
+  Script_6a015540c3896a72: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_fastq_ftp/main.nf
+  Script_06d732833f88a416: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/main.nf
+  Script_a9ea706fbcc7c682: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_runinfo_to_ftp/main.nf
+Dec-20 15:31:46.195 [main] DEBUG nextflow.Session - Session aborted -- Cause: A process input channel evaluates to null -- Invalid declaration `val mapping_fields`
+Dec-20 15:31:46.238 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] splitCsv
+  [operator] map
+  [operator] unique
+  [operator] mix
+  [operator] mix
+  [operator] splitCsv
+  [operator] map
+  [operator] unique
+  [operator] map
+  [operator] branch
+  [operator] mix
+  [operator] map
+  [operator] mix
+  [operator] mix
+  [operator] mix
+  [operator] mix
+  [operator] mix
+  [operator] map
+
+Dec-20 15:31:46.239 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Dec-20 15:31:46.275 [main] ERROR nextflow.cli.Launcher - A process input channel evaluates to null -- Invalid declaration `val mapping_fields`
+java.lang.IllegalArgumentException: A process input channel evaluates to null -- Invalid declaration `val mapping_fields`
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.script.params.BaseInParam.checkFromNotNull(BaseInParam.groovy:169)
+	at jdk.internal.reflect.GeneratedMethodAccessor64.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.script.params.BaseInParam.setFrom(BaseInParam.groovy:180)
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:179)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:102)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+	at Script_90e12e5e619ed13c$_runScript_closure1$_closure2.doCall(Script_90e12e5e619ed13c:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:102)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at Script_2f42a67a9624366c$_runScript_closure1$_closure3.doCall(Script_2f42a67a9624366c:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:102)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at Script_2f42a67a9624366c$_runScript_closure2$_closure4.doCall(Script_2f42a67a9624366c:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.IterableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
 	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
 	at nextflow.cli.Launcher.run(Launcher.groovy:499)
 	at nextflow.cli.Launcher.main(Launcher.groovy:670)
-Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
-Script_d25804e79d0100f3: 21: Unknown execution scope 'input:' @ line 21, column 3.
-     file data_file from file_list
-     ^
-
-Script_d25804e79d0100f3: 24: Unknown execution scope 'output:' @ line 24, column 3.
-     file('data_file.md5sum') into md5sum_files
-     ^
-
-Script_d25804e79d0100f3: 26: Unknown execution scope 'output:' @ line 26, column 3.
-     """
-     ^
-
-3 errors
-
-	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
-	at org.codehaus.groovy.control.CompilationUnit$IPrimaryClassNodeOperation.doPhaseOperation(CompilationUnit.java:985)
-	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:672)
-	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:636)
-	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:389)
-	at groovy.lang.GroovyClassLoader.lambda$parseClass$3(GroovyClassLoader.java:332)
-	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
-	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
-	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:330)
-	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:526)
-	at groovy.lang.GroovyShell.parse(GroovyShell.java:538)
-	at groovy.lang.GroovyShell.parse(GroovyShell.java:570)
-	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:175)
-	... 6 common frames omitted

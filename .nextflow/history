@@ -5,3 +5,10 @@
 2023-12-20 14:54:26	2s	loving_linnaeus	OK	aae628af35abdd1fd5547c30b34b7a30	47886fdc-3802-4779-a726-b89fed356ec5	nextflow run main.nf --input sra_list.txt
 2023-12-20 15:03:18	5.7s	magical_snyder	OK	44f0a03ec5002961430e718d7e874414	384f5c51-c8f1-4d08-87d3-e6078f8840fd	nextflow run main.nf --input sra_list.txt
 2023-12-20 15:21:59	4.6s	hungry_spence	OK	44f0a03ec5002961430e718d7e874414	705ad658-1549-40c5-b1a0-64a66633b058	nextflow run main.nf --input sra_list.csv --output tmp_dir
+2023-12-20 15:26:21	-	furious_ptolemy	-	95b6d13a753340f3bc9bb304ebb035e2	55cee9d5-29c0-4124-814a-8100c4d97882	nextflow run main.nf --input sra_list.csv --output tmp_dir
+2023-12-20 15:27:07	-	disturbed_darwin	-	a7d4f01efbfc875b67b8d19285de112e	6142bb68-fc94-4d52-8c1b-b3e3acd9d996	nextflow run main.nf --input sra_list.csv --output tmp_dir
+2023-12-20 15:30:13	-	pedantic_ptolemy	-	a7d4f01efbfc875b67b8d19285de112e	63c26c90-3b0a-48ef-932d-3d10a00e7d9a	nextflow run main.nf --input sra_list.csv --output tmp_dir
+2023-12-20 15:31:39	-	amazing_brattain	-	a7d4f01efbfc875b67b8d19285de112e	db3c0b60-65be-4da0-8934-e72318650bce	nextflow run main.nf --input sra_list.csv --output tmp_dir --input_type sra
+2023-12-20 20:39:46	5s	hungry_gauss	ERR	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-20 20:40:06	5.3s	crazy_darwin	ERR	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out -resume --max_cpus 1
+2023-12-20 20:41:48	29.2s	sad_northcutt	OK	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
