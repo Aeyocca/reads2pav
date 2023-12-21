@@ -10,7 +10,7 @@ process WC_FASTQ  {
     
     script:
     """
-    echo ${meta}
+    echo ${meta} > tmp.txt
     """
 }
 
