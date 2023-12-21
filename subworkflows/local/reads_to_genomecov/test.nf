@@ -43,6 +43,8 @@ workflow {
     sort_bam = true
     BWAMEM2_MEM ( read_tuple, BWAMEM2_INDEX.out.index, sort_bam )
     
+    BWAMEM2_MEM.out.view()
+    
     // genomecov_input = Channel.of(dummy_meta, BWAMEM2_MEM.out.bam, 1)
     GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
 }
