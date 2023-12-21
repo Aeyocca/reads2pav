@@ -10,7 +10,9 @@
 
 nextflow.enable.dsl = 2
 
-include { READS_TO_GENOMECOV                } from '../reads_to_genomecov'
+include { BWAMEM2_ALIGNER                } from '../reads_to_genomecov'
+include { GENOMECOV                      } from '../reads_to_genomecov'
+
 
 params.raw = "test/*{1,2}.fastq.gz"
 reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
