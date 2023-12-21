@@ -12,6 +12,8 @@ include { BWAMEM2_INDEX } from '../../../modules/nf-core/bwamem2/index/main'
 include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
 include { BEDTOOLS_GENOMECOV } from '../../../modules/nf-core/bedtools/genomecov/main'
 
+nextflow.enable.dsl = 2
+
 workflow BWAMEM2_ALIGNER {
     take:
     reads_ch            // channel: [ val(meta), [ reads ] ]
