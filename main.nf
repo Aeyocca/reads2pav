@@ -91,7 +91,7 @@ workflow {
         PIPELINE_INITIALISATION.out.summary_params
     )
     
-    WC_FASTQ(PIPELINE_COMPLETION.out.summary_params)
+    WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
 }
 
 /*
