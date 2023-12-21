@@ -39,7 +39,7 @@ workflow BWAMEM2_ALIGNER {
 }
 
 workflow GENOMECOV {
-    input:
+    take:
     bam
     genome_fai
     
@@ -53,7 +53,7 @@ workflow GENOMECOV {
 }
 
 workflow READS_TO_GENOMECOV {
-    input:
+    take:
     reads
     genome
     genome_fai
