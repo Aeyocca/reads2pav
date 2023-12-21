@@ -48,9 +48,5 @@ workflow GENOMECOV {
     main:
     
     BEDTOOLS_GENOMECOV(meta.id,bam,scale)
-    
-    
-    emit:
-    bed
 }
 
