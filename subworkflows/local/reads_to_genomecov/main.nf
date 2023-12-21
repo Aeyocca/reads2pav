@@ -12,7 +12,7 @@ include { BWAMEM2_INDEX } from '../../modules/nf-core/modules/bwamem2/index/main
 include { BWAMEM2_MEM } from '../../modules/nf-core/modules/bwamem2/mem/main'
 
 workflow BWAMEM2_ALIGNER {
-    input:
+    take:
     val(reads)            // channel: [ val(meta), [ reads ] ]
     val(genome)          // channel: file(ref_genome)
 
