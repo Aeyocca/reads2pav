@@ -14,6 +14,7 @@ include { BEDTOOLS_GENOMECOV } from '../../../modules/nf-core/bedtools/genomecov
 
 workflow BWAMEM2_ALIGNER {
     take:
+    meta
     reads_ch            // channel: [ val(meta), [ reads ] ]
     genome          // channel: file(ref_genome)
 
@@ -24,7 +25,7 @@ workflow BWAMEM2_ALIGNER {
     //
     // index the genome with bwamem2 index
     //
-    BWAMEM2_INDEX ( genome )
+    BWAMEM2_INDEX ( meta, genome )
     ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)
 
     //
