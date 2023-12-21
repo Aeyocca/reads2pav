@@ -3,7 +3,7 @@
 //
 
 
-workflow  {
+process WC_FASTQ  {
 
     input:
     tuple val(meta)
