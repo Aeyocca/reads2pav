@@ -13,7 +13,7 @@ include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
 
 workflow BWAMEM2_ALIGNER {
     take:
-    val(reads)            // channel: [ val(meta), [ reads ] ]
+    val(reads_ch)            // channel: [ val(meta), [ reads ] ]
     val(genome)          // channel: file(ref_genome)
 
     main:
@@ -30,7 +30,7 @@ workflow BWAMEM2_ALIGNER {
     // Map reads with bwamem2 mem
     //
     sort_bam = true
-    BWAMEM2_MEM ( reads, BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM ( reads_ch, BWAMEM2_INDEX.out.index, sort_bam )
     ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
 
     emit:
@@ -54,7 +54,7 @@ workflow GENOMECOV {
 
 workflow READS_TO_GENOMECOV {
     take:
-    reads_ch
+    val(reads_ch)
     genome
     genome_fai
     
