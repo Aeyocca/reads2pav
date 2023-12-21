@@ -13,3 +13,14 @@
 2023-12-21 10:13:02	-	scruffy_allen	-	a9caea9172a7d5cadd0a6192500a65be	27b0badc-c43a-4847-ad06-4ffe00b47d0f	nextflow run test.nf
 2023-12-21 10:13:55	-	compassionate_thompson	-	a9caea9172a7d5cadd0a6192500a65be	ca9b6a3d-82ad-423a-9d3e-da8b8ee43196	nextflow run test.nf --raw read
 2023-12-21 10:16:36	-	scruffy_torricelli	-	a9caea9172a7d5cadd0a6192500a65be	ac6e04b0-b01c-4450-a7c0-d494981408a3	nextflow run test.nf --raw read
+2023-12-21 10:42:44	-	boring_laplace	-	a9caea9172a7d5cadd0a6192500a65be	a6b26288-757a-4204-963d-029d5aa03f42	nextflow run test.nf
+2023-12-21 10:43:18	-	magical_brazil	-	a9caea9172a7d5cadd0a6192500a65be	9c6e42aa-9c7b-4343-b9d3-8c8c34d52225	nextflow run test.nf
+2023-12-21 10:46:00	-	sharp_davinci	-	a9caea9172a7d5cadd0a6192500a65be	2bb495db-0187-4ecd-8c66-6e79e2dd7c1d	nextflow run test.nf
+2023-12-21 10:46:39	-	dreamy_brattain	-	a9caea9172a7d5cadd0a6192500a65be	115a5c1a-6293-4e91-823f-26f0a376bee3	nextflow run test.nf
+2023-12-21 10:47:27	-	berserk_carson	-	5f635d576263472aae7bfdcf44762be9	ec2bb775-117e-4475-96fd-95f7a8b2de7b	nextflow run test.nf
+2023-12-21 10:48:35	-	special_gutenberg	-	528072717cb68f7ffa9bd5f445893656	f89e910a-0d53-418f-94eb-74ce3378ecd3	nextflow run test.nf
+2023-12-21 10:49:40	-	serene_feynman	-	528072717cb68f7ffa9bd5f445893656	dfdc48b2-5ea1-4913-b369-0a9418457fd8	nextflow run test.nf
+2023-12-21 10:57:22	-	shrivelled_wright	-	f0f543ab3c615706844e5398a431a417	4df41de0-4c3b-49d8-bad7-6ecaf6eb88ed	nextflow run test.nf
+2023-12-21 10:58:41	-	hungry_elion	-	b02280b79c529804855b30644d5ef47a	581e213c-42e0-4b98-949b-4da3754bfd5b	nextflow run test.nf
+2023-12-21 10:59:29	-	gigantic_bhaskara	-	b02280b79c529804855b30644d5ef47a	c311782e-9d9c-43b3-aabf-c22250f7fde5	nextflow run test.nf
+2023-12-21 11:02:21	-	cheesy_tesla	-	b02280b79c529804855b30644d5ef47a	cc0cf672-67c9-4b67-bfa6-f7eebc8379dd	nextflow run test.nf --bed test.genomecov

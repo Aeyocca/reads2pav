@@ -19,6 +19,7 @@ reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
 genome = "test/Athal_chr1.fasta"
 genome_fai = "test/Athal_chr1.fasta.fai"
 scale = 1
+def meta = [:]
 meta.id = "read"
 
 workflow {
