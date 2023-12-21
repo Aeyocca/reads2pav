@@ -8,8 +8,8 @@
 ========================================================================================
 */
 
-include { BWAMEM2_INDEX } from '../../../modules/nf-core/modules/bwamem2/index/main'
-include { BWAMEM2_MEM } from '../../../modules/nf-core/modules/bwamem2/mem/main'
+include { BWAMEM2_INDEX } from '../../../modules/nf-core/bwamem2/index/main'
+include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
 
 workflow BWAMEM2_ALIGNER {
     take:
