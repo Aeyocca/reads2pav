@@ -140,6 +140,9 @@ workflow PIPELINE_COMPLETION {
             synapseCurateSamplesheetWarn()
         }
     }
+    emit:
+    summary_params
+    
 }
 
 /*
