@@ -24,7 +24,7 @@ def meta = [:]
 meta.id = "read"
 
 workflow {
-    BWAMEM2_INDEX( genome )
+    BWAMEM2_INDEX( meta : meta, fasta : genome )
     //  BWAMEM2_ALIGNER(reads_ch, genome)
     sort_bam = true
     BWAMEM2_MEM ( reads_ch, BWAMEM2_INDEX.out.index, sort_bam )
