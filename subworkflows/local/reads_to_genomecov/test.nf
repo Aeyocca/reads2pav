@@ -32,6 +32,6 @@ workflow {
     //  BWAMEM2_ALIGNER(reads_ch, genome)
     sort_bam = true
     BWAMEM2_MEM ( read_tuple, BWAMEM2_INDEX.out.index, sort_bam )
-    GENOMECOV(meta, scale)
+    GENOMECOV(meta, BWAMEM2_MEM.out.bam, scale)
 }
 
