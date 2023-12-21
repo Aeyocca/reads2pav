@@ -59,6 +59,8 @@ workflow NFCORE_FETCHNGS {
 
 include { PIPELINE_INITIALISATION } from './subworkflows/local/nf_core_fetchngs_utils'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/nf_core_fetchngs_utils'
+include { WC_FASTQ                } from './subworkflows/local/wc_fastq'
+
 
 //
 // WORKFLOW: Execute a single named workflow for the pipeline
@@ -88,6 +90,8 @@ workflow {
         params.hook_url,
         PIPELINE_INITIALISATION.out.summary_params
     )
+    
+    WC_FASTQ()
 }
 
 /*
