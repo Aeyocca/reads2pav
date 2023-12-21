@@ -10,10 +10,10 @@
 
 nextflow.enable.dsl = 2
 
-include { BWAMEM2_ALIGNER                } from '../reads_to_genomecov'
-include { GENOMECOV                      } from '../reads_to_genomecov'
 include { BWAMEM2_INDEX } from '../../../modules/nf-core/bwamem2/index/main'
 include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
+include { BEDTOOLS_GENOMECOV } from '../../../modules/nf-core/bedtools/genomecov/main'
+
 
 def dummy_meta = [:]
 // meta is a dummy tuple while testing, going to take from fetchngs setup
@@ -45,5 +45,5 @@ workflow {
     sort_bam = true
     BWAMEM2_MEM ( reads_ch, BWAMEM2_INDEX.out.index, sort_bam )
     
-    GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
 }
