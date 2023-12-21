@@ -1,167 +1,209 @@
-Dec-20 20:38:23.124 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --outdir tmp_out
-Dec-20 20:38:23.303 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-20 20:38:23.327 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-20 20:38:23.349 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-20 20:38:23.351 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-20 20:38:23.354 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-20 20:38:23.370 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-20 20:38:23.389 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
-Dec-20 20:38:23.390 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
-Dec-20 20:38:23.422 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Dec-20 20:38:24.396 [main] ERROR nextflow.cli.Launcher - Unable to parse config file: '/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config'
+Dec-20 22:05:29.848 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+Dec-20 22:05:30.120 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-20 22:05:30.159 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-20 22:05:30.171 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-20 22:05:30.172 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-20 22:05:30.176 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-20 22:05:30.202 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-20 22:05:30.233 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
+Dec-20 22:05:30.235 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
+Dec-20 22:05:30.282 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-20 22:05:34.205 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-20 22:05:34.226 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [hungry_hoover] DSL2 - revision: 564115d5b8
+Dec-20 22:05:34.238 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Dec-20 22:05:34.239 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-20 22:05:34.239 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Dec-20 22:05:34.240 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Dec-20 22:05:34.486 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Dec-20 22:05:34.487 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Dec-20 22:05:34.531 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Dec-20 22:05:34.542 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-20 22:05:34.544 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@646d810b] - activable => nextflow.secret.LocalSecretsProvider@646d810b
+Dec-20 22:05:34.634 [main] DEBUG nextflow.Session - Session UUID: 20806d82-cb35-46fb-a930-125fc4d0864e
+Dec-20 22:05:34.646 [main] DEBUG nextflow.Session - Run name: hungry_hoover
+Dec-20 22:05:34.646 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-20 22:05:34.653 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-20 22:05:34.658 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-20 22:05:34.736 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (10:07 CDT)
+  System: Linux 4.18.0-477.21.1.el8_8.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.9-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1017818@int0002 [172.24.232.111]
+  CPUs: 1 - Mem: 10 GB (9.8 GB) - Swap: 0 (0)
+Dec-20 22:05:34.850 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
+Dec-20 22:05:34.864 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-20 22:05:34.895 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-20 22:05:34.976 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-20 22:05:34.987 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-20 22:05:35.132 [main] DEBUG nextflow.Session - Session start
+Dec-20 22:05:35.135 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/tmp_out/pipeline_info/execution_trace_2023-12-20_22-05-34.txt
+Dec-20 22:05:35.545 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-20 22:05:38.479 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp, paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, validateParameters:validateParameters]; plugin Id: nf-validation
+Dec-20 22:05:38.916 [main] DEBUG nextflow.Nextflow - Using schema file: nextflow_schema.json
+Dec-20 22:05:38.920 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `monochromeLogs` -- Initialise it to a default value eg. `params.monochromeLogs = some_value`
+Dec-20 22:05:38.939 [main] INFO  nextflow.Nextflow - 
 
-  Config file does not exist: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/conf/base.config
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/fetchngs v1.11.0[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName    : [0;32mhungry_hoover[0m
+  [0;34mlaunchDir  : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
+  [0;34mworkDir    : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work[0m
+  [0;34mprojectDir : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
+  [0;34muserName   : [0;32mayocca[0m
+  [0;34mprofile    : [0;32mstandard[0m
+  [0;34mconfigFiles: [0;32m[0m
 
-java.nio.file.NoSuchFileException: Config file does not exist: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/conf/base.config
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at nextflow.config.ConfigBase.memoizedMethodPriv$readConfigFilePath(ConfigBase.groovy:135)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at nextflow.config.ConfigBase$__clinit__closure3.doCall(ConfigBase.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
-	at groovy.lang.Closure.call(Closure.java:427)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
-	at groovy.lang.Closure.call(Closure.java:416)
-	at groovy.lang.Closure$call.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at nextflow.config.ConfigBase.readConfigFile(ConfigBase.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:149)
-	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:100)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:217)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:231)
-	at nextflow.config.ConfigBase.includeConfig(ConfigBase.groovy:90)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at org.codehaus.groovy.reflection.CachedMethod$invoke.call(Unknown Source)
-	at nextflow.config.ConfigParser$_parse_closure5.doCall(ConfigParser.groovy:448)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaMethod.invoke(ClosureMetaMethod.java:83)
-	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1118)
-	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:226)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at _nf_config_3ef26bcd.run(_nf_config_3ef26bcd:59)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at org.codehaus.groovy.reflection.CachedMethod$invoke.call(Unknown Source)
-	at nextflow.config.ConfigParser$_parse_closure5.doCall(ConfigParser.groovy:448)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaMethod.invoke(ClosureMetaMethod.java:83)
-	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1118)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
-	at groovy.lang.DelegatingMetaClass.invokeMethod(DelegatingMetaClass.java:147)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
-	at nextflow.config.ConfigParser.parse(ConfigParser.groovy:476)
-	at nextflow.config.ConfigParser$parse$5.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at nextflow.config.ConfigParser.parse(ConfigParser.groovy:303)
-	at nextflow.config.ConfigParser$parse$4.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at nextflow.config.ConfigBuilder.parse0(ConfigBuilder.groovy:434)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at nextflow.config.ConfigBuilder.merge0(ConfigBuilder.groovy:420)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at nextflow.config.ConfigBuilder.buildConfig0(ConfigBuilder.groovy:370)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at nextflow.config.ConfigBuilder.buildGivenFiles(ConfigBuilder.groovy:315)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at nextflow.config.ConfigBuilder.buildConfigObject(ConfigBuilder.groovy:806)
-	at nextflow.config.ConfigBuilder.build(ConfigBuilder.groovy:819)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:324)
-	at nextflow.cli.Launcher.run(Launcher.groovy:499)
-	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+[1mInput/output options[0m
+  [0;34minput      : [0;32msra_list.csv[0m
+  [0;34moutdir     : [0;32mtmp_out/[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus   : [0;32m1[0m
+  [0;34mmax_memory : [0;32m10.GB[0m
+  [0;34mmax_time   : [0;32m24.h[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/fetchngs for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.5070524
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/fetchngs/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Dec-20 22:05:38.941 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Dec-20 22:05:39.120 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/sra_list.csv' with 'assets/schema_input.json'
+Dec-20 22:05:39.153 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/sra_list.csv' with 'assets/schema_input.json'
+Dec-20 22:05:39.154 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Dec-20 22:05:39.168 [main] WARN  nextflow.Nextflow - [nf-core/fetchngs] You are attempting to run the pipeline without any custom configuration!
+
+This will be dependent on your local compute environment but can be achieved via one or more of the following:
+   (1) Using an existing pipeline profile e.g. `-profile docker` or `-profile singularity`
+   (2) Using an existing nf-core/configs for your Institution e.g. `-profile crick` or `-profile uppmax`
+   (3) Using your own local custom config e.g. `-c /path/to/your/custom.config`
+
+Please refer to the quick start section and usage docs for the pipeline.
+ 
+Dec-20 22:05:39.325 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:error_retry` matches labels `error_retry` for process with name NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
+Dec-20 22:05:39.337 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_IDS_TO_RUNINFO` matches process NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
+Dec-20 22:05:39.341 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.343 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.347 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-20 22:05:39.361 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=10 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
+Dec-20 22:05:39.363 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Dec-20 22:05:39.474 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_RUNINFO_TO_FTP` matches process NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP
+Dec-20 22:05:39.477 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.479 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.527 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,error_retry` for process with name NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
+Dec-20 22:05:39.527 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:error_retry` matches labels `process_low,error_retry` for process with name NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
+Dec-20 22:05:39.527 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_FASTQ_FTP` matches process NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
+Dec-20 22:05:39.529 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.530 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.547 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS
+Dec-20 22:05:39.549 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.550 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.558 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
+Dec-20 22:05:39.563 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRATOOLS_PREFETCH` matches process NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
+Dec-20 22:05:39.564 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.564 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.571 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
+Dec-20 22:05:39.578 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRATOOLS_FASTERQDUMP` matches process NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
+Dec-20 22:05:39.606 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.607 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.632 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_TO_SAMPLESHEET` matches process NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET
+Dec-20 22:05:39.635 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Dec-20 22:05:39.641 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.652 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_MERGE_SAMPLESHEET` matches process NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET
+Dec-20 22:05:39.661 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.661 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.667 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC_MAPPINGS_CONFIG` matches process NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG
+Dec-20 22:05:39.669 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.669 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.707 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-20 22:05:39.716 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-20 22:05:39.717 [main] WARN  nextflow.processor.TaskProcessor - Input `tuple` must define at least two component -- Check process `WC_FASTQ`
+Dec-20 22:05:39.842 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP, NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH, SRATOOLS_PREFETCH, NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP, NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET, CUSTOM_SRATOOLSNCBISETTINGS, SRATOOLS_FASTERQDUMP, MULTIQC_MAPPINGS_CONFIG, SRA_FASTQ_FTP, SRA_RUNINFO_TO_FTP, NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS, SRA_IDS_TO_RUNINFO, NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO, NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET, SRA_TO_SAMPLESHEET, NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG, NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP, SRA_MERGE_SAMPLESHEET, WC_FASTQ
+Dec-20 22:05:39.849 [main] DEBUG nextflow.Session - Igniting dataflow network (17)
+Dec-20 22:05:39.850 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
+Dec-20 22:05:39.865 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP
+Dec-20 22:05:39.866 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
+Dec-20 22:05:39.913 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS
+Dec-20 22:05:39.927 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
+Dec-20 22:05:39.927 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
+Dec-20 22:05:39.927 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET
+Dec-20 22:05:39.927 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET
+Dec-20 22:05:39.929 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG
+Dec-20 22:05:39.929 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > WC_FASTQ
+Dec-20 22:05:39.959 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_acdf5c75414b64a7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/multiqc_mappings_config/main.nf
+  Script_23a8e28974e45be5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfcore_pipeline_utils/main.nf
+  Script_90e12e5e619ed13c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/main.nf
+  Script_135da6eae79d8da7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/prefetch/main.nf
+  Script_7a7cf26370f047c5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/main.nf
+  Script_4d74e68032fdab1d: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_merge_samplesheet/main.nf
+  Script_c1730861b791086b: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/wc_fastq/main.nf
+  Script_98c167865477f3d5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfvalidation_plugin_utils/main.nf
+  Script_ed0ec3068ff15ce9: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/fasterqdump/main.nf
+  Script_9053ce6a78a54d3e: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nextflowpipelineutils/main.nf
+  Script_6e452f4dd363028b: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
+  Script_b5d28dc53c9ba9cf: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/custom/sratoolsncbisettings/main.nf
+  Script_7fead60763b2b030: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_ids_to_runinfo/main.nf
+  Script_8e47246e1eaac81c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_to_samplesheet/main.nf
+  Script_3dd57d452669545a: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf
+  Script_6a015540c3896a72: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_fastq_ftp/main.nf
+  Script_a9ea706fbcc7c682: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./workflows/sra/../../modules/local/sra_runinfo_to_ftp/main.nf
+Dec-20 22:05:39.963 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-20 22:05:39.965 [main] DEBUG nextflow.Session - Session await
+Dec-20 22:05:39.974 [Actor Thread 7] WARN  nextflow.processor.TaskProcessor - Input tuple does not match input set cardinality declared by process `WC_FASTQ` -- offending value: [Core Nextflow options:[runName:hungry_hoover, launchDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav, workDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work, projectDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav, userName:ayocca, profile:standard, configFiles:], Input/output options:[input:sra_list.csv, outdir:tmp_out/], Institutional config options:[:], Max job request options:[max_cpus:1, max_memory:10.GB, max_time:24.h], Generic options:[:]]
+Dec-20 22:05:40.096 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [41/5e7d09] Cached process > NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO (ERR11202896)
+Dec-20 22:05:40.096 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [21/e8a7c5] Cached process > NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS (ncbi-settings)
+Dec-20 22:05:40.195 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-20 22:05:40.196 [Actor Thread 1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-20 22:05:40.212 [Task submitter] INFO  nextflow.Session - [78/8c6cdc] Submitted process > WC_FASTQ
+Dec-20 22:05:40.219 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [7a/38c04d] Cached process > NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP (1)
+Dec-20 22:05:40.244 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [e5/c50c7a] Cached process > NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP (ERX10632306_ERR11202896)
+Dec-20 22:05:40.260 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [0c/f8f4a3] Cached process > NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET (ERX10632306_ERR11202896)
+Dec-20 22:05:40.317 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [f4/4adaff] Cached process > NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET
+Dec-20 22:05:40.332 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [49/b95d9e] Cached process > NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG
+Dec-20 22:05:40.343 [Actor Thread 4] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 7; slices: 1; internal sort time: 0.005 s; external sort time: 0.001 s; total time: 0.006 s
+Dec-20 22:05:40.347 [Actor Thread 4] DEBUG nextflow.file.FileCollector - >> temp file exists? true
+Dec-20 22:05:40.351 [Actor Thread 4] DEBUG nextflow.file.FileCollector - Retrieved cached collect-files from: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/collect-file/900efcdbd16b8037a9e86c3a0af42b27
+Dec-20 22:05:40.359 [Actor Thread 4] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-7200944936670502198
+Dec-20 22:05:41.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: WC_FASTQ; status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/78/8c6cdc51c5ebbf5d462f4f625c8fd0]
+Dec-20 22:05:41.432 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-20 22:05:41.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Dec-20 22:05:41.444 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-20 22:05:41.446 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Dec-20 22:05:41.447 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/fetchngs][0;32m Pipeline completed successfully[0m-
+Dec-20 22:05:41.448 [main] WARN  nextflow.Nextflow - =============================================================================
+  Please double-check the samplesheet that has been auto-created by the pipeline.
+
+  Public databases don't reliably hold information such as strandedness
+  information, controls etc
+
+  All of the sample metadata obtained from the ENA has been appended
+  as additional columns to help you manually curate the samplesheet before
+  running nf-core/other pipelines.
+===================================================================================
+Dec-20 22:05:41.451 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=7; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=65ms; failedDuration=0ms; cachedDuration=18.8s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
+Dec-20 22:05:41.451 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Dec-20 22:05:41.453 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Dec-20 22:05:42.473 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Dec-20 22:05:42.871 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-20 22:05:42.872 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
+Dec-20 22:05:42.872 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Dec-20 22:05:42.944 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Dec-20 22:05:42.945 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

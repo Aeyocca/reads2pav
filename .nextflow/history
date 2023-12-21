@@ -12,3 +12,10 @@
 2023-12-20 20:39:46	5s	hungry_gauss	ERR	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out
 2023-12-20 20:40:06	5.3s	crazy_darwin	ERR	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out -resume --max_cpus 1
 2023-12-20 20:41:48	29.2s	sad_northcutt	OK	59a6b5a7ee49958d367534c704b6a60b	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 21:18:02	-	modest_poisson	-	3fe404525c6747495896189bf7275711	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 21:20:04	-	mighty_stallman	-	3fe404525c6747495896189bf7275711	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 22:04:46	-	confident_lorenz	-	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 22:05:34	8.9s	hungry_hoover	OK	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 22:09:20	8.5s	hungry_lumiere	OK	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-20 22:11:32	8s	ecstatic_goldstine	OK	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-21 07:40:16	8.5s	sad_carlsson	OK	9ac0091a86094c38b8e4124eb79bee28	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
