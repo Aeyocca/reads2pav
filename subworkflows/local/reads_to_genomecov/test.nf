@@ -17,7 +17,7 @@ include { BWAMEM2_MEM } from '../../../modules/nf-core/bwamem2/mem/main'
 
 params.raw = "test/*{1,2}.fastq.gz"
 reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
-genome = Channel.fromPath( "test/Athal_chr1.fasta" )
+genome = file( "test/Athal_chr1.fasta" )
 genome_fai = "test/Athal_chr1.fasta.fai"
 scale = 1
 def meta = [:]
