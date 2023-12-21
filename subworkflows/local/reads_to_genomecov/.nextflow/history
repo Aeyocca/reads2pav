@@ -48,3 +48,10 @@
 2023-12-21 13:18:01	20m 4s	mighty_yonath	ERR	91170cac45f499066384c1b86f181953	966d770f-3df1-43c1-8507-2122ac6a1cf9	nextflow run test.nf -profile mamba
 2023-12-21 13:44:37	4.2s	happy_linnaeus	ERR	91170cac45f499066384c1b86f181953	6bdde1ad-8e61-488e-8071-c1a3595868ab	nextflow run test.nf -profile singularity
 2023-12-21 13:54:03	19.2s	pensive_cray	ERR	91170cac45f499066384c1b86f181953	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -profile singularity
+2023-12-21 14:10:52	-	admiring_northcutt	-	7b6ede71819119152759bc7dfe7fde1a	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:12:00	3.6s	peaceful_neumann	ERR	77811de72c6422c8d23e8d4e4339e5ac	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:12:56	3.6s	exotic_brahmagupta	ERR	ae454158f85ad0341104d1a6c5ccf8a8	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:20:28	-	trusting_einstein	-	5bb4e4c8b30aba87bee548c22ea1e922	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:21:15	-	fervent_payne	-	53eed3072a9f5214a0118c9a99b65142	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:21:46	3.5s	jolly_mahavira	ERR	c6ab9471c9e09a1658a78e79ca179303	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:22:25	10.6s	tender_goldstine	ERR	f9de13afb595aad8a4d06dc6f00bfcb2	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
