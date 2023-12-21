@@ -34,14 +34,16 @@ read_tuple = Channel
 
 
 genome = file( "test/Athal_chr1.fasta" )
-genome_fai = "test/Athal_chr1.fasta.fai"
-scale = 1
+sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
+extension = "genomecov"
 
 workflow {
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     //  BWAMEM2_ALIGNER(reads_ch, genome)
     sort_bam = true
     BWAMEM2_MEM ( read_tuple, BWAMEM2_INDEX.out.index, sort_bam )
-    GENOMECOV(dummy_meta, BWAMEM2_MEM.out.bam, scale)
+    
+    genomecov_input = Channel.of(dummy_meta, BWAMEM2_MEM.out.bam, 1)
+    GENOMECOV(genomecov_input, sizes, extension)
 }
 
