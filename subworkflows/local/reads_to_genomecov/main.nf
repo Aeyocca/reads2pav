@@ -53,7 +53,10 @@ workflow GENOMECOV {
 }
 
 workflow READS_TO_GENOMECOV {
-    
+    take:
+    reads_ch
+    genome
+    genome_fai
     
     BWAMEM2_ALIGNER(reads_ch, genome)
     GENOMECOV(BWAMEM2_ALIGNER.out.bam, genome_fai)
