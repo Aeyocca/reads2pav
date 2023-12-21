@@ -19,8 +19,12 @@ def dummy_meta = [:]
 // meta is a dummy tuple while testing, going to take from fetchngs setup
 dummy_meta.id = "read"
 
-params.raw = "test/*{1,2}.fastq.gz"
-reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
+// params.raw = "test/*{1,2}.fastq.gz"
+// reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
+
+reads_ch = Channel
+    .fromFilePairs("test/*{1,2}.fastq.gz")
+
 read_tuple = Channel
     .fromPath( 'test/*{1,2}.fastq.gz' )
     .collect()
@@ -31,8 +35,6 @@ read_tuple = Channel
     } 
     .view()
 
-
-
 genome = file( "test/Athal_chr1.fasta" )
 sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
@@ -41,7 +43,7 @@ workflow {
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     //  BWAMEM2_ALIGNER(reads_ch, genome)
     sort_bam = true
-    BWAMEM2_MEM ( read_tuple, BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM ( reads_ch, BWAMEM2_INDEX.out.index, sort_bam )
     
     GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
 }
