@@ -24,3 +24,27 @@
 2023-12-21 10:58:41	-	hungry_elion	-	b02280b79c529804855b30644d5ef47a	581e213c-42e0-4b98-949b-4da3754bfd5b	nextflow run test.nf
 2023-12-21 10:59:29	-	gigantic_bhaskara	-	b02280b79c529804855b30644d5ef47a	c311782e-9d9c-43b3-aabf-c22250f7fde5	nextflow run test.nf
 2023-12-21 11:02:21	-	cheesy_tesla	-	b02280b79c529804855b30644d5ef47a	cc0cf672-67c9-4b67-bfa6-f7eebc8379dd	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:23:20	-	trusting_cori	-	2a96f22ff0fa4e2ceba83c8e9e546645	bcd45ccf-8790-4d48-be7c-9db73be296d3	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:24:44	-	awesome_lagrange	-	b02280b79c529804855b30644d5ef47a	e4269ffd-f2b7-49e0-b37e-841727a61bc4	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:25:30	4.7s	tender_legentil	ERR	b02280b79c529804855b30644d5ef47a	d5147f10-6563-43bd-8d7d-4dcb85135bc2	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:28:15	4.5s	modest_shaw	ERR	ccfcce573cbee9ebc3c9b9dde62af31b	778bc0e2-a590-45eb-8293-4304d8147e2a	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:36:16	3.9s	magical_brattain	ERR	ccfcce573cbee9ebc3c9b9dde62af31b	02efe29e-cb9c-4c13-b5dd-62dcadd41684	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:37:02	4.3s	reverent_bhaskara	ERR	5858094c6c2256943d82e5a587c90751	78dff3f5-c504-443d-a397-1c8023143a0d	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:40:01	-	extravagant_hilbert	-	ec20f2bf34c70c5f920545573ee0b563	3c6d2c35-9a24-4e43-8ed4-43af6f5ea928	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:41:25	4.2s	admiring_elion	ERR	c743c268643899d6be7a3505adf45031	ce3759ab-f06f-481f-8adb-5e0be5136709	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:41:56	-	deadly_cori	-	a2de4ebcfa79f657c3621577fbc24196	0370109b-8ddf-4004-8c3c-8e3d4d905561	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:44:07	-	gloomy_mclean	-	956130597e7afe3957777abb2036c44e	c24c1fb0-f0ed-4520-b4e1-284826422348	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:44:42	-	magical_goodall	-	7b60a0a683eafd6d1d5750d32ca4dd92	45abe435-88af-453e-b4f6-adf754c8c351	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:47:08	4.6s	festering_mayer	ERR	334650c558eacdbd44b9e0d5b0c500e8	db06aec8-c623-445e-8ae9-1803d4a03c2d	nextflow run test.nf --bed test.genomecov
+2023-12-21 11:51:17	4.2s	zen_liskov	ERR	334650c558eacdbd44b9e0d5b0c500e8	db06aec8-c623-445e-8ae9-1803d4a03c2d	nextflow run test.nf --bed test.genomecov -resume
+2023-12-21 11:55:04	4.8s	shrivelled_almeida	ERR	91170cac45f499066384c1b86f181953	db06aec8-c623-445e-8ae9-1803d4a03c2d	nextflow run test.nf --bed test.genomecov -resume
+2023-12-21 11:57:06	4.5s	grave_albattani	ERR	91170cac45f499066384c1b86f181953	db06aec8-c623-445e-8ae9-1803d4a03c2d	nextflow run test.nf --bed test.genomecov -resume -profile singularity
+2023-12-21 12:06:41	4.4s	chaotic_avogadro	ERR	91170cac45f499066384c1b86f181953	db06aec8-c623-445e-8ae9-1803d4a03c2d	nextflow run test.nf --bed test.genomecov -resume
+2023-12-21 12:07:20	5.2s	sad_brenner	ERR	91170cac45f499066384c1b86f181953	e765b543-5b40-4e57-8140-266db741238a	nextflow run test.nf --bed test.genomecov -profile singularity
+2023-12-21 12:08:53	5.1s	crazy_avogadro	ERR	91170cac45f499066384c1b86f181953	483380df-1834-4674-88a7-32c5106f781e	nextflow run test.nf
+2023-12-21 12:09:12	4.4s	grave_torvalds	ERR	91170cac45f499066384c1b86f181953	120ebf39-9c82-4f04-86ef-873701918d3a	nextflow run test.nf -profile test,singularity
+2023-12-21 12:26:32	3.9s	confident_legentil	ERR	91170cac45f499066384c1b86f181953	40bb48a4-b64f-4d11-b491-1e98776515db	nextflow run test.nf -profile singularity
+2023-12-21 13:16:40	24.1s	ridiculous_hoover	ERR	91170cac45f499066384c1b86f181953	923bc480-0bd5-4698-8465-7e220b0f4169	nextflow run test.nf -profile conda
+2023-12-21 13:18:01	20m 4s	mighty_yonath	ERR	91170cac45f499066384c1b86f181953	966d770f-3df1-43c1-8507-2122ac6a1cf9	nextflow run test.nf -profile mamba
+2023-12-21 13:44:37	4.2s	happy_linnaeus	ERR	91170cac45f499066384c1b86f181953	6bdde1ad-8e61-488e-8071-c1a3595868ab	nextflow run test.nf -profile singularity
+2023-12-21 13:54:03	19.2s	pensive_cray	ERR	91170cac45f499066384c1b86f181953	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -profile singularity
