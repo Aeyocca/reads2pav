@@ -18,5 +18,6 @@ genome = "test/Athal_chr1.fasta"
 genome_fai = "test/Athal_chr1.fasta.fai"
 
 workflow {
-    READS_TO_GENOMECOV(reads_ch, genome, genome_fai)
+    BWAMEM2_ALIGNER(reads_ch, genome)
+    GENOMECOV(BWAMEM2_ALIGNER.out.bam, genome_fai)
 }
