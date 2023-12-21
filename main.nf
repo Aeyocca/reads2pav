@@ -59,7 +59,7 @@ workflow NFCORE_FETCHNGS {
 
 include { PIPELINE_INITIALISATION } from './subworkflows/local/nf_core_fetchngs_utils'
 include { PIPELINE_COMPLETION     } from './subworkflows/local/nf_core_fetchngs_utils'
-include { WC_FASTQ                } from './subworkflows/local/wc_fastq'
+include { READS_TO_GENOMECOV                } from './subworkflows/local/reads_to_genomecov'
 
 
 //
@@ -91,6 +91,8 @@ workflow {
         PIPELINE_INITIALISATION.out.summary_params
     )
     
+    // SRA_ID PIPELINE_INITIALISATION.out.ids, get fastq names from that and use
+    // it for file naming throughout
     WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
 }
 
