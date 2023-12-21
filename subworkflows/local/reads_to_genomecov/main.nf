@@ -54,7 +54,7 @@ workflow GENOMECOV {
 
 workflow READS_TO_GENOMECOV {
     take:
-    val(reads_ch)
+    reads_ch
     genome
     genome_fai
     
