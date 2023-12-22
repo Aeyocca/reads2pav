@@ -27,9 +27,14 @@ workflow {
     .splitCsv(header: ['col1', 'col2', 'col3'], skip: 1 )
     .view { row -> "${row.col1} - ${row.col2} - ${row.col3}" }
     
-    reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
+    read_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header : ["id", "fastq_1", "fastq_2"], skip : 1)
-        .view()
+    
+    id_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
+        .splitCsv(header : ["id", "fastq_1", "fastq_2"], skip : 1)
+    
+    reads_ch = read_ch.fastq_1.join(read_ch.fastq_2).view()
+    // bwa_ch = id_ch.id.
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
