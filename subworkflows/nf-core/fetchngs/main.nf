@@ -93,8 +93,9 @@ workflow FETCHNGS {
     // it for file naming throughout
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
+
     emit:
-    PIPELINE_INITIALISATION.out
+    PIPELINE_INITIALISATION.out.ids
 }
 
 

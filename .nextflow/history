@@ -23,3 +23,7 @@
 2023-12-22 10:25:22	-	voluminous_waddington	-	5dabb377001b09ebb93185a8588ff9a1	172ba54e-1e56-4fbb-95ab-aeba7fbf0d12	nextflow run main.nf
 2023-12-22 10:26:19	-	dreamy_jepsen	-	5dabb377001b09ebb93185a8588ff9a1	20b8f77a-ef90-4ba1-a9e3-8fd57957cd73	nextflow run main.nf
 2023-12-22 10:26:42	-	confident_celsius	-	5dabb377001b09ebb93185a8588ff9a1	bb9b4760-3825-4166-81e4-12cb722b1c57	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 10:32:08	-	lethal_leibniz	-	5dabb377001b09ebb93185a8588ff9a1	fa7fe2fe-5821-45eb-95fa-9c5dcc1c5586	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 10:33:20	-	scruffy_archimedes	-	5dabb377001b09ebb93185a8588ff9a1	33142e10-682d-457c-8d2c-5b9db1675080	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 10:38:39	-	cheeky_banach	-	5dabb377001b09ebb93185a8588ff9a1	356f7fec-781f-40c0-9c87-a367e2c8b863	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 10:39:06	25.7s	grave_gauss	OK	5dabb377001b09ebb93185a8588ff9a1	d04a43a3-271d-4710-adbc-4b628c7541dd	nextflow run main.nf --input sra_list.csv --outdir tmp_out
