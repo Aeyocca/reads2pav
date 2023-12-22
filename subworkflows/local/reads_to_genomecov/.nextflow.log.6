@@ -1,93 +1,172 @@
-Dec-21 14:10:51.119 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf -resume -profile singularity
-Dec-21 14:10:51.327 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-21 14:10:51.361 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-21 14:10:51.381 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-21 14:10:51.382 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-21 14:10:51.385 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-21 14:10:51.407 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-21 14:10:51.425 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
-Dec-21 14:10:51.437 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
-Dec-21 14:10:51.467 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
-Dec-21 14:10:52.630 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba, conda, singularity]
-Dec-21 14:10:52.686 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Dec-21 14:10:52.704 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [admiring_northcutt] DSL2 - revision: 7b6ede7181
-Dec-21 14:10:52.710 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Dec-21 14:10:52.710 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Dec-21 14:10:52.725 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
-Dec-21 14:10:52.728 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@727320fa] - activable => nextflow.secret.LocalSecretsProvider@727320fa
-Dec-21 14:10:52.836 [main] DEBUG nextflow.Session - Session UUID: deb46460-1dfe-473a-9b84-ae1e936344a1
-Dec-21 14:10:52.836 [main] DEBUG nextflow.Session - Run name: admiring_northcutt
-Dec-21 14:10:52.837 [main] DEBUG nextflow.Session - Executor pool size: 2
-Dec-21 14:10:52.844 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Dec-21 14:10:52.857 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Dec-21 14:10:52.892 [main] DEBUG nextflow.cli.CmdRun - 
+Dec-21 14:46:02.551 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf -profile singularity
+Dec-21 14:46:02.765 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-21 14:46:02.799 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-21 14:46:02.809 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-21 14:46:02.819 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-21 14:46:02.822 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-21 14:46:02.849 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-21 14:46:02.868 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
+Dec-21 14:46:02.880 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
+Dec-21 14:46:02.910 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-21 14:46:03.983 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba, conda, singularity]
+Dec-21 14:46:04.022 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-21 14:46:04.050 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [astonishing_newton] DSL2 - revision: 3d8c5b924b
+Dec-21 14:46:04.063 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-21 14:46:04.064 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-21 14:46:04.073 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-21 14:46:04.075 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@727320fa] - activable => nextflow.secret.LocalSecretsProvider@727320fa
+Dec-21 14:46:04.175 [main] DEBUG nextflow.Session - Session UUID: 76a309c7-d602-4416-89bc-a3ce07d83519
+Dec-21 14:46:04.188 [main] DEBUG nextflow.Session - Run name: astonishing_newton
+Dec-21 14:46:04.188 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-21 14:46:04.194 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-21 14:46:04.198 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-21 14:46:04.254 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 23.10.0 build 5889
   Created: 15-10-2023 15:07 UTC (10:07 CDT)
   System: Linux 4.18.0-477.21.1.el8_8.x86_64
   Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 1502446@int0002 [172.24.232.111]
-  CPUs: 1 - Mem: 1007.3 GB (117.9 GB) - Swap: 0 (0)
-Dec-21 14:10:52.979 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work [fuseblk]
-Dec-21 14:10:52.980 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/bin
-Dec-21 14:10:52.988 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Dec-21 14:10:53.019 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Dec-21 14:10:53.039 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Dec-21 14:10:53.180 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Dec-21 14:10:53.422 [main] DEBUG nextflow.Session - Session start
-Dec-21 14:10:53.789 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Dec-21 14:10:55.444 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-21 14:10:55.456 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-21 14:10:55.461 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Dec-21 14:10:55.468 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=1007.3 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
-Dec-21 14:10:55.471 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Dec-21 14:10:55.592 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-21 14:10:55.606 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-21 14:10:55.609 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Process: 1510192@int0002 [172.24.232.111]
+  CPUs: 1 - Mem: 1007.3 GB (118.4 GB) - Swap: 0 (0)
+Dec-21 14:46:04.315 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work [fuseblk]
+Dec-21 14:46:04.317 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/bin
+Dec-21 14:46:04.326 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-21 14:46:04.350 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-21 14:46:04.373 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-21 14:46:04.530 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-21 14:46:04.653 [main] DEBUG nextflow.Session - Session start
+Dec-21 14:46:05.034 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-21 14:46:06.575 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-21 14:46:06.581 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-21 14:46:06.587 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-21 14:46:06.601 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=1007.3 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
+Dec-21 14:46:06.603 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Dec-21 14:46:06.734 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-21 14:46:06.735 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-21 14:46:06.748 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-21 14:46:06.760 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-21 14:46:06.763 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BWAMEM2_INDEX, BWAMEM2_MEM, BEDTOOLS_GENOMECOV, GENOMECOV:BEDTOOLS_GENOMECOV
+Dec-21 14:46:06.764 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Dec-21 14:46:06.793 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_INDEX
+Dec-21 14:46:06.795 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_MEM
+Dec-21 14:46:06.797 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GENOMECOV:BEDTOOLS_GENOMECOV
+Dec-21 14:46:06.782 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test/; pattern: *{1,2}.fastq.gz; options: [checkIfExists:true]
+Dec-21 14:46:06.791 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test/; pattern: *{1,2}.fastq.gz; options: [:]
+Dec-21 14:46:06.811 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_bb4f31dd92cedb90: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../../../modules/nf-core/bwamem2/mem/main.nf
   Script_d6715a92b793b124: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../../../modules/nf-core/bwamem2/index/main.nf
   Script_c990398bafab9a5b: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/../../../modules/nf-core/bedtools/genomecov/main.nf
-  Script_bb4f31dd92cedb90: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/../../../modules/nf-core/bwamem2/mem/main.nf
-  Script_cb89353d4acd4cf7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/test.nf
+  Script_5d7170b0ac287095: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/test.nf
   Script_d8e05b4245837ee4: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/main.nf
-Dec-21 14:10:55.610 [main] DEBUG nextflow.Session - Session aborted -- Cause: Workflow `GENOMECOV` declares 3 input channels but 2 were given
-Dec-21 14:10:55.628 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Dec-21 14:10:55.632 [main] ERROR nextflow.cli.Launcher - Workflow `GENOMECOV` declares 3 input channels but 2 were given
-java.lang.IllegalArgumentException: Workflow `GENOMECOV` declares 3 input channels but 2 were given
-	at nextflow.script.WorkflowDef.collectInputs(WorkflowDef.groovy:130)
-	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:199)
-	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
-	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
-	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
-	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:102)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:408)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:350)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+Dec-21 14:46:06.818 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Dec-21 14:46:06.818 [main] DEBUG nextflow.Session - Session await
+Dec-21 14:46:06.964 [Actor Thread 6] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bwa-mem2:2.2.1--he513fc3_0; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-bwa-mem2-2.2.1--he513fc3_0.img
+Dec-21 14:46:07.113 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-21 14:46:07.122 [Task submitter] INFO  nextflow.Session - [eb/f114ad] Submitted process > BWAMEM2_INDEX (Athal_chr1.fasta)
+Dec-21 14:46:18.943 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: BWAMEM2_INDEX (Athal_chr1.fasta); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work/eb/f114ad91f94953c4a2e98a71a0d11a]
+Dec-21 14:46:18.993 [Actor Thread 3] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6:6351200f24497efba12c219c2bea4bb0f69a9d47-0; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6-6351200f24497efba12c219c2bea4bb0f69a9d47-0.img
+Dec-21 14:46:19.027 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-21 14:46:19.036 [Task submitter] INFO  nextflow.Session - [a6/571615] Submitted process > BWAMEM2_MEM (reads)
+Dec-21 14:46:23.049 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: BWAMEM2_MEM (reads); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work/a6/5716159b803dcafbb28c2c6f8ae9fc]
+Dec-21 14:46:23.087 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=BWAMEM2_MEM (reads); work-dir=/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work/a6/5716159b803dcafbb28c2c6f8ae9fc
+  error [groovy.lang.MissingPropertyException]: Exception evaluating property 'id' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: id for class: sun.nio.fs.UnixPath
+Dec-21 14:46:23.115 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'BWAMEM2_MEM (reads)'
+
+Caused by:
+  No such variable: Exception evaluating property 'id' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: id for class: sun.nio.fs.UnixPath
+
+groovy.lang.MissingPropertyException: Exception evaluating property 'id' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: id for class: sun.nio.fs.UnixPath
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.getAtIterable(DefaultGroovyMethods.java:8763)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.getAt(DefaultGroovyMethods.java:8751)
+	at groovy.lang.MetaClassImpl.getProperty(MetaClassImpl.java:1927)
+	at groovy.lang.MetaClassImpl.getProperty(MetaClassImpl.java:3815)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:195)
+	at groovyx.gpars.dataflow.expression.DataflowGetPropertyExpression.evaluate(DataflowGetPropertyExpression.java:49)
+	at groovyx.gpars.dataflow.expression.DataflowExpression$DataflowExpressionsCollector.send(DataflowExpression.java:1250)
+	at groovyx.gpars.dataflow.expression.DataflowExpression.scheduleCallback(DataflowExpression.java:479)
+	at groovyx.gpars.dataflow.expression.DataflowExpression.doBindImpl(DataflowExpression.java:417)
+	at groovyx.gpars.dataflow.expression.DataflowExpression.doBind(DataflowExpression.java:395)
+	at groovyx.gpars.dataflow.expression.DataflowExpression.bind(DataflowExpression.java:371)
+	at jdk.internal.reflect.GeneratedMethodAccessor52.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1254)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.runtime.metaclass.NextflowDelegatingMetaClass.invokeMethod(NextflowDelegatingMetaClass.java:64)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.processor.TaskProcessor.bindOutParam(TaskProcessor.groovy:1468)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at Script_cb89353d4acd4cf7$_runScript_closure1$_closure2.doCall(Script_cb89353d4acd4cf7:35)
+	at nextflow.processor.TaskProcessor.bindOutputs0(TaskProcessor.groovy:1454)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.processor.TaskProcessor.bindOutputs(TaskProcessor.groovy:1410)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.processor.TaskProcessor.finalizeTask0(TaskProcessor.groovy:2336)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.processor.TaskProcessor.finalizeTask(TaskProcessor.groovy:2308)
+	at nextflow.processor.TaskPollingMonitor.checkTaskStatus(TaskPollingMonitor.groovy:631)
+	at nextflow.processor.TaskPollingMonitor.checkAllTasks(TaskPollingMonitor.groovy:537)
+	at nextflow.processor.TaskPollingMonitor.pollLoop(TaskPollingMonitor.groovy:412)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1254)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
-	at groovy.lang.Closure.call(Closure.java:427)
-	at groovy.lang.Closure.call(Closure.java:406)
-	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
-	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
-	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
-	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at nextflow.script.BaseScript.run0(BaseScript.groovy:183)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
-	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
-	at nextflow.cli.Launcher.run(Launcher.groovy:499)
-	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:1036)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:1019)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:97)
+	at nextflow.processor.TaskPollingMonitor$_start_closure2.doCall(TaskPollingMonitor.groovy:293)
+	at nextflow.processor.TaskPollingMonitor$_start_closure2.call(TaskPollingMonitor.groovy)
+	at groovy.lang.Closure.run(Closure.java:498)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Dec-21 14:46:23.122 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Exception evaluating property 'id' for java.util.ArrayList, Reason: groovy.lang.MissingPropertyException: No such property: id for class: sun.nio.fs.UnixPath
+Dec-21 14:46:23.141 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] GENOMECOV:BEDTOOLS_GENOMECOV
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: -
+  port 1: (queue) OPEN  ; channel: sizes
+  port 2: (value) bound ; channel: extension
+  port 3: (cntrl) -     ; channel: $
+
+Dec-21 14:46:23.161 [main] DEBUG nextflow.Session - Session await > all processes finished
+Dec-21 14:46:23.161 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-21 14:46:23.170 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=1; retriesCount=0; abortedCount=0; succeedDuration=11.7s; failedDuration=0ms; cachedDuration=0ms;loadCpus=1; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Dec-21 14:46:23.179 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Dec-21 14:46:23.416 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Dec-21 14:46:23.446 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

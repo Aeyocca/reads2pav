@@ -1,98 +1,111 @@
-Dec-21 14:22:23.275 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf -resume -profile singularity
-Dec-21 14:22:23.497 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-21 14:22:23.528 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-21 14:22:23.548 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-21 14:22:23.550 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-21 14:22:23.553 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-21 14:22:23.576 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-21 14:22:23.601 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
-Dec-21 14:22:23.604 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
-Dec-21 14:22:23.637 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
-Dec-21 14:22:24.701 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba, conda, singularity]
-Dec-21 14:22:24.758 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Dec-21 14:22:24.786 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [tender_goldstine] DSL2 - revision: f9de13afb5
-Dec-21 14:22:24.798 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Dec-21 14:22:24.799 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Dec-21 14:22:24.807 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
-Dec-21 14:22:24.810 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3ce443f9] - activable => nextflow.secret.LocalSecretsProvider@3ce443f9
-Dec-21 14:22:24.923 [main] DEBUG nextflow.Session - Session UUID: deb46460-1dfe-473a-9b84-ae1e936344a1
-Dec-21 14:22:24.924 [main] DEBUG nextflow.Session - Run name: tender_goldstine
-Dec-21 14:22:24.924 [main] DEBUG nextflow.Session - Executor pool size: 2
-Dec-21 14:22:24.931 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Dec-21 14:22:24.944 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Dec-21 14:22:24.977 [main] DEBUG nextflow.cli.CmdRun - 
+Dec-22 07:48:56.826 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf -profile singularity
+Dec-22 07:48:57.045 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-22 07:48:57.085 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-22 07:48:57.096 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-22 07:48:57.106 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-22 07:48:57.109 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-22 07:48:57.138 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-22 07:48:57.163 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
+Dec-22 07:48:57.167 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/nextflow.config
+Dec-22 07:48:57.199 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-22 07:48:58.299 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [mamba, conda, singularity]
+Dec-22 07:48:58.346 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-22 07:48:58.375 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [irreverent_boltzmann] DSL2 - revision: 6ca2864d93
+Dec-22 07:48:58.376 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-22 07:48:58.376 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Dec-22 07:48:58.395 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-22 07:48:58.398 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@727320fa] - activable => nextflow.secret.LocalSecretsProvider@727320fa
+Dec-22 07:48:58.511 [main] DEBUG nextflow.Session - Session UUID: c91b70a4-f634-4d7f-8671-eecfccc7bf35
+Dec-22 07:48:58.511 [main] DEBUG nextflow.Session - Run name: irreverent_boltzmann
+Dec-22 07:48:58.511 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-22 07:48:58.525 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-22 07:48:58.529 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-22 07:48:58.568 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 23.10.0 build 5889
   Created: 15-10-2023 15:07 UTC (10:07 CDT)
   System: Linux 4.18.0-477.21.1.el8_8.x86_64
   Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 1504806@int0002 [172.24.232.111]
-  CPUs: 1 - Mem: 1007.3 GB (115.3 GB) - Swap: 0 (0)
-Dec-21 14:22:25.065 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work [fuseblk]
-Dec-21 14:22:25.067 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/bin
-Dec-21 14:22:25.075 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Dec-21 14:22:25.097 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Dec-21 14:22:25.122 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Dec-21 14:22:25.274 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Dec-21 14:22:25.395 [main] DEBUG nextflow.Session - Session start
-Dec-21 14:22:25.768 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Dec-21 14:22:27.392 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-21 14:22:27.393 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-21 14:22:27.399 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Dec-21 14:22:27.413 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=1007.3 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
-Dec-21 14:22:27.415 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Dec-21 14:22:27.548 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-21 14:22:27.548 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-21 14:22:27.554 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-21 14:22:27.555 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-21 14:22:27.559 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BWAMEM2_INDEX, BWAMEM2_MEM, BEDTOOLS_GENOMECOV, GENOMECOV:BEDTOOLS_GENOMECOV
-Dec-21 14:22:27.560 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
-Dec-21 14:22:27.594 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_INDEX
-Dec-21 14:22:27.594 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_MEM
-Dec-21 14:22:27.596 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GENOMECOV:BEDTOOLS_GENOMECOV
-Dec-21 14:22:27.580 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test/; pattern: *{1,2}.fastq.gz; options: [checkIfExists:true]
-Dec-21 14:22:27.611 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_bb4f31dd92cedb90: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/../../../modules/nf-core/bwamem2/mem/main.nf
-  Script_d6715a92b793b124: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/../../../modules/nf-core/bwamem2/index/main.nf
-  Script_c990398bafab9a5b: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/../../../modules/nf-core/bedtools/genomecov/main.nf
-  Script_9388e18f4610b390: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/test.nf
-  Script_d8e05b4245837ee4: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/../reads_to_genomecov/main.nf
-Dec-21 14:22:27.615 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Dec-21 14:22:27.619 [main] DEBUG nextflow.Session - Session await
-Dec-21 14:22:27.611 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: test/; pattern: *{1,2}.fastq.gz; options: [:]
-Dec-21 14:22:27.779 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bwa-mem2:2.2.1--he513fc3_0; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-bwa-mem2-2.2.1--he513fc3_0.img
-Dec-21 14:22:27.981 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [7a/e015c1] Cached process > BWAMEM2_INDEX (Athal_chr1.fasta)
-Dec-21 14:22:28.092 [Actor Thread 2] INFO  nextflow.container.SingularityCache - Pulling Singularity image https://depot.galaxyproject.org/singularity/mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6:6351200f24497efba12c219c2bea4bb0f69a9d47-0 [cache /cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6-6351200f24497efba12c219c2bea4bb0f69a9d47-0.img]
-Dec-21 14:22:30.762 [Actor Thread 2] DEBUG nextflow.container.SingularityCache - Singularity pull complete image=https://depot.galaxyproject.org/singularity/mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6:6351200f24497efba12c219c2bea4bb0f69a9d47-0 path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6-6351200f24497efba12c219c2bea4bb0f69a9d47-0.img
-Dec-21 14:22:30.875 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-21 14:22:30.890 [Task submitter] INFO  nextflow.Session - [df/b31e74] Submitted process > BWAMEM2_MEM (reads)
-Dec-21 14:22:35.209 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: BWAMEM2_MEM (reads); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work/df/b31e741b5c495cbaf2f75db4663b60]
-Dec-21 14:22:35.231 [Actor Thread 2] WARN  nextflow.processor.TaskProcessor - Input tuple does not match input set cardinality declared by process `GENOMECOV:BEDTOOLS_GENOMECOV` -- offending value: read
-Dec-21 14:22:35.236 [Actor Thread 2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=GENOMECOV:BEDTOOLS_GENOMECOV; work-dir=null
-  error [nextflow.exception.ProcessUnrecoverableException]: Path value cannot be null
-Dec-21 14:22:35.251 [Actor Thread 2] ERROR nextflow.processor.TaskProcessor - Error executing process > 'GENOMECOV:BEDTOOLS_GENOMECOV'
+  Process: 1593008@int0002 [172.24.232.111]
+  CPUs: 1 - Mem: 1007.3 GB (115.2 GB) - Swap: 0 (0)
+Dec-22 07:48:58.627 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/work [fuseblk]
+Dec-22 07:48:58.628 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/bin
+Dec-22 07:48:58.637 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-22 07:48:58.662 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-22 07:48:58.698 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-22 07:48:58.853 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-22 07:48:58.974 [main] DEBUG nextflow.Session - Session start
+Dec-22 07:48:59.116 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Dec-22 07:48:59.135 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/test.nf
+- cause: Unexpected input: '("test/*{1,2}.fastq.gz")\n    .collect()\n    .map {\n        def meta = ["id" : ]' @ line 29, column 28.
+           def meta = ["id" : ]
+                              ^
 
-Caused by:
-  Path value cannot be null
+1 error
 
+nextflow.exception.ScriptCompilationException: Script compilation error
+- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/subworkflows/local/reads_to_genomecov/test.nf
+- cause: Unexpected input: '("test/*{1,2}.fastq.gz")\n    .collect()\n    .map {\n        def meta = ["id" : ]' @ line 29, column 28.
+           def meta = ["id" : ]
+                              ^
 
-Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
-Dec-21 14:22:35.253 [Actor Thread 2] DEBUG nextflow.Session - Session aborted -- Cause: Path value cannot be null
-Dec-21 14:22:35.280 [Actor Thread 2] DEBUG nextflow.Session - The following nodes are still active:
-[process] GENOMECOV:BEDTOOLS_GENOMECOV
-  status=ACTIVE
-  port 0: (value) bound ; channel: -
-  port 1: (value) bound ; channel: sizes
-  port 2: (value) bound ; channel: extension
-  port 3: (cntrl) -     ; channel: $
+1 error
 
-Dec-21 14:22:35.281 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Dec-21 14:22:35.283 [main] DEBUG nextflow.Session - Session await > all processes finished
-Dec-21 14:22:35.283 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Dec-21 14:22:35.289 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=4.2s; failedDuration=0ms; cachedDuration=12s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
-Dec-21 14:22:35.290 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=GENOMECOV:BEDTOOLS_GENOMECOV; work-dir=null
-  error [java.lang.InterruptedException]: java.lang.InterruptedException
-Dec-21 14:22:35.557 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Dec-21 14:22:35.581 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:196)
+	at nextflow.script.ScriptParser.parse(ScriptParser.groovy:206)
+	at nextflow.script.ScriptRunner.parseScript(ScriptRunner.groovy:228)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:135)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+Script_0995ebb20efa7f05: 29: Unexpected input: '("test/*{1,2}.fastq.gz")\n    .collect()\n    .map {\n        def meta = ["id" : ]' @ line 29, column 28.
+           def meta = ["id" : ]
+                              ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
+	at org.apache.groovy.parser.antlr4.AstBuilder.collectSyntaxError(AstBuilder.java:4321)
+	at org.apache.groovy.parser.antlr4.AstBuilder.access$000(AstBuilder.java:176)
+	at org.apache.groovy.parser.antlr4.AstBuilder$1.syntaxError(AstBuilder.java:4332)
+	at groovyjarjarantlr4.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:44)
+	at groovyjarjarantlr4.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
+	at groovyjarjarantlr4.v4.runtime.DefaultErrorStrategy.notifyErrorListeners(DefaultErrorStrategy.java:154)
+	at org.apache.groovy.parser.antlr4.internal.DescriptiveErrorStrategy.reportNoViableAlternative(DescriptiveErrorStrategy.java:92)
+	at groovyjarjarantlr4.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:139)
+	at org.apache.groovy.parser.antlr4.GroovyParser.pathExpression(GroovyParser.java:9500)
+	at org.apache.groovy.parser.antlr4.GroovyParser.postfixExpression(GroovyParser.java:8108)
+	at org.apache.groovy.parser.antlr4.GroovyParser.expression(GroovyParser.java:8650)
+	at org.apache.groovy.parser.antlr4.GroovyParser.commandExpression(GroovyParser.java:9299)
+	at org.apache.groovy.parser.antlr4.GroovyParser.statementExpression(GroovyParser.java:8067)
+	at org.apache.groovy.parser.antlr4.GroovyParser.enhancedStatementExpression(GroovyParser.java:8011)
+	at org.apache.groovy.parser.antlr4.GroovyParser.expression(GroovyParser.java:9155)
+	at org.apache.groovy.parser.antlr4.GroovyParser.commandExpression(GroovyParser.java:9299)
+	at org.apache.groovy.parser.antlr4.GroovyParser.statementExpression(GroovyParser.java:8067)
+	at org.apache.groovy.parser.antlr4.GroovyParser.statement(GroovyParser.java:6915)
+	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatement(GroovyParser.java:514)
+	at org.apache.groovy.parser.antlr4.GroovyParser.scriptStatements(GroovyParser.java:421)
+	at org.apache.groovy.parser.antlr4.GroovyParser.compilationUnit(GroovyParser.java:357)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:250)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:228)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildAST(AstBuilder.java:269)
+	at org.apache.groovy.parser.antlr4.Antlr4ParserPlugin.buildAST(Antlr4ParserPlugin.java:58)
+	at org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:256)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.codehaus.groovy.control.CompilationUnit.buildASTs(CompilationUnit.java:667)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:633)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:389)
+	at groovy.lang.GroovyClassLoader.lambda$parseClass$3(GroovyClassLoader.java:332)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:330)
+	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:526)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:538)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:570)
+	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:175)
+	... 6 common frames omitted

@@ -18,7 +18,7 @@ nextflow.enable.dsl = 2
 */
 
 if (params.input_type == 'sra')     include { SRA     } from '../../../workflows/sra'
-if (params.input_type == 'synapse') include { SYNAPSE } from './workflows/synapse'
+// if (params.input_type == 'synapse') include { SYNAPSE } from './workflows/synapse'
 
 //
 // WORKFLOW: Run main nf-core/fetchngs analysis pipeline depending on type of identifier provided
@@ -57,8 +57,8 @@ workflow NFCORE_FETCHNGS {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { PIPELINE_INITIALISATION } from '../../subworkflows/local/nf_core_fetchngs_utils'
-include { PIPELINE_COMPLETION     } from '../../subworkflows/local/nf_core_fetchngs_utils'
+include { PIPELINE_INITIALISATION } from '../../../subworkflows/local/nf_core_fetchngs_utils'
+include { PIPELINE_COMPLETION     } from '../../../subworkflows/local/nf_core_fetchngs_utils'
 
 //
 // WORKFLOW: Execute a single named workflow for the pipeline
@@ -94,7 +94,7 @@ workflow FETCHNGS {
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
     emit:
-    meta            = PIPELINE_INITIALISATION.out
+    PIPELINE_INITIALISATION.out
 }
 
 

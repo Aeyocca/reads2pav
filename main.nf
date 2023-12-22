@@ -27,6 +27,8 @@ nextflow.enable.dsl = 2
 // WORKFLOW: Execute a single named workflow for the pipeline
 //
 
+include { FETCHNGS     } from './subworkflows/nf-core/fetchngs'
+
 workflow {
 
     FETCHNGS()

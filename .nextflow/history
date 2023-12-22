@@ -19,3 +19,7 @@
 2023-12-20 22:09:20	8.5s	hungry_lumiere	OK	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
 2023-12-20 22:11:32	8s	ecstatic_goldstine	OK	564115d5b831aab21306f8b3bce7b9d1	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
 2023-12-21 07:40:16	8.5s	sad_carlsson	OK	9ac0091a86094c38b8e4124eb79bee28	20806d82-cb35-46fb-a930-125fc4d0864e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume --max_cpus 1
+2023-12-22 10:23:40	-	small_baekeland	-	434299460eabce9456bf51c6c587c4fe	56c5b5cf-3ccc-4d01-a30e-76df4425de5d	nextflow run main.nf
+2023-12-22 10:25:22	-	voluminous_waddington	-	5dabb377001b09ebb93185a8588ff9a1	172ba54e-1e56-4fbb-95ab-aeba7fbf0d12	nextflow run main.nf
+2023-12-22 10:26:19	-	dreamy_jepsen	-	5dabb377001b09ebb93185a8588ff9a1	20b8f77a-ef90-4ba1-a9e3-8fd57957cd73	nextflow run main.nf
+2023-12-22 10:26:42	-	confident_celsius	-	5dabb377001b09ebb93185a8588ff9a1	bb9b4760-3825-4166-81e4-12cb722b1c57	nextflow run main.nf --input sra_list.csv --outdir tmp_out

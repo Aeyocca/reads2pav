@@ -55,3 +55,13 @@
 2023-12-21 14:21:15	-	fervent_payne	-	53eed3072a9f5214a0118c9a99b65142	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
 2023-12-21 14:21:46	3.5s	jolly_mahavira	ERR	c6ab9471c9e09a1658a78e79ca179303	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
 2023-12-21 14:22:25	10.6s	tender_goldstine	ERR	f9de13afb595aad8a4d06dc6f00bfcb2	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:31:06	-	naughty_varahamihira	-	634e83acd37a25362c5ad534a0db68e8	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:44:54	8.3s	golden_feynman	ERR	f7b7a7b8720f6d5ded9fa6ac8d690693	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:45:42	7.6s	lethal_pasteur	ERR	3d8c5b924b654f3166277ec3075cd116	deb46460-1dfe-473a-9b84-ae1e936344a1	nextflow run test.nf -resume -profile singularity
+2023-12-21 14:46:04	19.4s	astonishing_newton	ERR	3d8c5b924b654f3166277ec3075cd116	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -profile singularity
+2023-12-21 14:47:58	-	silly_austin	-	a93f26bd874a5e7a8daab9081a8d7fa6	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -resume -profile singularity
+2023-12-21 15:31:17	8.4s	stoic_rutherford	ERR	46b7e8d5b81e5870fa2cf9f32456a4e1	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -resume -profile singularity
+2023-12-21 15:36:14	-	romantic_majorana	-	5eb8448bffc9c2c8fd1d4d1d920b5ed1	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -resume -profile singularity
+2023-12-21 15:37:50	3.5s	ridiculous_knuth	ERR	02db48b721881112789173a68046e84c	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -resume -profile singularity
+2023-12-21 15:42:39	15.7s	condescending_moriondo	ERR	adc7f7193ab59f82d230f1e8d750253c	76a309c7-d602-4416-89bc-a3ce07d83519	nextflow run test.nf -resume -profile singularity
+2023-12-22 07:48:58	-	irreverent_boltzmann	-	6ca2864d9352ba0808d4d73bba34c7d8	c91b70a4-f634-4d7f-8671-eecfccc7bf35	nextflow run test.nf -profile singularity
