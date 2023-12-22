@@ -28,13 +28,8 @@ workflow {
     .view { row -> "${row.col1} - ${row.col2} - ${row.col3}" }
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header : ["id", "fastq_1", "fastq_2"])
-        .multiMap{ it ->
-            id: id
-            reads: [fastq_1, fastq_2]
-        }
-        .set { result }
-    result.view()
+        .splitCsv(header : ["id", "fastq_1", "fastq_2"], skip : 1)
+        .view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
