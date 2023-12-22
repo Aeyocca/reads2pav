@@ -30,7 +30,7 @@ workflow {
             bar: [fastq_1, fastq_2]
         }.set{results}
     
-    results.foo.view("$it")
+    results.foo.view("$id")
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
