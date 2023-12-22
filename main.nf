@@ -33,7 +33,8 @@ workflow {
             id: id
             reads: [fastq_1, fastq_2]
         }
-        .view()
+        .set { result }
+    result.view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
