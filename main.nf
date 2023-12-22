@@ -29,6 +29,10 @@ workflow {
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header : ["id", "fastq_1", "fastq_2"])
+        .multiMap{ it ->
+            id: id
+            reads: [fastq_1, fastq_2]
+        }
         .view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
