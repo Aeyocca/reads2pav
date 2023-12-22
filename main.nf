@@ -1,4 +1,4 @@
-a#!/usr/bin/env nextflow
+#!/usr/bin/env nextflow
 
 nextflow.enable.dsl = 2
 

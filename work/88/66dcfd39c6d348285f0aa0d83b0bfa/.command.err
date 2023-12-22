@@ -1,0 +1,2 @@
+/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/bin/sra_ids_to_runinfo.py:5: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
