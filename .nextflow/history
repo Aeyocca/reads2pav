@@ -30,3 +30,7 @@
 2023-12-22 11:11:57	-	cheeky_cajal	-	6e756d2c5c6a3507de734cf6e39d0328	2a5bae25-0c6b-4739-b507-90d9d4688665	nextflow run main.nf --input sra_list.csv --outdir tmp_out
 2023-12-22 11:12:36	24.2s	goofy_lalande	OK	9ea24f15bdede1a0ff0f0c2be0079080	abbd9f10-6efa-434a-95d5-d85532f18e55	nextflow run main.nf --input sra_list.csv --outdir tmp_out
 2023-12-22 12:27:04	26s	scruffy_cantor	OK	14f31bf8690f0fc9c9317611885e7a0c	dd060fcf-0dd1-4fad-834a-3112b2d6e3c6	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 12:39:47	-	cheesy_visvesvaraya	-	decd93b8d1f267eee7805cd011823ea5	1a12a642-fd5d-44ca-8ed8-965235a6fbe4	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 12:42:35	-	berserk_pare	-	17fcfae06e4dc76cff617d80d9e07ec5	4d32e2fd-a71f-458c-8445-f1dc1886ef8c	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 12:43:24	-	evil_cantor	-	e0fdfa315a4bc16fdafa514cd94c6e6a	085cc7fe-72d3-4fe2-b57b-73f423646f40	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-22 12:44:01	4.2s	sharp_ardinghelli	ERR	82b50526ae35aa4396ca049da962c6e3	c2f8907a-cbc3-4ace-9015-b8595f478876	nextflow run main.nf --input sra_list.csv --outdir tmp_out

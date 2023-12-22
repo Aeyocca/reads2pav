@@ -32,9 +32,9 @@ workflow {
         .multiMap { it ->
             foo: id 
             bar: [fastq_1, fastq_2]
-        }.set(results)
+        }.set{results}
     
-    results.view()
+    results.foo.view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
