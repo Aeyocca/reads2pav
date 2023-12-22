@@ -17,14 +17,17 @@ include { BEDTOOLS_GENOMECOV } from '../../../modules/nf-core/bedtools/genomecov
 
 def dummy_meta = [:]
 // meta is a dummy tuple while testing, going to take from fetchngs setup
-dummy_meta.id = "reads"
+dummy_meta.id = "read"
 
 // params.raw = "test/*{1,2}.fastq.gz"
 // reads_ch = Channel.fromFilePairs(params.raw, checkIfExists: true )
 
 reads_ch = Channel
     .fromFilePairs("test/*{1,2}.fastq.gz")
-    .view()
+    .collect()
+    .map {
+        def meta = ["id" : ]
+    }
 
 read_tuple = Channel
     .fromPath( 'test/*{1,2}.fastq.gz' )
