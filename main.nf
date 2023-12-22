@@ -22,10 +22,6 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 
 workflow {
     FETCHNGS()
-    Channel
-    .of( 'alpha,beta,gamma\n10,20,30\n70,80,90' )
-    .splitCsv(header: ['col1', 'col2', 'col3'], skip: 1 )
-    .view { row -> "${row.col1} - ${row.col2} - ${row.col3}" }
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header : ["id", "fastq_1", "fastq_2"])
@@ -34,7 +30,7 @@ workflow {
             bar: [fastq_1, fastq_2]
         }.set{results}
     
-    results.foo.view()
+    results.foo.view("$it")
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
