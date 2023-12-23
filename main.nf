@@ -26,12 +26,12 @@ workflow {
     reads_ch = Channel.fromFilePairs(params.outdir + "/fastq/*_{1,2}.fastq.gz")
         .view()
     
-    // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
-    // sort_bam = true
+    sort_bam = true
     
     
-    // BWAMEM2_MEM ( FETCHNGS.out.ids , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM ( FETCHNGS.out.ids , BWAMEM2_INDEX.out.index, sort_bam )
     
     // BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
 }
