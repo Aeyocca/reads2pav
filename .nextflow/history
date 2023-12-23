@@ -43,3 +43,5 @@
 2023-12-23 08:12:20	24s	prickly_descartes	OK	d01ce24cd1bb4ef19452097ca39c6226	d6b4bb29-bee7-4169-82b9-133a574cd606	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
 2023-12-23 08:16:52	-	sick_boltzmann	-	feecd3bf5f08adb72caac977cfa439aa	c9e41674-f727-4ec8-9dd5-7d1509b467fd	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
 2023-12-23 08:20:52	-	boring_jennings	-	4b73cca55b8003b30e4f57d9d9e8fbde	c30dcbd9-cbc9-48c3-b84b-f6e305a9f4bf	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:23:44	7.5s	exotic_carlsson	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:24:35	7.3s	friendly_jennings	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume -profile singularity
