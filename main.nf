@@ -24,7 +24,7 @@ genome = file( "test/Athal_chr1.fasta" )
 workflow {
     FETCHNGS()
     
-    reads_ch = Channel.fromFilePath(params.outdir + "/samplesheet/samplesheet.csv")
+    reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header: ["ids", "fastq_1", "fastq_2"])
         .view()
     
