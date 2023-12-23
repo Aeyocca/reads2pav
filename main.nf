@@ -26,7 +26,7 @@ workflow {
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header: ["id", "fastq_1", "fastq_2"], skip = 1)
-        .collect { it[1:2] }
+        .collect { it[1] }
         .view()
     
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
