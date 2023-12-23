@@ -23,11 +23,7 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 workflow {
     FETCHNGS()
     
-    reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header : ["id", "fastq_1", "fastq_2"], skip = 1)
-        .view()
-    
-    reads_ch = Channel.fromList([ "id" : "SRA11111", "reads" = ["/path/to/R1","/path/to/R2"]])
+    reads_ch = Channel.fromFilePairs(params.outdir + "/fastq/*_{1,2}.fastq.gz")
         .view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
