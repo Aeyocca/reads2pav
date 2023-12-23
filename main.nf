@@ -24,9 +24,11 @@ workflow {
     FETCHNGS()
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header : ["id", ["fastq_1", "fastq_2"]])
+        .splitCsv(header : ["id", "fastq_1", "fastq_2"], skip = 1)
         .view()
     
+    reads_ch = Channel.fromList([id : "SRA11111", reads = ["/path/to/R1","/path/to/R2"]])
+        .view()
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
