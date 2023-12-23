@@ -24,13 +24,9 @@ workflow {
     FETCHNGS()
     
     reads_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header : ["id", "fastq_1", "fastq_2"])
-        .multiMap { it ->
-            foo: id 
-            bar: [fastq_1, fastq_2]
-        }.set{results}
+        .splitCsv(header : ["id", ["fastq_1", "fastq_2"]])
+        .view()
     
-    results.foo.view{"$id"}
     
     // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(reads_ch, genome)
