@@ -8,7 +8,7 @@ process BWAMEM2_MEM {
         'biocontainers/mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6:6351200f24497efba12c219c2bea4bb0f69a9d47-0' }"
 
     input:
-    tuple val(meta), path(reads)
+    tuple val(meta), path(fastq_1), path(fastq_2)
     tuple val(meta2), path(index)
     val   sort_bam
 
@@ -32,7 +32,7 @@ process BWAMEM2_MEM {
         $args \\
         -t $task.cpus \\
         \$INDEX \\
-        $reads \\
+        $fastq_1 $fastq_2 \\
         | samtools $samtools_command $args2 -@ $task.cpus -o ${prefix}.bam -
 
     cat <<-END_VERSIONS > versions.yml
