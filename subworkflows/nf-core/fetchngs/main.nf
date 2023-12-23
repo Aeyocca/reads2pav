@@ -95,7 +95,7 @@ workflow FETCHNGS {
     
 
     emit:
-    PIPELINE_INITIALISATION.out.ids
+    ids = PIPELINE_INITIALISATION.out.ids
 }
 
 

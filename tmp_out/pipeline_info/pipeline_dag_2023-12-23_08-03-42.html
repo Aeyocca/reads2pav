@@ -1,0 +1,110 @@
+<!--
+  ~ Copyright 2013-2023, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+flowchart TB
+    subgraph " "
+    v0["Channel.from"]
+    v7["fields"]
+    v28["certificate"]
+    v32["certificate"]
+    v40["pipeline"]
+    v41["strandedness"]
+    v42["mapping_fields"]
+    v55["Channel.of"]
+    v59["Channel.fromPath"]
+    end
+    subgraph FETCHNGS
+    subgraph NFCORE_FETCHNGS
+    subgraph SRA
+    v8([SRA_IDS_TO_RUNINFO])
+    v11([SRA_RUNINFO_TO_FTP])
+    v20([SRA_FASTQ_FTP])
+    subgraph FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS
+    v26([CUSTOM_SRATOOLSNCBISETTINGS])
+    v29([SRATOOLS_PREFETCH])
+    v33([SRATOOLS_FASTERQDUMP])
+    end
+    v43([SRA_TO_SAMPLESHEET])
+    v46([SRA_MERGE_SAMPLESHEET])
+    v51([MULTIQC_MAPPINGS_CONFIG])
+    v1(( ))
+    v9(( ))
+    v14(( ))
+    v38(( ))
+    v44(( ))
+    v45(( ))
+    end
+    end
+    end
+    subgraph " "
+    v21[" "]
+    v47["samplesheet"]
+    v52["sample_mappings"]
+    v58[" "]
+    v62["reads_ch"]
+    end
+    v60(( ))
+    v0 --> v1
+    v7 --> v8
+    v1 --> v8
+    v8 --> v11
+    v8 --> v9
+    v11 --> v9
+    v11 --> v14
+    v14 --> v20
+    v20 --> v21
+    v20 --> v9
+    v20 --> v38
+    v26 --> v29
+    v26 --> v33
+    v26 --> v9
+    v28 --> v29
+    v14 --> v29
+    v29 --> v33
+    v29 --> v9
+    v32 --> v33
+    v33 --> v9
+    v33 --> v38
+    v40 --> v43
+    v41 --> v43
+    v42 --> v43
+    v38 --> v43
+    v43 --> v44
+    v43 --> v45
+    v44 --> v46
+    v45 --> v46
+    v46 --> v47
+    v46 --> v51
+    v46 --> v9
+    v51 --> v52
+    v51 --> v9
+    v55 --> v9
+    v9 --> v58
+    v59 --> v60
+    v60 --> v62
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</body>
+</html>

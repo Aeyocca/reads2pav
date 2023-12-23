@@ -37,3 +37,9 @@
 2023-12-22 12:46:39	-	serene_kalman	-	6dbdfbd2d48109d6a40fc0e3c24bdb3a	ae763b39-6db5-4cc1-bd50-b8b4c77e4955	nextflow run main.nf --input sra_list.csv --outdir tmp_out
 2023-12-22 12:47:09	-	lonely_kay	-	0bcb5e8513f65f5845ac3843c514c5b8	82afb3f4-3354-458f-8874-c1047e379522	nextflow run main.nf --input sra_list.csv --outdir tmp_out
 2023-12-22 12:49:52	4.3s	exotic_noether	ERR	c56214877bee9f9b169cafc725c8c29b	efa9fe9c-45b6-4116-9fd8-2a511cd7d194	nextflow run main.nf --input sra_list.csv --outdir tmp_out
+2023-12-23 08:03:43	25.9s	cranky_magritte	OK	1ae7f11b2159a7ffa01f3a13c15adae7	5d8dd535-6536-4532-a3e9-67bf12921161	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:08:47	-	distraught_stonebraker	-	52213f90b8bcda58bf16d8ad15e0c0a6	9e253018-ef98-417a-95f6-8148e9c6a387	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:10:11	-	suspicious_hodgkin	-	e28ad3aae2cb5377d673c69cb34f3a7c	ead42d5b-2c2a-4147-ba5e-4ba327c4c6a8	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:12:20	24s	prickly_descartes	OK	d01ce24cd1bb4ef19452097ca39c6226	d6b4bb29-bee7-4169-82b9-133a574cd606	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:16:52	-	sick_boltzmann	-	feecd3bf5f08adb72caac977cfa439aa	c9e41674-f727-4ec8-9dd5-7d1509b467fd	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
+2023-12-23 08:20:52	-	boring_jennings	-	4b73cca55b8003b30e4f57d9d9e8fbde	c30dcbd9-cbc9-48c3-b84b-f6e305a9f4bf	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
