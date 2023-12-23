@@ -15,7 +15,8 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
-// genome = file( "test/Athal_chr1.fasta" )
+def dummy_meta = []
+genome = file( "test/Athal_chr1.fasta" )
 // sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 // extension = "genomecov"
 
