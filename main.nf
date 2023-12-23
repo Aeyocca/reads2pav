@@ -24,7 +24,8 @@ genome = file( "test/Athal_chr1.fasta" )
 workflow {
     FETCHNGS()
     
-    reads_ch = Channel.fromFilePairs(params.outdir + "/fastq/*_{1,2}.fastq.gz")
+    reads_ch = Channel.fromFilePath(params.outdir + "/samplesheet/samplesheet.csv")
+        .splitCsv(header: ["ids", "fastq_1", "fastq_2"])
         .view()
     
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
