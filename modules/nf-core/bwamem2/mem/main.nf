@@ -24,6 +24,8 @@ process BWAMEM2_MEM {
     def args2 = task.ext.args2 ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
     def samtools_command = sort_bam ? 'sort' : 'view'
+    def fastq_1 = params.outdir + ${meta.fastq_1}
+    def fastq_2 = params.outdir + ${meta.fastq_2}
     """
     INDEX=`find -L ./ -name "*.amb" | sed 's/\\.amb\$//'`
 
@@ -32,7 +34,7 @@ process BWAMEM2_MEM {
         $args \\
         -t $task.cpus \\
         \$INDEX \\
-        ${meta.fastq_1} ${meta.fastq_2} \\
+        ${fastq_1} ${fastq_2} \\
         | samtools $samtools_command $args2 -@ $task.cpus -o ${prefix}.bam -
 
     cat <<-END_VERSIONS > versions.yml
