@@ -64,7 +64,7 @@ include { PIPELINE_COMPLETION     } from '../../../subworkflows/local/nf_core_fe
 // WORKFLOW: Execute a single named workflow for the pipeline
 //
 workflow FETCHNGS {
-
+    main:
     //
     // SUBWORKFLOW: Run initialisation tasks
     //
