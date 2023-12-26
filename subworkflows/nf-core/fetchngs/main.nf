@@ -60,7 +60,6 @@ workflow NFCORE_FETCHNGS {
 
 include { PIPELINE_INITIALISATION } from '../../../subworkflows/local/nf_core_fetchngs_utils'
 include { PIPELINE_COMPLETION     } from '../../../subworkflows/local/nf_core_fetchngs_utils'
-include { SETUP_READ_CHANNEL } from '../../../subworkflows/local/setup_read_channel'
 
 //
 // WORKFLOW: Execute a single named workflow for the pipeline
@@ -95,10 +94,8 @@ workflow FETCHNGS {
     // it for file naming throughout
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
-    SETUP_READ_CHANNEL(NFCORE_FETCHNGS.out.samplesheet)
-
     emit:
-    reads_ch = SETUP_READ_CHANNEL.out.reads_ch
+    samplesheet = NFCORE_FETCHNGS.out.samplesheet
 }
 
 
