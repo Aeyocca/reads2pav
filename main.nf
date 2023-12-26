@@ -25,6 +25,8 @@ extension = "genomecov"
 workflow {
     FETCHNGS()
     
+    FETCHNGS.out.samplesheet.view()
+    
     SETUP_READ_CHANNEL(FETCHNGS.out.samplesheet)
     
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
