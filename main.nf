@@ -17,8 +17,8 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
 def dummy_meta = []
 genome = file( "test/Athal_chr1.fasta" )
-// sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
-// extension = "genomecov"
+sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
+extension = "genomecov"
 
 
 workflow {
