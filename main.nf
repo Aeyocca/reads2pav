@@ -29,15 +29,10 @@ workflow {
     sort_bam = true
     
     // subworkflow or just a process to create the reads_ch
+    SETUP_READ_CHANNEL(FETCHNGS.out.ids)
     
-    read_one_ch = Channel.fromFilePairs(params.outdir + "/fastq/" + 
-        FETCHNGS.out.ids + "*{1,2}.fastq.gz")
-        .view()
-    
-    BWAMEM2_MEM( read_one_ch , BWAMEM2_INDEX.out.index, sort_bam )
-    
-    BWAMEM2_MEM.out.bam.view { path -> file('output.bam', path) }
-    
+    BWAMEM2_MEM( SETUP_READ_CHANNEL.out.read_ch , BWAMEM2_INDEX.out.index, sort_bam )
+        
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     
 }
