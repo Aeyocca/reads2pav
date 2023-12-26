@@ -1,0 +1,14 @@
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: Skipping mount /cluster/home/ayocca/miniconda3/envs/reads2pav/var/singularity/mnt/session/etc/resolv.conf [files]: /etc/resolv.conf doesn't exist in container
+Looking to launch executable "/usr/local/bin/bwa-mem2.avx512bw", simd = .avx512bw
+Launching executable "/usr/local/bin/bwa-mem2.avx512bw"
+[bwa_index] Pack FASTA... 0.13 sec
+* Entering FMI_search
+init ticks = 1654302504
+ref seq len = 60855342
+binary seq ticks = 1274795380
+build suffix-array ticks = 14773586364
+pos: 7606918, ref_seq_len__: 7606917
+build fm-index ticks = 4323357808
+Total time taken: 8.7375
+INFO:    Cleaning up image...
