@@ -3,7 +3,7 @@
 workflow SETUP_READ_CHANNEL {
 
     take:
-    ids // from FETCHNGS.out.ids subworkflow
+    val(ids) // from FETCHNGS.out.ids subworkflow
 
     main:
 
