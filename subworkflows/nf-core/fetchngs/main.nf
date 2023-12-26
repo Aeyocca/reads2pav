@@ -97,7 +97,7 @@ workflow FETCHNGS {
     SETUP_READ_CHANNEL(PIPELINE_INITIALISATION.out.ids)
 
     emit:
-    ids = SETUP_READ_CHANNEL.out.reads_ch
+    reads_ch = SETUP_READ_CHANNEL.out.reads_ch
 }
 
 
