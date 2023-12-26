@@ -95,7 +95,7 @@ workflow FETCHNGS {
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
     emit:
-    ch_sra_metadata = NFCORE_FETCHNGS.out.ch_sra_metadata
+    reads = NFCORE_FETCHNGS.out.reads
 }
 
 
