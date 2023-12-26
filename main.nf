@@ -28,7 +28,7 @@ workflow {
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
      
-    BWAMEM2_MEM( FETCHNGS.out.reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM( FETCHNGS.out.reads_ch , sort_bam )
         
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     
