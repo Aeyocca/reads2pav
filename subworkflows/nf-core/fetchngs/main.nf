@@ -81,14 +81,14 @@ workflow FETCHNGS {
     //
     // SUBWORKFLOW: Run completion tasks
     //
-    PIPELINE_COMPLETION (
-        NFCORE_FETCHNGS.out.versions,
-        params.input_type,
-        params.email,
-        params.email_on_fail,
-        params.hook_url,
-        PIPELINE_INITIALISATION.out.summary_params
-    )
+    // PIPELINE_COMPLETION (
+    //     NFCORE_FETCHNGS.out.versions,
+    //     params.input_type,
+    //     params.email,
+    //     params.email_on_fail,
+    //     params.hook_url,
+    //     PIPELINE_INITIALISATION.out.summary_params
+    // )
     
     // SRA_ID PIPELINE_INITIALISATION.out.ids, get fastq names from that and use
     // it for file naming throughout
