@@ -33,14 +33,8 @@ workflow {
     read_one_ch = Channel.fromFilePairs(params.outdir + "/fastq/" + 
         FETCHNGS.out.ids + "*{1,2}.fastq.gz")
         .view()
-        
-    read_two_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header: ["id", "fastq_1", "reads"], skip : 1)
-        .view()
-    reads_ch = read_one_ch.join(read_two_ch)
-        .view()
     
-    BWAMEM2_MEM( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM( read_one_ch , BWAMEM2_INDEX.out.index, sort_bam )
     
     BWAMEM2_MEM.out.bam.view { path -> file('output.bam', path) }
     
