@@ -31,7 +31,7 @@ workflow {
     // subworkflow or just a process to create the reads_ch
     
     read_one_ch = Channel.fromFilePairs(params.outdir + "/fastq/" + 
-        FETCHNGS.out.ids "*{1,2}.fastq.gz")
+        FETCHNGS.out.ids + "*{1,2}.fastq.gz")
         .view()
         
     read_two_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
