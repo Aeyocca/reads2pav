@@ -12,7 +12,7 @@ include { FETCHNGS           } from './subworkflows/nf-core/fetchngs'
 include { BWAMEM2_INDEX      } from './modules/nf-core/bwamem2/index/main'
 include { BWAMEM2_MEM        } from './modules/nf-core/bwamem2/mem/main'
 include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
-include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
+include { SETUP_READ_CHANNEL } from '../subworkflows/local/setup_read_channel'
 
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
@@ -25,15 +25,13 @@ extension = "genomecov"
 workflow {
     FETCHNGS()
     
-    FETCHNGS.out.ch_sra_metadata.view()
-    
-    // SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
+    SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
     
     BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
      
-    BWAMEM2_MEM( FETCHNGS.out.ch_sra_metadata , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM( SETUP_READ_CHANNEL.out.reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
         
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     

@@ -3,12 +3,12 @@
 workflow SETUP_READ_CHANNEL {
 
     take:
-    ids
+    ch_sra_metadata
 
     main:
 
     reads_ch = Channel.fromFilePairs(params.outdir + "/fastq/" + 
-        ids + "*{1,2}.fastq.gz")
+        ch_sra_metadata.id + "*{1,2}.fastq.gz")
         .view()
     
     emit:
