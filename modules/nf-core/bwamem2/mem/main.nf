@@ -32,7 +32,7 @@ process BWAMEM2_MEM {
         $args \\
         -t $task.cpus \\
         \$INDEX \\
-        $${meta.fastq_1} ${meta.fastq_2} \\
+        ${meta.fastq_1} ${meta.fastq_2} \\
         | samtools $samtools_command $args2 -@ $task.cpus -o ${prefix}.bam -
 
     cat <<-END_VERSIONS > versions.yml
