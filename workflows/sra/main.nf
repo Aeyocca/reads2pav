@@ -146,6 +146,7 @@ workflow SRA {
     mappings        = SRA_MERGE_SAMPLESHEET.out.mappings
     sample_mappings = ch_sample_mappings_yml
     versions        = ch_versions.unique()
+    ch_sra_metadata = ch_sra_metadata
 }
 
 /*
