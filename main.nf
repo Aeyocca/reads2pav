@@ -38,7 +38,7 @@ workflow {
      
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
         
-    //BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     
 }
 
