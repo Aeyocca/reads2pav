@@ -24,6 +24,10 @@ extension = "genomecov"
 workflow {
     FETCHNGS()
     
+    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    // //  BWAMEM2_ALIGNER(read_ch, genome)
+    sort_bam = true
+    
     read_one_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header: ["id", "reads", "fastq_2"], skip : 1)
         .view()
@@ -33,12 +37,6 @@ workflow {
         .view()
     reads_ch = read_one_ch.join(read_two_ch)
         .view()
-    
-    
-    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
-    // //  BWAMEM2_ALIGNER(read_ch, genome)
-    sort_bam = true
-    
     
     BWAMEM2_MEM ( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
     
