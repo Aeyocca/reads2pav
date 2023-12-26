@@ -49,7 +49,7 @@ workflow NFCORE_FETCHNGS {
 
     emit:
     versions = ch_versions
-    samplesheet = SRA.out.samplesheet
+    ch_sra_metadata = SRA.out.ch_sra_metadata
 }
 
 /*
