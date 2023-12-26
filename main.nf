@@ -30,17 +30,17 @@ workflow {
     read_two_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
         .splitCsv(header: ["id", "fastq_1", "reads"], skip : 1)
         
-    read_ch = Channel.of(read_one_ch,read_two_ch)
+    reads_ch = read_one_ch.join(read_two_ch)
         .groupTuple()
         .view()
     
     
-    // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
-    // //  BWAMEM2_ALIGNER(reads_ch, genome)
-    // sort_bam = true
+    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    // //  BWAMEM2_ALIGNER(read_ch, genome)
+    sort_bam = true
     
     
-    // BWAMEM2_MEM ( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM ( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
     
     // BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
 }

@@ -45,3 +45,19 @@
 2023-12-23 08:20:52	-	boring_jennings	-	4b73cca55b8003b30e4f57d9d9e8fbde	c30dcbd9-cbc9-48c3-b84b-f6e305a9f4bf	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
 2023-12-23 08:23:44	7.5s	exotic_carlsson	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/
 2023-12-23 08:24:35	7.3s	friendly_jennings	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume -profile singularity
+2023-12-23 08:26:19	-	silly_descartes	-	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume -profile singularity
+2023-12-23 08:27:47	11.5s	cranky_booth	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume -profile singularity
+2023-12-23 08:28:22	13.6s	infallible_jennings	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	88aa7430-c2a8-42b9-89ce-e54790dd21ee	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -resume -profile singularity --max_cpus 1
+2023-12-23 08:28:53	27.1s	sleepy_wright	ERR	4b73cca55b8003b30e4f57d9d9e8fbde	5432f98c-dc4e-428c-b17e-164f827a3bae	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 08:44:33	25s	deadly_bohr	ERR	a8b92f48213e7d767401d363065ba0a0	18ac16de-4920-4e41-9bc2-f4613683737b	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 08:55:23	-	soggy_meucci	-	ebadf2d4a2c8c19d9330927a18cee89f	3538fcf6-269f-4202-8cd8-2901b7944584	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 08:58:11	29.2s	sick_swanson	ERR	5996d2c30ded2a4f5c386f16c505f11e	c7f773de-425b-46df-8d79-3237e7629394	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:01:58	-	magical_shockley	-	c39a4deda0fb9072c227db33d5833d62	fcb54c85-db9e-4537-8f95-a7145b49e2f7	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:02:28	-	kickass_baekeland	-	94c85692e17c1496ab617a45f2bbc3d0	0f94e212-e623-47f4-b9d4-b2b51391c82e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:08:18	-	stupefied_booth	-	94c85692e17c1496ab617a45f2bbc3d0	3a8c35e7-55cc-4efe-8776-ab34209fba3e	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:09:25	7.3s	evil_marconi	ERR	ecbc9a18e8645cf37af9ebd6887d155e	0baa4194-bab0-43ab-9e86-9021dbff8440	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:14:46	7s	ecstatic_lovelace	ERR	6122272f9d05b469bd8bd7aabc003661	56df7a5f-919b-45a9-b1ab-ef92b6fd31b2	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-23 09:15:09	27.6s	amazing_watson	ERR	6977a33139f9863dd79ca1ca37a782c5	f54edb2f-5e33-4b1d-bb6d-86b1d300fb6d	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-26 08:43:22	-	maniac_shaw	-	7992d097c06869e47eac4e22296e91ca	d7139629-9e57-495c-a35c-07c1b65457d2	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-26 08:45:39	42.8s	trusting_carlsson	OK	e2b5f04f164830911d47345046393d08	e970c25b-4f1b-450c-bde2-7869ee1843f1	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
+2023-12-26 08:47:20	50.7s	nasty_faggin	OK	048f111da107ebaf3b306814624c14f9	a2d7c697-85c5-4685-acb5-f8c70edc54ec	nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
