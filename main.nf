@@ -28,8 +28,10 @@ workflow {
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
     
-    read_one_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
-        .splitCsv(header: ["id", "reads", "fastq_2"], skip : 1)
+    // subworkflow or just a process to create the reads_ch
+    
+    read_one_ch = Channel.fromFilePairs(params.outdir + "/fastq/" + 
+        FETCHNGS.out.ids "*{1,2}.fastq.gz")
         .view()
         
     read_two_ch = Channel.fromPath(params.outdir + "/samplesheet/samplesheet.csv")
@@ -38,12 +40,11 @@ workflow {
     reads_ch = read_one_ch.join(read_two_ch)
         .view()
     
-    BWAMEM2_MEM ( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM( reads_ch , BWAMEM2_INDEX.out.index, sort_bam )
     
     BWAMEM2_MEM.out.bam.view { path -> file('output.bam', path) }
     
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
-    
     
 }
 
