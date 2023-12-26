@@ -25,9 +25,11 @@ extension = "genomecov"
 workflow {
     FETCHNGS()
     
-    SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
+    FETCHNGS.out.ch_sra_metadata.view()
     
-    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    // SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
+    
+    // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
      
