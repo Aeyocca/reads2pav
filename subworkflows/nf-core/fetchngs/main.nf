@@ -94,7 +94,7 @@ workflow FETCHNGS {
     // it for file naming throughout
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
-    SETUP_READ_CHANNEL(FETCHNGS.out.ids)
+    SETUP_READ_CHANNEL(PIPELINE_INITIALISATION.out.ids)
 
     emit:
     ids = SETUP_READ_CHANNEL.out.reads_ch
