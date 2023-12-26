@@ -70,6 +70,8 @@ workflow FETCHNGS {
     // SUBWORKFLOW: Run initialisation tasks
     //
     PIPELINE_INITIALISATION ()
+    
+    ch_versions = Channel.empty()
 
     //
     // WORKFLOW: Run primary workflows for the pipeline
@@ -77,6 +79,7 @@ workflow FETCHNGS {
     NFCORE_FETCHNGS (
         PIPELINE_INITIALISATION.out.ids
     )
+    ch_versions = NFCORE_FETCHNGS.out.versions
 
     //
     // SUBWORKFLOW: Run completion tasks
@@ -96,10 +99,10 @@ workflow FETCHNGS {
     
     emit:
     reads = NFCORE_FETCHNGS.out.reads
+    versions = ch_versions
 }
 
 
-    
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     THE END

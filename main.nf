@@ -24,6 +24,9 @@ extension = "genomecov"
 
 workflow {
     FETCHNGS()
+    ch_versions = Channel.empty()
+    
+    ch_versions = ch_versions.mix(FETCHNGS.out.versions)
     
     // FETCHNGS.out.ch_sra_metadata.view()
     
@@ -42,5 +45,6 @@ workflow {
     
     BEDTOOLS_GENOMECOV.out.genomecov.view()
     
+    ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
 }
 
