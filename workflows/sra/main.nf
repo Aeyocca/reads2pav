@@ -94,8 +94,14 @@ workflow SRA {
         ch_versions = ch_versions.mix(FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS.out.versions.first())
 
         // Isolate FASTQ channel which will be added to emit block
-        fastq_files
-            .mix(SRA_FASTQ_FTP.out.fastq, FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS.out.reads)
+        // fastq_files
+        //    .mix(SRA_FASTQ_FTP.out.fastq, FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS.out.reads)
+        //    .map {
+        //        meta, fastq ->
+        //            def reads = fastq instanceof List ? fastq.flatten() : [ fastq ]
+        //            def meta_clone = meta.clone()
+
+        FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS.out.reads
             .map {
                 meta, fastq ->
                     def reads = fastq instanceof List ? fastq.flatten() : [ fastq ]
