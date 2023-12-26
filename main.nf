@@ -31,7 +31,6 @@ workflow {
         .splitCsv(header: ["id", "fastq_1", "reads"], skip : 1)
         
     reads_ch = read_one_ch.join(read_two_ch)
-        .groupTuple()
         .view()
     
     
