@@ -40,5 +40,7 @@ workflow {
         
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     
+    BEDTOOLS_GENOMECOV.out.genomecov.view()
+    
 }
 
