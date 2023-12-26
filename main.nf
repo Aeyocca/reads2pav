@@ -29,7 +29,7 @@ workflow {
     
     // SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
     
-    // BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
      
