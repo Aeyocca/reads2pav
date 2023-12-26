@@ -49,6 +49,7 @@ workflow NFCORE_FETCHNGS {
 
     emit:
     versions = ch_versions
+    samplesheet = SRA.out.samplesheet
 }
 
 /*
@@ -94,7 +95,7 @@ workflow FETCHNGS {
     // it for file naming throughout
     // WC_FASTQ(PIPELINE_INITIALISATION.out.ids)
     
-    SETUP_READ_CHANNEL(PIPELINE_INITIALISATION.out.ids)
+    SETUP_READ_CHANNEL(NFCORE_FETCHNGS.out.samplesheet)
 
     emit:
     reads_ch = SETUP_READ_CHANNEL.out.reads_ch
