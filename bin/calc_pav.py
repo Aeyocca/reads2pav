@@ -10,7 +10,7 @@ parser.add_argument('--input', default = "none", required=False, help=
 	'input bedgraph files, comma separated')
 parser.add_argument('--input_list', required=False, default = "none", help=
 	'file of input bedgraph files, one per line separated')
-parser.add_argument('--gff', required=True, help='reference annotation')
+parser.add_argument('--bed', required=True, help='bed of features')
 parser.add_argument('--depth_threshold', required=False, default = 1, help=
 	'depth threshold for presence, default 1 read')
 parser.add_argument('--cov_threshold', required=False, default = 0.8, help=
@@ -20,6 +20,7 @@ parser.add_argument('--output', required=True, help='output PAV table')
 
 args = parser.parse_args()
 
+# depreciated for now, might add back later
 def load_gff(gff = ""):
 	#dictionary, key = gene, value = list of exon boundaries
 	#two objects returned, a gff_bg to index bases, and a gff_cov to collect length
@@ -58,6 +59,40 @@ def load_gff(gff = ""):
 						else:
 							ref_gff[la[0]][str(bp)] = [trans_id]
 	return(ref_gff,cov_gff)
+
+def load_bed(bed = ""):
+	#dictionary, key = gene, value = list of exon boundaries
+	#two objects returned, a bed_bg to index bases, and a bed_cov to collect length
+	#eh, can be one object but lets make it two
+	gene_id = ""
+	ref_bed = dict()
+	cov_bed = dict()
+	with open(bed) as fh:
+		for line in fh:
+			if line.startswith("#"):
+				continue
+			la = line.strip().split("\t")
+			trans_id = la[3]
+			#should be initialized at the same time so just check one
+			if trans_id in cov_gff:
+				for bp in range(int(la[1]),int(la[2]) + 1):
+					cov_gff[trans_id]["Length"] += 1
+					#if overlapping gene
+					if str(bp) in ref_bed[la[0]].keys():
+						ref_bed[la[0]][str(bp)].append(trans_id)
+					else:
+						ref_bed[la[0]][str(bp)] = [trans_id]
+			else:
+				cov_bed[trans_id] = {"Length" : int(la[2]) - int(la[1]) + 1, 
+					"Cov" : 0, "Cov_bases" : 0}
+				if la[0] not in list(ref_bed.keys()):
+					ref_bed[la[0]] = dict()
+				for bp in range(int(la[1]),int(la[2]) + 1):
+					if str(bp) in ref_bed[la[0]].keys():
+						ref_bed[la[0]][str(bp)].append(trans_id)
+					else:
+						ref_bed[la[0]][str(bp)] = [trans_id]
+	return(ref_bed,cov_bed)
 
 #that should be it, gene set to a list of exon boundaries
 def loop_bg(bg_file = "", ref_gff = dict(), cov_gff = dict()):
@@ -111,9 +146,7 @@ def main():
 	#nope that actually shouldn't affect the calculation for the primary, 
 	#can filter after this script
 	output = dict()
-	#print("%s" % (args.depth_threshold))
-	#ref_gff, cov_gff = load_gff(gff = args.gff)
-
+	
 	in_list = []
 	if args.input_list == "none" and args.input == "none":
 		sys.exit("Must specify one of input or input_list")
@@ -128,7 +161,7 @@ def main():
 		tag = bg_file.replace(".bed","")
 		output[tag] = dict()
 		#reset every iteration to be sure
-		ref_gff, cov_gff = load_gff(gff = args.gff)
+		ref_gff, cov_gff = load_bed(gff = args.bed)
 		cov_gff = loop_bg(bg_file = bg_file, ref_gff = ref_gff, cov_gff = cov_gff)
 		output[tag] = calc_pav(
 				cov_gff = cov_gff, cov_threshold = args.cov_threshold, 
@@ -144,19 +177,5 @@ def main():
 				tmp = out.write(str(col) + "\t")
 			tmp = out.write(str(out_t[gene][-1]) + "\n")
 
-
-
 if __name__ == "__main__":
 	main()
-
-
-
-
-
-
-
-
-
-
-
-
