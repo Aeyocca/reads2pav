@@ -20,5 +20,9 @@ process CALC_PAV {
     --cov_threshold ${params.cov_threshold} \\
     --output ${prefix}.pav.txt
     
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        curl: \$(echo \$(curl --version | head -n 1 | sed 's/^curl //; s/ .*\$//'))
+    END_VERSIONS
     """
 }
