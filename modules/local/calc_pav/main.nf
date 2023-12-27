@@ -20,3 +20,4 @@ process CALC_PAV {
     --output ${prefix}.pav.txt
     
     """
+}
