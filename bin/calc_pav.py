@@ -80,9 +80,10 @@ def calc_pav(cov_gff = dict(), cov_threshold = float(), depth_threshold = int())
 	#simple division here
 	out_dict = dict()
 	for gene in cov_gff.keys():
-		if cov_gff[gene]["Cov"] / cov_gff[gene]["Length"] >= float(depth_threshold) 
+		if (cov_gff[gene]["Cov"] / cov_gff[gene]["Length"] >= float(depth_threshold) 
 				and cov_gff[gene]["Cov_bases"] / cov_gff[gene]["Length"] 
-				>= float(cov_threshold):
+				>= float(cov_threshold) 
+				):
 			out_dict[gene] = 1
 		else:
 			out_dict[gene] = 0

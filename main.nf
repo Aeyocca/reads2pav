@@ -10,6 +10,7 @@ nextflow.enable.dsl = 2
 
 include { FETCHNGS           } from './subworkflows/nf-core/fetchngs'
 include { BWAMEM2_INDEX      } from './modules/nf-core/bwamem2/index/main'
+include { SAMTOOLS_FAIDX     } from '../modules/nf-core/samtools/faidx/main'
 include { BWAMEM2_MEM        } from './modules/nf-core/bwamem2/mem/main'
 include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
@@ -17,7 +18,7 @@ include { CALC_PAV           } from './modules/local/calc_pav/main'
 
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
-def index_input = [meta : [], genome : file( "test/Athal_chr1.fasta" )]
+def index_input = [meta : [], ref_genome : file( params.ref_genome )]
 // genome = file( "test/Athal_chr1.fasta" )
 sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
@@ -36,6 +37,8 @@ workflow {
     //reads_ch = Channel.fromFilePairs("fastq/" + 
     //    FETCHNGS.out.ch_sra_metadata.id + "*{1,2}.fastq_gz")
     
+    SAMTOOLS_FAIDX( index_input )
+    
     BWAMEM2_INDEX( index_input )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
@@ -47,7 +50,7 @@ workflow {
     // size_ch = Channel.of([size : 1])
     // bedtools_input = BWAMEM2_MEM.out.bam.join(size_ch).view()
         
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, SAMTOOLS_FAIDX.fai, extension)
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
