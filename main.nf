@@ -46,7 +46,7 @@ workflow {
     size_ch = Channel.of([size : 1])
     bedtools_input = BWAMEM2_MEM.out.bam.join(size_ch).view()
         
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV(bedtools_input, sizes, extension)
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
