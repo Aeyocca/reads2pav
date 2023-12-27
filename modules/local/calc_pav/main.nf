@@ -14,7 +14,7 @@ process CALC_PAV {
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
     
-    calc_pav.py --input ${genomecov} --bed ${prefix}.bed \\
+    calc_pav.py --input ${genomecov} --bed ${params.ref_bed} \\
     --depth_threshold ${params.depth_threshold} \\
     --cov_threshold ${params.cov_threshold} \\
     --output ${prefix}.pav.txt
