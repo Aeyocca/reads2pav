@@ -40,9 +40,13 @@ workflow {
     sort_bam = true
      
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
+    
+    // need to have bwamem2 output a channel?? can I just create it here from the output?
+    // the only issue is we are missing scale actually, have meta and 
+    size_ch = Channel.of([size : 1])
+    bedtools_input = BWAMEM2_MEM.out.bam.join(size_ch).view()
         
-    // BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
-    BEDTOOLS_GENOMECOV([index_input, BWAMEM2_MEM.out.bam, 1], sizes, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
