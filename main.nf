@@ -16,8 +16,8 @@ include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
 
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
-def dummy_meta = []
-genome = file( "test/Athal_chr1.fasta" )
+def index_input = [meta : [], genome = file( "test/Athal_chr1.fasta" )]
+// genome = file( "test/Athal_chr1.fasta" )
 sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
 
@@ -41,9 +41,10 @@ workflow {
      
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
         
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    // BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV([index_input, BWAMEM2_MEM.out.bam, 1], sizes, extension)
     
-    BEDTOOLS_GENOMECOV.out.genomecov.view()
+    // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
     ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
 }
