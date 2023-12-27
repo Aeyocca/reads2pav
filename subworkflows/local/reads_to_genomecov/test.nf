@@ -24,10 +24,15 @@ dummy_meta.id = "read"
 
 reads_ch = Channel
     .fromFilePairs("test/*{1,2}.fastq.gz")
-    .collect()
-    .map {
-        def meta = ["id" : ]
-    }
+
+
+reads_ch = Channel
+        .from(reads_ch)
+        .splitCsv(header:false, sep:'', strip:true)
+        .map { it[0] }
+        .unique()
+        .set { ch_ids }
+
 
 read_tuple = Channel
     .fromPath( 'test/*{1,2}.fastq.gz' )

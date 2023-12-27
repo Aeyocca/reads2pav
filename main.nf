@@ -13,6 +13,7 @@ include { BWAMEM2_INDEX      } from './modules/nf-core/bwamem2/index/main'
 include { BWAMEM2_MEM        } from './modules/nf-core/bwamem2/mem/main'
 include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
+include { CALC_PAV           } from './modules/local/calc_pav/main'
 
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
@@ -51,5 +52,7 @@ workflow {
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
     ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
+    
+    CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov)
 }
 
