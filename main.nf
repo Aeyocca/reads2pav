@@ -25,7 +25,7 @@ genome_ch = Channel
     .of([meta : [], ref_genome : params.ref_genome])
 // genome_ch = Channel.fromPath(meta : [], ref_genome : params.ref_genome)
 // genome = file( "test/Athal_chr1.fasta" )
-/ sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
+// sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
 
 
