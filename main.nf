@@ -19,6 +19,8 @@ include { CALC_PAV           } from './modules/local/calc_pav/main'
 // reads_ch = Channel
 //    .fromFilePairs("test/*{1,2}.fastq.gz")
 def index_input = [meta : [], ref_genome : file( params.ref_genome )]
+def faidx_input = [meta : [], fai : file( params.ref_genome + ".fai")]
+
 // genome = file( "test/Athal_chr1.fasta" )
 sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
@@ -37,7 +39,7 @@ workflow {
     //reads_ch = Channel.fromFilePairs("fastq/" + 
     //    FETCHNGS.out.ch_sra_metadata.id + "*{1,2}.fastq_gz")
     
-    SAMTOOLS_FAIDX( index_input )
+    SAMTOOLS_FAIDX( index_input , faidx_input)
     
     BWAMEM2_INDEX( index_input )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
