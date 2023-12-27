@@ -13,7 +13,7 @@ process SAMTOOLS_FAIDX {
 
     output:
     tuple val(meta), path ("*.{fa,fasta}") , emit: fa , optional: true
-    tuple val(meta), path ("*.fai")        , emit: fai, optional: true
+    tuple val(meta), path ("*.fai")        , emit: fai
     tuple val(meta), path ("*.gzi")        , emit: gzi, optional: true
     path "versions.yml"                    , emit: versions
 
