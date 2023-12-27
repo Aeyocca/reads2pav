@@ -35,7 +35,7 @@ workflow {
     //reads_ch = Channel.fromFilePairs("fastq/" + 
     //    FETCHNGS.out.ch_sra_metadata.id + "*{1,2}.fastq_gz")
     
-    BWAMEM2_INDEX( meta : dummy_meta, fasta : genome )
+    BWAMEM2_INDEX( index_input )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
     sort_bam = true
      
