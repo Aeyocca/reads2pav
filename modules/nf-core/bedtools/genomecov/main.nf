@@ -8,7 +8,8 @@ process BEDTOOLS_GENOMECOV {
         'biocontainers/bedtools:2.31.1--hf5e1c6e_0' }"
 
     input:
-    tuple val(meta), path(intervals), val(scale)
+    // tuple val(meta), path(intervals), val(scale)
+    tuple val(meta), path(intervals)
     path  sizes
     val   extension
 
@@ -22,10 +23,10 @@ process BEDTOOLS_GENOMECOV {
     script:
     def args = task.ext.args ?: ''
     def args_list = args.tokenize()
-    args += (scale > 0 && scale != 1) ? " -scale $scale" : ""
-    if (!args_list.contains('-bg') && (scale > 0 && scale != 1)) {
-        args += " -bg"
-    }
+    // args += (scale > 0 && scale != 1) ? " -scale $scale" : ""
+    // if (!args_list.contains('-bg') && (scale > 0 && scale != 1)) {
+    //     args += " -bg"
+    // }
 
     def prefix = task.ext.prefix ?: "${meta.id}"
     if (intervals.name =~ /\.bam/) {
