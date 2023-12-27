@@ -32,7 +32,7 @@ sort_bam = true
 
 workflow {
     ch_versions = Channel.empty()
-
+    
     FETCHNGS()
     ch_versions = ch_versions.mix(FETCHNGS.out.versions)
     
@@ -45,11 +45,8 @@ workflow {
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
     ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
     
-        
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, SAMTOOLS_FAIDX.out.fai, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, faidx_input, extension)
     ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
-    
-    // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
     CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov)
     ch_versions = ch_versions.mix(CALC_PAV.out.versions)
