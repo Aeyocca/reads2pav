@@ -1,16 +1,21 @@
 #!/bin/python
-#sgsgeneloss.py
-as
+#calc_pav.py
+
 import sys
 import re
 import argparse
 
 parser = argparse.ArgumentParser(prog='PROG')
-parser.add_argument('--input', default = "none", required=False, help='input bedgraph files, comma separated')
-parser.add_argument('--input_list', required=False, default = "none", help='file of input bedgraph files, one per line separated')
+parser.add_argument('--input', default = "none", required=False, help=
+	'input bedgraph files, comma separated')
+parser.add_argument('--input_list', required=False, default = "none", help=
+	'file of input bedgraph files, one per line separated')
 parser.add_argument('--gff', required=True, help='reference annotation')
-parser.add_argument('--depth_threshold', required=False, default = 1, help='depth threshold for presence, default 1 read')
-parser.add_argument('--cov_threshold', required=False, default = 0.8, help='horizontal coverage threshold for presence. Default 0.8 of exon bases passing depth_threshold')
+parser.add_argument('--depth_threshold', required=False, default = 1, help=
+	'depth threshold for presence, default 1 read')
+parser.add_argument('--cov_threshold', required=False, default = 0.8, help=
+	'''horizontal coverage threshold for presence. Default 0.8 of exon bases passing 
+	depth_threshold''')
 parser.add_argument('--output', required=True, help='output PAV table')
 
 args = parser.parse_args()
@@ -28,7 +33,8 @@ def load_gff(gff = ""):
 				continue
 			la = line.strip().split("\t")
 			###sooo 5' utr / 3' were messing with it
-			#if la[2] == "exon" or la[2] == "five_prime_UTR" or la[2] == "three_prime_UTR":
+			#if la[2] == "exon" or la[2] == "five_prime_UTR" or 
+			#la[2] == "three_prime_UTR":
 			if la[2] == "exon":
 				trans_id_tmp = la[8].split("Parent=")[1]
 				trans_id = trans_id_tmp.split(";")[0]
@@ -42,7 +48,8 @@ def load_gff(gff = ""):
 						else:
 							ref_gff[la[0]][str(bp)] = [trans_id]
 				else:
-					cov_gff[trans_id] = {"Length" : int(la[4]) - int(la[3]) + 1, "Cov" : 0, "Cov_bases" : 0}
+					cov_gff[trans_id] = {"Length" : int(la[4]) - int(la[3]) + 1, 
+						"Cov" : 0, "Cov_bases" : 0}
 					if la[0] not in list(ref_gff.keys()):
 						ref_gff[la[0]] = dict()
 					for bp in range(int(la[3]),int(la[4]) + 1):
@@ -73,7 +80,9 @@ def calc_pav(cov_gff = dict(), cov_threshold = float(), depth_threshold = int())
 	#simple division here
 	out_dict = dict()
 	for gene in cov_gff.keys():
-		if cov_gff[gene]["Cov"] / cov_gff[gene]["Length"] >= float(depth_threshold) and cov_gff[gene]["Cov_bases"] / cov_gff[gene]["Length"] >= float(cov_threshold):
+		if cov_gff[gene]["Cov"] / cov_gff[gene]["Length"] >= float(depth_threshold) 
+				and cov_gff[gene]["Cov_bases"] / cov_gff[gene]["Length"] 
+				>= float(cov_threshold):
 			out_dict[gene] = 1
 		else:
 			out_dict[gene] = 0
@@ -96,8 +105,10 @@ def transpose_dict(in_dict = dict()):
 	return(out_dict)
 
 def main():
-	#print("WARNING: ensure only primary transcripts are in gff... ? wait should that matter?")
-	#nope that actually shouldn't affect the calculation for the primary, can filter after this script
+	#print("WARNING: ensure only primary transcripts are in gff... ? 
+	#wait should that matter?")
+	#nope that actually shouldn't affect the calculation for the primary, 
+	#can filter after this script
 	output = dict()
 	#print("%s" % (args.depth_threshold))
 	#ref_gff, cov_gff = load_gff(gff = args.gff)
@@ -118,7 +129,10 @@ def main():
 		#reset every iteration to be sure
 		ref_gff, cov_gff = load_gff(gff = args.gff)
 		cov_gff = loop_bg(bg_file = bg_file, ref_gff = ref_gff, cov_gff = cov_gff)
-		output[tag] = calc_pav(cov_gff = cov_gff, cov_threshold = args.cov_threshold, depth_threshold = args.depth_threshold)		
+		output[tag] = calc_pav(
+				cov_gff = cov_gff, cov_threshold = args.cov_threshold, 
+				depth_threshold = args.depth_threshold
+			)		
 		
 	out_t = transpose_dict(output)
 	
