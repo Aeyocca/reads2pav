@@ -27,40 +27,31 @@ genome_ch = Channel
 // genome = file( "test/Athal_chr1.fasta" )
 // sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
+sort_bam = true
 
 
 workflow {
-    FETCHNGS()
     ch_versions = Channel.empty()
-    
+
+    FETCHNGS()
     ch_versions = ch_versions.mix(FETCHNGS.out.versions)
     
-    // FETCHNGS.out.ch_sra_metadata.view()
-    
-    // SETUP_READ_CHANNEL(FETCHNGS.out.ch_sra_metadata)
-    
-    //reads_ch = Channel.fromFilePairs("fastq/" + 
-    //    FETCHNGS.out.ch_sra_metadata.id + "*{1,2}.fastq_gz")
-    
     SAMTOOLS_FAIDX( genome_ch , faidx_input)
+    ch_versions = ch_versions.mix(SAMTOOLS_FAIDX.out.versions)
     
     BWAMEM2_INDEX( index_input )
-    // //  BWAMEM2_ALIGNER(read_ch, genome)
-    sort_bam = true
+    ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)
      
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
+    ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
     
-    // need to have bwamem2 output a channel?? can I just create it here from the output?
-    // the only issue is we are missing scale actually, have meta and 
-    // size_ch = Channel.of([size : 1])
-    // bedtools_input = BWAMEM2_MEM.out.bam.join(size_ch).view()
         
     BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, SAMTOOLS_FAIDX.out.fai, extension)
+    ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
     CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov)
-    
     ch_versions = ch_versions.mix(CALC_PAV.out.versions)
     
 }
