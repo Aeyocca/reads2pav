@@ -13,7 +13,8 @@ process CALC_PAV {
     script:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    calc_pav.py --input ${genomecov} --bed ${prefix}.bed \
-    --depth_threshold ${params.depth_threshold} --cov_threshold ${params.cov_threshold} \
+    calc_pav.py --input ${genomecov} --bed ${prefix}.bed \\
+    --depth_threshold ${params.depth_threshold} \\
+    --cov_threshold ${params.cov_threshold} \\
     --output ${prefix}.pav.txt
     """
