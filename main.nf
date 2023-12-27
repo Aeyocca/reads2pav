@@ -39,6 +39,8 @@ workflow {
     SAMTOOLS_FAIDX( genome_ch , faidx_input)
     ch_versions = ch_versions.mix(SAMTOOLS_FAIDX.out.versions)
     
+    SAMTOOLS_FAIDX.out.fai.view()
+    
     BWAMEM2_INDEX( index_input )
     ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)
      
