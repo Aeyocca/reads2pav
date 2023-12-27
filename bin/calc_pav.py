@@ -161,7 +161,7 @@ def main():
 		tag = bg_file.replace(".bed","")
 		output[tag] = dict()
 		#reset every iteration to be sure
-		ref_gff, cov_gff = load_bed(gff = args.bed)
+		ref_gff, cov_gff = load_bed(bed = args.bed)
 		cov_gff = loop_bg(bg_file = bg_file, ref_gff = ref_gff, cov_gff = cov_gff)
 		output[tag] = calc_pav(
 				cov_gff = cov_gff, cov_threshold = args.cov_threshold, 
