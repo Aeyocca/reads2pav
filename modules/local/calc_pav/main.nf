@@ -8,7 +8,7 @@ process CALC_PAV {
     
     output:
     tuple val(meta), path("*.pav.txt"), emit: pav_output
-    // path  "versions.yml"           , emit: versions
+    path  "versions.yml"           , emit: versions
     
     script:
     def prefix = task.ext.prefix ?: "${meta.id}"

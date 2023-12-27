@@ -51,8 +51,9 @@ workflow {
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
-    ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
-    
     CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov)
+    
+    ch_versions = ch_versions.mix(CALC_PAV.out.versions)
+    
 }
 
