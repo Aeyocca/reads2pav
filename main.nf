@@ -21,8 +21,11 @@ include { CALC_PAV           } from './modules/local/calc_pav/main'
 def index_input = [meta : [], ref_genome : file( params.ref_genome )]
 def faidx_input = [meta : [], fai : file( params.ref_genome + ".fai")]
 
+genome_ch = Channel.
+        .of([meta : [], ref_genome : params.ref_genome])
+// genome_ch = Channel.fromPath(meta : [], ref_genome : params.ref_genome)
 // genome = file( "test/Athal_chr1.fasta" )
-sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
+/ sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
 
 
@@ -39,7 +42,7 @@ workflow {
     //reads_ch = Channel.fromFilePairs("fastq/" + 
     //    FETCHNGS.out.ch_sra_metadata.id + "*{1,2}.fastq_gz")
     
-    SAMTOOLS_FAIDX( index_input , faidx_input)
+    SAMTOOLS_FAIDX( genome_ch , faidx_input)
     
     BWAMEM2_INDEX( index_input )
     // //  BWAMEM2_ALIGNER(read_ch, genome)
@@ -52,7 +55,7 @@ workflow {
     // size_ch = Channel.of([size : 1])
     // bedtools_input = BWAMEM2_MEM.out.bam.join(size_ch).view()
         
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, SAMTOOLS_FAIDX.fai, extension)
     
     // BEDTOOLS_GENOMECOV.out.genomecov.view()
     
