@@ -1,3 +1,0 @@
-task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
-3	7a/e382cb	1710624	BWAMEM2_INDEX (Athal_chr1.fasta)	COMPLETED	0	2023-12-23 08:44:39.200	13.4s	11s	76.6%	657 MB	685 MB	36.7 MB	159.6 MB
-1	f2/37a73b	1711380	FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO (ERR11202896)	COMPLETED	0	2023-12-23 08:44:52.737	4.3s	1s	13.9%	25.1 MB	31 MB	4.4 MB	5.3 KB

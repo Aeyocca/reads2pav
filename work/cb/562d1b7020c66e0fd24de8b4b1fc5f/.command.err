@@ -1,0 +1,4 @@
+  File "/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/bin/calc_pav.py", line 83
+    if cov_gff[gene]["Cov"] / cov_gff[gene]["Length"] >= float(depth_threshold) 
+                                                                               ^
+SyntaxError: invalid syntax

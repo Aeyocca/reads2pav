@@ -1,242 +1,157 @@
-Dec-26 14:01:47.599 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1
-Dec-26 14:01:47.876 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
-Dec-26 14:01:47.913 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
-Dec-26 14:01:47.922 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-26 14:01:47.924 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-26 14:01:47.927 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-26 14:01:47.962 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-26 14:01:47.978 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
-Dec-26 14:01:47.985 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
-Dec-26 14:01:48.026 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
-Dec-26 14:01:51.508 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, tigem, tubingen_apg, google, apollo, ipop_up, pdc_kth, googlels, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, unc_lccc, wehi, awsbatch, wustl_htcf, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, test, computerome, ucd_sonic, test_synapse, seg_globe, sanger, dkfz, pasteur, ethz_euler, test_full, imb, tuos_stanage, azurebatch, hki, crukmi, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, uw_hyak_pedslabs, prince, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
-Dec-26 14:01:51.575 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Dec-26 14:01:51.590 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [elated_bohr] DSL2 - revision: 1778375829
-Dec-26 14:01:51.598 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
-Dec-26 14:01:51.599 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Dec-26 14:01:51.599 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
-Dec-26 14:01:51.599 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
-Dec-26 14:01:51.815 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
-Dec-26 14:01:51.817 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
-Dec-26 14:01:51.887 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
-Dec-26 14:01:51.896 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
-Dec-26 14:01:51.898 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@642c6461] - activable => nextflow.secret.LocalSecretsProvider@642c6461
-Dec-26 14:01:51.985 [main] DEBUG nextflow.Session - Session UUID: 7e292776-6882-4433-93a8-4cd9283622a6
-Dec-26 14:01:51.985 [main] DEBUG nextflow.Session - Run name: elated_bohr
-Dec-26 14:01:51.986 [main] DEBUG nextflow.Session - Executor pool size: 2
-Dec-26 14:01:51.991 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Dec-26 14:01:51.996 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Dec-26 14:01:52.031 [main] DEBUG nextflow.cli.CmdRun - 
+Dec-27 11:44:19.585 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input sra_list.csv --outdir tmp_out/ -profile singularity --max_cpus 1 -resume
+Dec-27 11:44:19.946 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Dec-27 11:44:19.969 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/cluster/home/ayocca/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Dec-27 11:44:19.992 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-27 11:44:19.993 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-27 11:44:19.996 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-27 11:44:20.030 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-27 11:44:20.066 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
+Dec-27 11:44:20.069 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/nextflow.config
+Dec-27 11:44:20.108 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Dec-27 11:44:23.661 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [cfc_dev, uzl_omics, ifb_core, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, uge, rosalind_uge, lugh, unibe_ibu, vai, czbiohub_aws, jax, ccga_med, scw, tigem, tubingen_apg, google, apollo, ipop_up, pdc_kth, googlels, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, hasta, cfc, uzh, ebi_codon_slurm, ebc, ku_sund_dangpu, ccga_dx, crick, marvin, biohpc_gen, shifter, mana, mamba, unc_lccc, wehi, awsbatch, wustl_htcf, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, test, computerome, ucd_sonic, test_synapse, seg_globe, sanger, dkfz, pasteur, ethz_euler, test_full, imb, tuos_stanage, azurebatch, hki, crukmi, docker, engaging, gis, hypatia, psmn, eva, nygc, fgcz, conda, crg, singularity, self_hosted_runner, uw_hyak_pedslabs, prince, utd_sysbio, debug, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Dec-27 11:44:23.727 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Dec-27 11:44:23.759 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [sick_yonath] DSL2 - revision: c2fbf56565
+Dec-27 11:44:23.760 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Dec-27 11:44:23.760 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-27 11:44:23.760 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Dec-27 11:44:23.761 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Dec-27 11:44:23.951 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Dec-27 11:44:23.953 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Dec-27 11:44:23.974 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Dec-27 11:44:23.982 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /cluster/home/ayocca/.nextflow/secrets/store.json
+Dec-27 11:44:23.987 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@59b492ec] - activable => nextflow.secret.LocalSecretsProvider@59b492ec
+Dec-27 11:44:24.071 [main] DEBUG nextflow.Session - Session UUID: 04539bc8-ac71-4f14-960d-dce84a8b466c
+Dec-27 11:44:24.084 [main] DEBUG nextflow.Session - Run name: sick_yonath
+Dec-27 11:44:24.084 [main] DEBUG nextflow.Session - Executor pool size: 2
+Dec-27 11:44:24.089 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Dec-27 11:44:24.094 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Dec-27 11:44:24.125 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 23.10.0 build 5889
   Created: 15-10-2023 15:07 UTC (10:07 CDT)
   System: Linux 4.18.0-477.21.1.el8_8.x86_64
   Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 2123986@int0002 [172.24.232.111]
-  CPUs: 1 - Mem: 1007.3 GB (110 GB) - Swap: 0 (0)
-Dec-26 14:01:52.096 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
-Dec-26 14:01:52.109 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Dec-26 14:01:52.137 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Dec-26 14:01:52.207 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Dec-26 14:01:52.228 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Dec-26 14:01:52.346 [main] DEBUG nextflow.Session - Session start
-Dec-26 14:01:52.349 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/tmp_out/pipeline_info/execution_trace_2023-12-26_14-01-51.txt
-Dec-26 14:01:52.581 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Dec-26 14:01:55.208 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp, paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, validateParameters:validateParameters]; plugin Id: nf-validation
-Dec-26 14:01:55.901 [main] DEBUG nextflow.Nextflow - Using schema file: nextflow_schema.json
-Dec-26 14:01:55.906 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `monochromeLogs` -- Initialise it to a default value eg. `params.monochromeLogs = some_value`
-Dec-26 14:01:55.928 [main] INFO  nextflow.Nextflow - 
-
--[2m----------------------------------------------------[0m-
-                                        [0;32m,--.[0;30m/[0;32m,-.[0m
-[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
-[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
-[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
-                                        [0;32m`._,._,'[0m
-[0;35m  nf-core/fetchngs v1.11.0[0m
--[2m----------------------------------------------------[0m-
-[1mCore Nextflow options[0m
-  [0;34mrunName        : [0;32melated_bohr[0m
-  [0;34mcontainerEngine: [0;32msingularity[0m
-  [0;34mlaunchDir      : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
-  [0;34mworkDir        : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work[0m
-  [0;34mprojectDir     : [0;32m/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav[0m
-  [0;34muserName       : [0;32mayocca[0m
-  [0;34mprofile        : [0;32msingularity[0m
-  [0;34mconfigFiles    : [0;32m[0m
-
-[1mInput/output options[0m
-  [0;34minput          : [0;32msra_list.csv[0m
-  [0;34moutdir         : [0;32mtmp_out/[0m
-
-[1mMax job request options[0m
-  [0;34mmax_cpus       : [0;32m1[0m
-  [0;34mmax_memory     : [0;32m10.GB[0m
-  [0;34mmax_time       : [0;32m24.h[0m
-
-!! Only displaying parameters that differ from the pipeline defaults !!
--[2m----------------------------------------------------[0m-
-If you use nf-core/fetchngs for your analysis please cite:
-
-* The pipeline
-  https://doi.org/10.5281/zenodo.5070524
-
-* The nf-core framework
-  https://doi.org/10.1038/s41587-020-0439-x
-
-* Software dependencies
-  https://github.com/nf-core/fetchngs/blob/master/CITATIONS.md
--[2m----------------------------------------------------[0m-
-Dec-26 14:01:55.930 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
-Dec-26 14:01:56.048 [main] WARN  nextflow.validation.SchemaValidator - The following invalid input values have been detected:
-
-* --dag: [overwrite:true]
-
-
-Dec-26 14:01:56.072 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/sra_list.csv' with 'assets/schema_input.json'
-Dec-26 14:01:56.133 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/sra_list.csv' with 'assets/schema_input.json'
-Dec-26 14:01:56.133 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
-Dec-26 14:01:56.418 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:error_retry` matches labels `error_retry` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
-Dec-26 14:01:56.420 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_IDS_TO_RUNINFO` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
-Dec-26 14:01:56.425 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.426 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.431 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Dec-26 14:01:56.439 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=1007.3 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
-Dec-26 14:01:56.453 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Dec-26 14:01:56.568 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_RUNINFO_TO_FTP` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP
-Dec-26 14:01:56.571 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.580 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.638 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low,error_retry` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
-Dec-26 14:01:56.654 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:error_retry` matches labels `process_low,error_retry` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
-Dec-26 14:01:56.656 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_FASTQ_FTP` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
-Dec-26 14:01:56.658 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.660 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.673 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS
-Dec-26 14:01:56.682 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.683 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.691 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
-Dec-26 14:01:56.692 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRATOOLS_PREFETCH` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
-Dec-26 14:01:56.693 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.696 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.710 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
-Dec-26 14:01:56.717 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRATOOLS_FASTERQDUMP` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
-Dec-26 14:01:56.718 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.718 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.729 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_TO_SAMPLESHEET` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET
-Dec-26 14:01:56.730 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Dec-26 14:01:56.731 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.751 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SRA_MERGE_SAMPLESHEET` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET
-Dec-26 14:01:56.753 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.755 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.772 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MULTIQC_MAPPINGS_CONFIG` matches process FETCHNGS:NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG
-Dec-26 14:01:56.773 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.774 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.835 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name BWAMEM2_INDEX
-Dec-26 14:01:56.842 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.849 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.853 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name BWAMEM2_MEM
-Dec-26 14:01:56.856 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Dec-26 14:01:56.856 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Dec-26 14:01:56.860 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ECHO_CHANNEL, BWAMEM2_INDEX, SRATOOLS_PREFETCH, FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET, FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP, CUSTOM_SRATOOLSNCBISETTINGS, BEDTOOLS_GENOMECOV, SRATOOLS_FASTERQDUMP, FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP, MULTIQC_MAPPINGS_CONFIG, SRA_FASTQ_FTP, SRA_RUNINFO_TO_FTP, SRA_IDS_TO_RUNINFO, FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO, FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS, FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP, BWAMEM2_MEM, SRA_TO_SAMPLESHEET, FETCHNGS:NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG, FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH, FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET, SRA_MERGE_SAMPLESHEET
-Dec-26 14:01:56.866 [main] DEBUG nextflow.Session - Igniting dataflow network (19)
-Dec-26 14:01:56.881 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO
-Dec-26 14:01:56.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP
-Dec-26 14:01:56.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP
-Dec-26 14:01:56.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS
-Dec-26 14:01:56.929 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_PREFETCH
-Dec-26 14:01:56.930 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:SRATOOLS_FASTERQDUMP
-Dec-26 14:01:56.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET
-Dec-26 14:01:56.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET
-Dec-26 14:01:56.931 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FETCHNGS:NFCORE_FETCHNGS:SRA:MULTIQC_MAPPINGS_CONFIG
-Dec-26 14:01:56.932 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_INDEX
-Dec-26 14:01:56.933 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BWAMEM2_MEM
-Dec-26 14:01:56.934 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Process: 2322681@int0002 [172.24.232.111]
+  CPUs: 1 - Mem: 1007.3 GB (57 GB) - Swap: 0 (0)
+Dec-27 11:44:24.213 [main] DEBUG nextflow.Session - Work-dir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work [fuseblk]
+Dec-27 11:44:24.227 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-27 11:44:24.251 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-27 11:44:24.321 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Dec-27 11:44:24.338 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Dec-27 11:44:24.474 [main] DEBUG nextflow.Session - Session start
+Dec-27 11:44:24.478 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/tmp_out/pipeline_info/execution_trace_2023-12-27_11-44-23.txt
+Dec-27 11:44:24.719 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-27 11:44:27.800 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsHelp:paramsHelp, paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, validateParameters:validateParameters]; plugin Id: nf-validation
+Dec-27 11:44:28.670 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
   Script_c634c2ba523885a8: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/local/setup_read_channel/main.nf
-  Script_acdf5c75414b64a7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/multiqc_mappings_config/main.nf
+  Script_3b32faa4ea12bb9c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/main.nf
   Script_23a8e28974e45be5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfcore_pipeline_utils/main.nf
+  Script_acdf5c75414b64a7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/multiqc_mappings_config/main.nf
   Script_d6715a92b793b124: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/nf-core/bwamem2/index/main.nf
   Script_135da6eae79d8da7: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/prefetch/main.nf
   Script_7a7cf26370f047c5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../subworkflows/local/nf_core_fetchngs_utils/main.nf
   Script_4d74e68032fdab1d: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/sra_merge_samplesheet/main.nf
   Script_98c167865477f3d5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nfvalidation_plugin_utils/main.nf
   Script_ed0ec3068ff15ce9: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/sratools/fasterqdump/main.nf
-  Script_abbcf32fa0888c59: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/main.nf
   Script_9053ce6a78a54d3e: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../subworkflows/local/nf_core_fetchngs_utils/../../nf-core/nextflowpipelineutils/main.nf
   Script_b5d28dc53c9ba9cf: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/../../../modules/nf-core/custom/sratoolsncbisettings/main.nf
-  Script_e4c9394e59d2c7f5: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
   Script_7fead60763b2b030: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/sra_ids_to_runinfo/main.nf
   Script_8e47246e1eaac81c: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/sra_to_samplesheet/main.nf
   Script_3dd57d452669545a: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../subworkflows/nf-core/fastq_download_prefetch_fasterqdump_sratools/main.nf
   Script_6a015540c3896a72: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/sra_fastq_ftp/main.nf
   Script_bb4f31dd92cedb90: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/nf-core/bwamem2/mem/main.nf
-  Script_c990398bafab9a5b: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/nf-core/bedtools/genomecov/main.nf
-  Script_e5f01bc8263f0510: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/main.nf
+  Script_19644f32e78cab01: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/main.nf
   Script_a9ea706fbcc7c682: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./subworkflows/nf-core/fetchngs/../../../workflows/sra/../../modules/local/sra_runinfo_to_ftp/main.nf
-Dec-26 14:01:56.935 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Dec-26 14:01:56.936 [main] DEBUG nextflow.Session - Session await
-Dec-26 14:01:57.056 [Actor Thread 4] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/python:3.9--1; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-python-3.9--1.img
-Dec-26 14:01:57.065 [Actor Thread 4] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/sra-tools:2.11.0--pl5321ha49a11a_3; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-sra-tools-2.11.0--pl5321ha49a11a_3.img
-Dec-26 14:01:57.102 [Actor Thread 9] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bwa-mem2:2.2.1--he513fc3_0; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-bwa-mem2-2.2.1--he513fc3_0.img
-Dec-26 14:01:57.198 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-26 14:01:57.205 [Task submitter] INFO  nextflow.Session - [b8/a6993e] Submitted process > FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS (ncbi-settings)
-Dec-26 14:02:00.249 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FETCHNGS:NFCORE_FETCHNGS:SRA:FASTQ_DOWNLOAD_PREFETCH_FASTERQDUMP_SRATOOLS:CUSTOM_SRATOOLSNCBISETTINGS (ncbi-settings); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/b8/a6993e221d8b9c213210be7969d811]
-Dec-26 14:02:00.279 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-26 14:02:00.300 [Task submitter] INFO  nextflow.Session - [e4/f3eaa1] Submitted process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO (ERR11202896)
-Dec-26 14:02:00.308 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Dec-26 14:02:04.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_IDS_TO_RUNINFO (ERR11202896); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/e4/f3eaa169202e5073fec3c860306f86]
-Dec-26 14:02:05.022 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-26 14:02:05.022 [Task submitter] INFO  nextflow.Session - [ef/3f2479] Submitted process > BWAMEM2_INDEX (Athal_chr1.fasta)
-Dec-26 14:02:18.232 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: BWAMEM2_INDEX (Athal_chr1.fasta); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/ef/3f247979bbf3219cb4a092cedbc844]
-Dec-26 14:02:18.251 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-26 14:02:18.251 [Task submitter] INFO  nextflow.Session - [f3/4dc896] Submitted process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP (1)
-Dec-26 14:02:20.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_RUNINFO_TO_FTP (1); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/f3/4dc8960901d346838f6b8bd67df44c]
-Dec-26 14:02:20.742 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Dec-26 14:02:20.743 [Task submitter] INFO  nextflow.Session - [4d/18366c] Submitted process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP (ERX10632306_ERR11202896)
-Dec-26 14:02:38.657 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_FASTQ_FTP (ERX10632306_ERR11202896); status: COMPLETED; exit: 0; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/4d/18366cfb45fee307a89bf3f1c8b242]
-Dec-26 14:02:38.673 [Actor Thread 8] WARN  nextflow.processor.TaskProcessor - Input tuple does not match input set cardinality declared by process `BWAMEM2_MEM` -- offending value: [id:ERX10632306_ERR11202896, run_accession:ERR11202896, experiment_accession:ERX10632306, sample_accession:SAMEA112880752, secondary_sample_accession:ERS14887340, study_accession:PRJEB61192, secondary_study_accession:ERP146291, submission_accession:ERA21678559, run_alias:E-MTAB-12838:5385_Y.R, experiment_alias:E-MTAB-12838:5385_Y_p, sample_alias:E-MTAB-12838:5385_Y, study_alias:E-MTAB-12838, library_layout:PAIRED, library_selection:RANDOM, library_source:GENOMIC, library_strategy:WGS, library_name:5385_Y_p, instrument_model:Illumina HiSeq 3000, instrument_platform:ILLUMINA, base_count:222917877, read_count:1518108, tax_id:3702, scientific_name:Arabidopsis thaliana, sample_title:5385_Y, experiment_title:Illumina HiSeq 3000 sequencing: Whole-genome resequencing of BC1 populations from Arabidopsis (Col x Ler) x Col crosses (wild type and heip1), study_title:Whole-genome resequencing of BC1 populations from Arabidopsis (Col x Ler) x Col crosses (wild type and heip1), sample_description:Protocols: Leaves were removed from plants and stored at -80 C until DNA extraction Greenhouse supplemented with additional light. Plants grown in the greenhouse (16 h day/8 h night) for 3 weeks and 4 days in the dark NucleoMag Plant Kit (Macherey and Nagel, P/O 744400.4) on a robotic device (KingFisher, Thermo) TPase-based DNA library (>95 samples), fastq_md5:8cdf01d4a1a429dbd5014726e9f0d733;e27fdd4822fc0772d828fe915e7a2c03, fastq_bytes:59046954;57201296, fastq_ftp:ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_2.fastq.gz, fastq_galaxy:ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_2.fastq.gz, fastq_aspera:fasp.sra.ebi.ac.uk:/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_1.fastq.gz;fasp.sra.ebi.ac.uk:/vol1/fastq/ERR112/096/ERR11202896/ERR11202896_2.fastq.gz, fastq_1:tmp_out//fastq/ERX10632306_ERR11202896_1.fastq.gz, fastq_2:tmp_out//fastq/ERX10632306_ERR11202896_2.fastq.gz, md5_1:8cdf01d4a1a429dbd5014726e9f0d733, md5_2:e27fdd4822fc0772d828fe915e7a2c03, single_end:false]
-Dec-26 14:02:38.687 [Actor Thread 8] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=BWAMEM2_MEM (1); work-dir=null
-  error [nextflow.exception.ProcessUnrecoverableException]: Not a valid path value: 'ERR11202896'
-Dec-26 14:02:38.690 [Task submitter] INFO  nextflow.Session - [fa/12bfd7] Submitted process > FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET (ERX10632306_ERR11202896)
-Dec-26 14:02:38.721 [Actor Thread 8] ERROR nextflow.processor.TaskProcessor - Error executing process > 'BWAMEM2_MEM (1)'
+  Script_c9bf3a25c9b86c97: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/nf-core/bedtools/genomecov/main.nf
+  Script_db3faa23377ab5bb: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/main.nf
+Dec-27 11:44:28.684 [main] ERROR nextflow.cli.Launcher - Module compilation error
+- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/local/calc_pav/main.nf
+- cause: Unexpected input: '{' @ line 1, column 18.
+   process CALC_PAV {
+                    ^
 
-Caused by:
-  Not a valid path value: 'ERR11202896'
+1 error
 
+NOTE: If this is the beginning of a process or workflow, there may be a syntax error in the body, such as a missing or extra comma, for which a more specific error message could not be produced.
+nextflow.exception.ScriptCompilationException: Module compilation error
+- file : /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/./modules/local/calc_pav/main.nf
+- cause: Unexpected input: '{' @ line 1, column 18.
+   process CALC_PAV {
+                    ^
 
-Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
-Dec-26 14:02:38.762 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_TO_SAMPLESHEET (ERX10632306_ERR11202896); status: COMPLETED; exit: -; error: -; workDir: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/fa/12bfd74ced867e183e932e3adb8344]
-Dec-26 14:02:38.795 [Actor Thread 8] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
-Dec-26 14:02:38.800 [main] DEBUG nextflow.Session - Session await > all processes finished
-Dec-26 14:02:38.803 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Dec-26 14:02:38.809 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Dec-26 14:02:38.809 [Actor Thread 3] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/ubuntu:20.04; path=/cluster/home/ayocca/Alan_bin/singularity.cacheDir/depot.galaxyproject.org-singularity-ubuntu-20.04.img
-Dec-26 14:02:38.820 [Actor Thread 5] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=FETCHNGS:NFCORE_FETCHNGS:SRA:SRA_MERGE_SAMPLESHEET; work-dir=null
-  error [java.lang.InterruptedException]: java.lang.InterruptedException
-Dec-26 14:02:38.828 [Actor Thread 7] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=BWAMEM2_MEM; work-dir=null
-  error [java.lang.InterruptedException]: java.lang.InterruptedException
-Dec-26 14:02:38.887 [Actor Thread 3] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 5; slices: 1; internal sort time: 0.053 s; external sort time: 0.01 s; total time: 0.063 s
-Dec-26 14:02:38.923 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work/collect-file/8e35999027c17b915a0aaa8afb23152c
-Dec-26 14:02:38.928 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-4830603604698230776
-Dec-26 14:02:39.658 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
-Dec-26 14:02:39.659 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/fetchngs][0;31m Pipeline completed with errors[0m-
-Dec-26 14:02:39.661 [main] WARN  nextflow.Nextflow - =============================================================================
-  Please double-check the samplesheet that has been auto-created by the pipeline.
+1 error
 
-  Public databases don't reliably hold information such as strandedness
-  information, controls etc
+NOTE: If this is the beginning of a process or workflow, there may be a syntax error in the body, such as a missing or extra comma, for which a more specific error message could not be produced.
+	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:196)
+	at nextflow.script.ScriptParser.parse(ScriptParser.groovy:206)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:151)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure2.doCall(IncludeDef.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:123)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_db3faa23377ab5bb.runScript(Script_db3faa23377ab5bb:16)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:144)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:192)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:242)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:137)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:499)
+	at nextflow.cli.Launcher.main(Launcher.groovy:670)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+Script_059be2910241fcd0: 1: Unexpected input: '{' @ line 1, column 18.
+   process CALC_PAV {
+                    ^
 
-  All of the sample metadata obtained from the ENA has been appended
-  as additional columns to help you manually curate the samplesheet before
-  running nf-core/other pipelines.
-===================================================================================
-Dec-26 14:02:39.665 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=6; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=1; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=28s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=10 GB; ]
-Dec-26 14:02:39.665 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
-Dec-26 14:02:39.668 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
-Dec-26 14:02:40.373 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
-Dec-26 14:02:40.691 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Dec-26 14:02:40.691 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
-Dec-26 14:02:40.691 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
-Dec-26 14:02:40.711 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Dec-26 14:02:40.712 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
+	at org.apache.groovy.parser.antlr4.AstBuilder.collectSyntaxError(AstBuilder.java:4321)
+	at org.apache.groovy.parser.antlr4.AstBuilder.access$000(AstBuilder.java:176)
+	at org.apache.groovy.parser.antlr4.AstBuilder$1.syntaxError(AstBuilder.java:4332)
+	at groovyjarjarantlr4.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:44)
+	at groovyjarjarantlr4.v4.runtime.Parser.notifyErrorListeners(Parser.java:543)
+	at groovyjarjarantlr4.v4.runtime.DefaultErrorStrategy.notifyErrorListeners(DefaultErrorStrategy.java:154)
+	at org.apache.groovy.parser.antlr4.internal.DescriptiveErrorStrategy.reportInputMismatch(DescriptiveErrorStrategy.java:103)
+	at org.apache.groovy.parser.antlr4.internal.DescriptiveErrorStrategy.recover(DescriptiveErrorStrategy.java:55)
+	at org.apache.groovy.parser.antlr4.internal.DescriptiveErrorStrategy.recoverInline(DescriptiveErrorStrategy.java:68)
+	at groovyjarjarantlr4.v4.runtime.Parser.match(Parser.java:213)
+	at org.apache.groovy.parser.antlr4.GroovyParser.compilationUnit(GroovyParser.java:362)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:250)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildCST(AstBuilder.java:228)
+	at org.apache.groovy.parser.antlr4.AstBuilder.buildAST(AstBuilder.java:269)
+	at org.apache.groovy.parser.antlr4.Antlr4ParserPlugin.buildAST(Antlr4ParserPlugin.java:58)
+	at org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:256)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at org.codehaus.groovy.control.CompilationUnit.buildASTs(CompilationUnit.java:667)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:633)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:389)
+	at groovy.lang.GroovyClassLoader.lambda$parseClass$3(GroovyClassLoader.java:332)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.compute(StampedCommonCache.java:163)
+	at org.codehaus.groovy.runtime.memoize.StampedCommonCache.getAndPut(StampedCommonCache.java:154)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:330)
+	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:526)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:538)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:570)
+	at nextflow.script.ScriptParser.parse0(ScriptParser.groovy:175)
+	... 32 common frames omitted

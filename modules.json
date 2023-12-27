@@ -30,6 +30,11 @@
             "git_sha": "65ad3e0b9a4099592e1102e92e10455dc661cf53",
             "installed_by": ["modules"]
           },
+          "samtools/faidx": {
+            "branch": "master",
+            "git_sha": "a64788f5ad388f1d2ac5bd5f1f3f8fc81476148c",
+            "installed_by": ["modules"]
+          },
           "sratools/fasterqdump": {
             "branch": "master",
             "git_sha": "4125fb0c2152efbcec8d9ed71a756c9274b2f7f5",

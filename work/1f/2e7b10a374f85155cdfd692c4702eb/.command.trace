@@ -1,0 +1,17 @@
+nextflow.trace/v2
+realtime=11000
+%cpu=770
+cpu_model=Intel(R) Xeon(R) Platinum 8358P CPU @ 2.60GHz
+rchar=38494627
+wchar=167358275
+syscr=2069
+syscw=45
+read_bytes=38428672
+write_bytes=4096
+%mem=1
+vmem=701452
+rss=664588
+peak_vmem=701456
+peak_rss=664588
+vol_ctxt=143
+inv_ctxt=489

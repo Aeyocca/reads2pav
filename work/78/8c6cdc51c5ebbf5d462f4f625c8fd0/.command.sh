@@ -1,2 +1,0 @@
-#!/bin/bash -euo pipefail
-echo [runName:hungry_hoover, launchDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav, workDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav/work, projectDir:/cluster/home/ayocca/03_RGE/12_reads2pav/readstopav, userName:ayocca, profile:standard, configFiles:]

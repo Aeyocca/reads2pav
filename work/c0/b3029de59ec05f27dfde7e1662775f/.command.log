@@ -1,0 +1,22 @@
+INFO:    Converting SIF file to temporary sandbox...
+2023-12-27T13:58:03 prefetch.3.0.8: Current preference is set to retrieve SRA Normalized Format files with full base quality scores.
+2023-12-27T13:58:03 prefetch.3.0.8: 1) Downloading 'ERR11202896'...
+2023-12-27T13:58:03 prefetch.3.0.8: SRA Normalized Format file is being retrieved, if this is different from your preference, it may be due to current file availability.
+2023-12-27T13:58:03 prefetch.3.0.8:  Downloading via HTTPS...
+2023-12-27T13:58:05 prefetch.3.0.8:  HTTPS download succeed
+2023-12-27T13:58:06 prefetch.3.0.8:  'ERR11202896' is valid
+2023-12-27T13:58:06 prefetch.3.0.8: 1) 'ERR11202896' was downloaded successfully
+2023-12-27T13:58:06 prefetch.3.0.8: 'ERR11202896' has 0 unresolved dependencies
+
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Database 'ERR11202896.sra' metadata: md5 ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Table 'SEQUENCE' metadata: md5 ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'ALTREAD': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'ORIGINAL_QUALITY': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'READ': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'READ_LEN': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'READ_START': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'SPOT_GROUP': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'X': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Column 'Y': checksums ok
+2023-12-27T13:58:06 vdb-validate.3.0.8 info: Database 'ERR11202896.sra' is consistent
+INFO:    Cleaning up image...
