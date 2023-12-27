@@ -28,7 +28,7 @@ genome_ch = Channel
 // sizes = Channel.fromPath("test/Athal_chr1.fasta.fai")
 extension = "genomecov"
 sort_bam = true
-
+sizes = [] //unnecessary since feeding genomecov a bam file
 
 workflow {
     ch_versions = Channel.empty()
@@ -47,7 +47,7 @@ workflow {
     BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
     ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
     
-    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, faidx_input, extension)
+    BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
     ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
     
     CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov)
