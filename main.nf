@@ -44,7 +44,7 @@ workflow {
     
     // split each reads channel by chromosome
     
-    BWA_IDX_BY_CHR.chr_out.view() // has all the indexed genomes.. I hope
+    BWA_IDX_BY_CHR.out.chr_out.view() // has all the indexed genomes.. I hope
      
     // BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
