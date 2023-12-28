@@ -17,7 +17,7 @@ include { CALC_PAV           } from './modules/local/calc_pav/main'
 
 index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
-    .of(params.ref_genome)
+    .fromFile(params.ref_genome)
 
 extension = "genomecov"
 sort_bam = true
