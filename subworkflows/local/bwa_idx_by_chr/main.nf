@@ -18,7 +18,10 @@ process SPLIT_FASTA {
     
     echo ${output}
     echo ${chr_string}
-    subset_fa.pl -f ${params.ref_genome} -s ${chr_string} -o ${output}
+    subset_fa.pl \\
+    -f ${params.ref_genome} \\
+    -s ${chr_string} \\
+    -o ${params.ref_genome}_${chr_string}
     
     """
 }
