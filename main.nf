@@ -17,7 +17,7 @@ include { CALC_PAV           } from './modules/local/calc_pav/main'
 
 index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
-    .of([meta : [], ref_genome : file(params.ref_genome)])
+    .of(params.ref_genome)
 
 extension = "genomecov"
 sort_bam = true
@@ -37,7 +37,7 @@ workflow {
     
     // write your own bwa subworkflow to split by chromosome...
     
-    BWA_IDX_BY_CHR(chrom_ch)
+    BWA_IDX_BY_CHR(genome_ch, chrom_ch)
     
     // BWAMEM2_INDEX( index_input )
     // ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)

@@ -4,6 +4,7 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
+    val(genome)
     val(chr)
 
     output:
@@ -13,14 +14,14 @@ process SPLIT_FASTA {
     // output = chr[0].ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     // chr_string = chr[1].replaceAll(/[/, "").replaceAll(/]/, "")
     
-    output = params.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
+    output = genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     // clean_genome = output.replaceFirst(/\.fasta/,"_${chr}.fasta")
-    // chr_string = chr[0]
+    chr_string = chr.replaceAll(/[/, "").replaceAll(/]/, "")
     """
     
     echo ${output}
-    echo ${chr}
-    split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
+    echo ${chr_string}
+    subset_fa.pl -f ${params.ref_genome} -s ${chr_string} -o ${output}
     
     """
 }
@@ -29,12 +30,13 @@ process SPLIT_FASTA {
 workflow BWA_IDX_BY_CHR {
 
     take:
+    genome_ch
     chrom_ch
 
     main:
     ch_versions = Channel.empty()
     
-    SPLIT_FASTA(chrom_ch)
+    SPLIT_FASTA(genome_ch,chrom_ch)
     
     BWAMEM2_INDEX(SPLIT_FASTA.output)
     
