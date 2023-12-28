@@ -35,6 +35,6 @@ workflow BWA_IDX_BY_CHR {
     // split genome by chromosome and index each
 
     emit:
-    chr_out = BWAMEM2_INDEX.out.fasta
+    chr_out = BWAMEM2_INDEX.out.index
     
 }
