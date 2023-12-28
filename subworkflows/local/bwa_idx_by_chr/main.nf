@@ -19,7 +19,7 @@ process SPLIT_FASTA {
     """
     
     echo ${output}
-    echo ${chr_string}
+    echo ${chr}
     split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
     
     """
