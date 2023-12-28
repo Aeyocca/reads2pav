@@ -27,7 +27,7 @@ sizes = []
 
 chrom_ch = Channel
     .fromPath( params.chrom_list )
-    .splitCsv(header: false).view()
+    .splitCsv(header: false)
 
 workflow {
     ch_versions = Channel.empty()
