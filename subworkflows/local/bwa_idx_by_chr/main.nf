@@ -14,12 +14,13 @@ process SPLIT_FASTA {
     // chr_string = chr[1].replaceAll(/[/, "").replaceAll(/]/, "")
     
     output = chr[0].ref_genome
-    clean_genome = output.replaceFirst(/\.fasta/,"_${chr}.fasta")
+    // clean_genome = output.replaceFirst(/\.fasta/,"_${chr}.fasta")
     chr_string = chr[1]
     """
     
     echo ${output}
-    split_fa.pl -f chr[0].ref_genome -s ${chr_string} -o ${clean_genome}
+    echo ${chr_string}
+    split_fa.pl -f chr[0].ref_genome -s ${chr_string} -o ${output}
     
     """
 }
