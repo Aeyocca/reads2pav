@@ -26,7 +26,7 @@ workflow BWA_IDX_BY_CHR {
     main:
     ch_versions = Channel.empty()
     
-    chr_idx = index_input.join(chrom_ch)
+    chr_idx = index_input.combine(chrom_ch)
     
     SPLIT_FASTA(chr_idx)
     

@@ -36,6 +36,7 @@ workflow {
     ch_versions = ch_versions.mix(FETCHNGS.out.versions)
     
     // write your own bwa subworkflow to split by chromosome...
+    
     BWA_IDX_BY_CHR(index_input, chrom_ch)
     
     // BWAMEM2_INDEX( index_input )
