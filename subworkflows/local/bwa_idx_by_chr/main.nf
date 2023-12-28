@@ -16,7 +16,7 @@ process SPLIT_FASTA {
     
     output = genome[0].replaceFirst(/\.fasta/,"_${chr}.fasta")
     // clean_genome = output.replaceFirst(/\.fasta/,"_${chr}.fasta")
-    chr_string = chr[0].replaceAll(/[/, "").replaceAll(/]/, "")
+    chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
     """
     
     echo ${output}
