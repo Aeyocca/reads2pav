@@ -4,10 +4,10 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    val(chr) from chr_idx
+    val(chr)
 
     output:
-    path "output" into chromosome_output
+    path(output)
 
     script:
     output = params.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
