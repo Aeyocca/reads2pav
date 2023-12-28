@@ -15,7 +15,7 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
 include { CALC_PAV           } from './modules/local/calc_pav/main'
 
-def index_input = [meta : [], ref_genome : file( params.ref_genome )]
+index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
     .of([meta : [], ref_genome : file(params.ref_genome)])
 
@@ -27,7 +27,7 @@ sizes = []
 
 chrom_ch = Channel
     .fromPath( params.chrom_list )
-    .splitCsv(header: false)
+    .splitCsv(header: false).view()
 
 workflow {
     ch_versions = Channel.empty()
