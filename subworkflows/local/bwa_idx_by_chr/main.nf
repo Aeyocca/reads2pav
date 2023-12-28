@@ -10,14 +10,14 @@ process SPLIT_FASTA {
     path(output)
 
     script:
-    // output = ${chr[0]}.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
-    // chr_string = ${chr[1]}.replaceAll(/[/, "").replaceAll(/]/, "")
+    output = chr[0].ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
+    // chr_string = chr[1].replaceAll(/[/, "").replaceAll(/]/, "")
     
-    output = chr[0].ref_genome
+    chr_string = chr[1]
     """
     
     echo ${output}
-    #split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
+    #split_fa.pl -f params.ref_genome -s ${chr_string} -o ${output}
     
     """
 }
