@@ -13,7 +13,7 @@ process SPLIT_FASTA {
     // output = ${chr[0]}.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     // chr_string = ${chr[1]}.replaceAll(/[/, "").replaceAll(/]/, "")
     
-    output = chr[0]
+    output = chr[0].ref_genome
     """
     
     echo ${output}
