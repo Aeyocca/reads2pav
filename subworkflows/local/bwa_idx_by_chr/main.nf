@@ -12,6 +12,8 @@ process SPLIT_FASTA {
     script:
     output = params.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     """
+    echo ${chr.ref_genome}
+    echo ${chr[1]}
     split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
     """
 }
