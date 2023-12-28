@@ -13,14 +13,14 @@ process SPLIT_FASTA {
     // output = chr[0].ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     // chr_string = chr[1].replaceAll(/[/, "").replaceAll(/]/, "")
     
-    output = chr[0].ref_genome
+    output = params.ref_genome.replaceFirst(/\.fasta/,"_${chr}.fasta")
     // clean_genome = output.replaceFirst(/\.fasta/,"_${chr}.fasta")
-    chr_string = chr[1]
+    // chr_string = chr[0]
     """
     
     echo ${output}
     echo ${chr_string}
-    split_fa.pl -f chr[0].ref_genome -s ${chr_string} -o ${output}
+    split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
     
     """
 }
@@ -29,15 +29,12 @@ process SPLIT_FASTA {
 workflow BWA_IDX_BY_CHR {
 
     take:
-    index_input
     chrom_ch
 
     main:
     ch_versions = Channel.empty()
     
-    chr_idx = index_input.combine(chrom_ch)
-    
-    SPLIT_FASTA(chr_idx)
+    SPLIT_FASTA(chrom_ch)
     
     BWAMEM2_INDEX(SPLIT_FASTA.output)
     
