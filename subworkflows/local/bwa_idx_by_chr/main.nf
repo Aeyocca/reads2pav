@@ -30,7 +30,7 @@ workflow BWA_IDX_BY_CHR {
     
     SPLIT_FASTA(chr_idx)
     
-    BWAMEM2_INDEX(SPLIT_FASTA.chromosome_output)
+    BWAMEM2_INDEX(SPLIT_FASTA.output)
     
     // split genome by chromosome and index each
 
