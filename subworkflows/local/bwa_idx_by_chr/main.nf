@@ -14,7 +14,6 @@ process SPLIT_FASTA {
     chr_string = ${chr[1]}.replaceAll(/[/, "").replaceAll(/]/, "")
     """
     echo ${chr[0].ref_genome}
-    echo ${chr_string}
     split_fa.pl -f params.ref_genome -s ${chr} -o ${output}
     """
 }
