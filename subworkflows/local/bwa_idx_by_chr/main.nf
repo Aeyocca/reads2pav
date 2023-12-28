@@ -8,11 +8,10 @@ process SPLIT_FASTA {
     val(chr)
 
     output:
-    path(output)
+    path(${params.ref_genome}_${chr_string})
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
-    output = genome.replaceFirst(/\.fasta/,"_${chr_string}.fasta")
     
     """
     
