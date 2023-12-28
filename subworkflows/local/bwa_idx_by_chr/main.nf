@@ -4,7 +4,7 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    val(chr) from chr_channel
+    val(chr) from chr_idx
 
     output:
     path "output" into chromosome_output
