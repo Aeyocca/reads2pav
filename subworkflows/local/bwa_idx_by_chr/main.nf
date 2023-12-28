@@ -8,10 +8,11 @@ process SPLIT_FASTA {
     val(chr)
 
     output:
-    ${params.ref_genome}_${chr_string}
+    output
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
+    def output = ${params.ref_genome}_${chr_string}
     
     """
     
@@ -20,7 +21,7 @@ process SPLIT_FASTA {
     subset_fa.pl \\
     -f ${params.ref_genome} \\
     -s ${chr_string} \\
-    -o ${params.ref_genome}_${chr_string}
+    -o ${output}
     
     """
 }
