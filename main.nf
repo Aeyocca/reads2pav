@@ -56,7 +56,7 @@ workflow {
     
     BWAMEM2_PER_CHR(reads_per_chrom_ch)
     
-    BWAMEM2_PER_CHR.out.bam.view()
+    // BWAMEM2_PER_CHR.out.bam.view()
     
     // BWAMEM2_MEM( FETCHNGS.out.reads , BWA_IDX_BY_CHR.out.chr_out, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
