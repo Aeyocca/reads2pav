@@ -19,11 +19,6 @@ process SPLIT_FASTA {
     
     mkdir split_genome
     
-    #subset_fa.pl \\
-    #-f ${genome} \\
-    #-s ${chr_string} \\
-    #-o split_genome/${genome}.baseName_${chr_string}
-    
     """
 }
 
