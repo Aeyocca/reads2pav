@@ -28,6 +28,7 @@ workflow BWAMEM2_PER_CHR {
     // BWAMEM2_MEM(reads_per_chrom_ch[0] + reads_per_chrom_ch[2].id,sort_bam)
 
     emit:
-    chr_out = BWAMEM2_INDEX.out.index
+    // chr_out = BWAMEM2_MEM.out.bam
+    tmp = reads_per_chrom_ch
     
 }
