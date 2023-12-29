@@ -8,7 +8,7 @@ process SPLIT_FASTA {
     val(chr)
 
     output:
-    tuple val(meta), path("split_genome"), emit: split_genome
+    tuple val(meta), path("split_genome/*"), emit: split_genome
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
