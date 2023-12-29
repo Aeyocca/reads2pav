@@ -38,10 +38,10 @@ workflow BWA_IDX_BY_CHR {
     ch_versions = Channel.empty()
     
     // need to combine chrom and genome channels to properly parallelize, yes?
-    genome_ch.combine(chrom_ch)
+    chrom_ch.combine(genome_ch)
         .set{split_ch}
     
-    // split_ch.groupTuple().view()
+    split_ch.view()
     
     SPLIT_FASTA(split_ch)
     
