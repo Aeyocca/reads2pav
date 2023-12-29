@@ -22,7 +22,7 @@ process BWAMEM2_INDEX {
     def prefix = task.ext.prefix ?: "${fasta}"
     def args = task.ext.args ?: ''
     """
-    mkdir bwamem2/${prefix}/
+    mkdir -p bwamem2/${prefix}/
     bwa-mem2 \\
         index \\
         $args \\
