@@ -10,12 +10,10 @@ process SPLIT_FASTA {
     tuple val(genome_ch.meta), path("split_genome/*"), emit: split_genome
 
     script:
-    chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
+    chr_string = chr.replaceAll(/\[/, "").replaceAll(/\]/, "")
     // output = genome.baseName + "_" + chr_string
     
     """
-    
-    echo $genome_ch.meta
     
     mkdir split_genome
     
