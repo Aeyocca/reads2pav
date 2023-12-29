@@ -8,12 +8,13 @@ nextflow.enable.dsl = 2
 ========================================================================================
 */
 
-include { FETCHNGS           } from './subworkflows/nf-core/fetchngs'
-include { BWA_IDX_BY_CHR     } from './subworkflows/local/bwa_idx_by_chr/main'
-include { BWAMEM2_MEM        } from './modules/nf-core/bwamem2/mem/main'
-include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
-include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
-include { CALC_PAV           } from './modules/local/calc_pav/main'
+include { FETCHNGS            } from './subworkflows/nf-core/fetchngs'
+include { BWA_IDX_BY_CHR      } from './subworkflows/local/bwa_idx_by_chr/main'
+include { BWAMEM2_MEM         } from './modules/nf-core/bwamem2/mem/main'
+include { BEDTOOLS_GENOMECOV  } from './modules/nf-core/bedtools/genomecov/main'
+include { SETUP_READ_CHANNEL  } from './subworkflows/local/setup_read_channel'
+include { CALC_PAV            } from './modules/local/calc_pav/main'
+include { BWAMEM2_PER_CHR     } from './subworkflows/local/bwamem2_per_chr/main'
 
 // index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
@@ -53,7 +54,7 @@ workflow {
     // need to edit the id value, but then what is our index channel?!?
     // wrapper this as well
     
-    BWAMEM2_MEM_PER_CHR(reads_per_chrom_ch)
+    BWAMEM2_PER_CHR(reads_per_chrom_ch)
     
     // BWAMEM2_MEM( FETCHNGS.out.reads , BWA_IDX_BY_CHR.out.chr_out, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)

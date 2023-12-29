@@ -2,7 +2,7 @@
 
 include { BWAMEM2_MEM      } from '../../../modules/nf-core/bwamem2/mem/main'
 
-workflow BWAMEM2_MEM_PER_CHR {
+workflow BWAMEM2_PER_CHR {
 
     take:
     reads_per_chrom_ch
