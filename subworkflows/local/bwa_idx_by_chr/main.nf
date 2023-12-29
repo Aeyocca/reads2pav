@@ -15,7 +15,7 @@ process SPLIT_FASTA {
     
     """
     
-    echo $meta
+    echo $genome_ch.meta
     
     mkdir split_genome
     
