@@ -44,17 +44,17 @@ workflow {
     // ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)
     
     // split each reads channel by chromosome
-    reads_per_chrom_ch = BWA_IDX_BY_CHR.out.chr_out
-        .combine(FETCHNGS.out.reads)
-    reads_per_chrom_ch.view()
+    // reads_per_chrom_ch = BWA_IDX_BY_CHR.out.chr_out
+    //     .combine(FETCHNGS.out.reads)
+    // reads_per_chrom_ch.view()
     
     // how to feed this when it needs separate channel for reads / index?
     // BWAMEM2_PER_CHR(reads_per_chrom_ch)
     
     // I need a channel where the meta.id value is sra_id appended to chromosome
-    // 
+    // If I feed it multi-channel for each of these will it combine??
     
-    // BWAMEM2_MEM( FETCHNGS.out.reads , BWAMEM2_INDEX.out.index, sort_bam )
+    BWAMEM2_MEM( FETCHNGS.out.reads , BWA_IDX_BY_CHR.out.chr_out, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
     
     // BEDTOOLS_GENOMECOV(BWAMEM2_MEM.out.bam, sizes, extension)
