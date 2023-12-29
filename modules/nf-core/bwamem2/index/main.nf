@@ -37,12 +37,12 @@ process BWAMEM2_INDEX {
     def prefix = task.ext.prefix ?: "${fasta}"
 
     """
-    mkdir bwamem2
-    touch bwamem2/${prefix}.0123
-    touch bwamem2/${prefix}.ann
-    touch bwamem2/${prefix}.pac
-    touch bwamem2/${prefix}.amb
-    touch bwamem2/${prefix}.bwt.2bit.64
+    mkdir bwamem2/${prefix}/
+    touch bwamem2/${prefix}/${prefix}.0123
+    touch bwamem2/${prefix}/${prefix}.ann
+    touch bwamem2/${prefix}/${prefix}.pac
+    touch bwamem2/${prefix}/${prefix}.amb
+    touch bwamem2/${prefix}/${prefix}.bwt.2bit.64
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
