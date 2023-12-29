@@ -4,18 +4,18 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    tuple val(chr), val(meta), path(genome)
+    tuple val(chr), val(meta)
     
     output:
     tuple val(meta), path("split_genome/*"), emit: split_genome
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
-    output = genome.baseName + "_" + chr_string
+    // output = genome.baseName + "_" + chr_string
     
     """
     
-    echo $output
+    echo $meta
     
     mkdir split_genome
     
