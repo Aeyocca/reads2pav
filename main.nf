@@ -44,8 +44,8 @@ workflow {
     // ch_versions = ch_versions.mix(BWAMEM2_INDEX.out.versions)
     
     // split each reads channel by chromosome
-    BWA_IDX_BY_CHR.out.chr_out.combine(FETCHNGS.out.reads)
-        .set{reads_per_chrom_ch}
+    reads_per_chrom_ch = BWA_IDX_BY_CHR.out.chr_out
+        .combine(FETCHNGS.out.reads)
     reads_per_chrom_ch.view()
     
     // how to feed this when it needs separate channel for reads / index?
