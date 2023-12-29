@@ -46,7 +46,7 @@ workflow {
     // split each reads channel by chromosome
     reads_per_chrom_ch = BWA_IDX_BY_CHR.out.chr_out
         .combine(FETCHNGS.out.reads)
-    reads_per_chrom_ch.view()
+    // reads_per_chrom_ch.view()
     
     // how to feed this when it needs separate channel for reads / index?
     // BWAMEM2_PER_CHR(reads_per_chrom_ch)
