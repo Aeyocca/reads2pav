@@ -17,15 +17,15 @@ workflow BWAMEM2_PER_CHR {
     
     // can we just string concatenate?
     
-    reads_per_chrom_ch.map { meta ->
+    adjusted_ch = reads_per_chrom_ch.map { meta ->
             def dup = meta.clone()
             dup[2].id_chr = dup[2].id + "_" + dup[0]
             dup
-        }.set{adjusted_ch}
+        }
     
     // adjusted_ch.view()
     
-    BWAMEM2_MEM(adjusted_ch[2], [adjusted_ch[0], adjusted_ch[1]],sort_bam)
+    BWAMEM2_MEM(adjusted_ch)
 
     emit:
     bam = BWAMEM2_MEM.out.bam
