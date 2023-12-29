@@ -4,11 +4,11 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    path(genome)
+    tuple val(meta), path(genome)
     val(chr)
 
     output:
-    path("split_genome"), emit: split_genome
+    tuple val(meta), path("split_genome"), emit: split_genome
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
@@ -39,6 +39,8 @@ workflow BWA_IDX_BY_CHR {
     ch_versions = Channel.empty()
     
     SPLIT_FASTA(genome_ch,chrom_ch)
+    
+    // tuple val(meta), path(fasta)
     
     BWAMEM2_INDEX(SPLIT_FASTA.out.split_genome)
     

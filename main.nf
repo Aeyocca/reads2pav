@@ -15,9 +15,9 @@ include { BEDTOOLS_GENOMECOV } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL } from './subworkflows/local/setup_read_channel'
 include { CALC_PAV           } from './modules/local/calc_pav/main'
 
-index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
+// index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
-    .fromPath(params.ref_genome)
+    .of([meta : [], genome : file (params.ref_genome)])
 
 extension = "genomecov"
 sort_bam = true
