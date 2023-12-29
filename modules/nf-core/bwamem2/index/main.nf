@@ -11,7 +11,8 @@ process BWAMEM2_INDEX {
     tuple val(meta), path(fasta)
 
     output:
-    tuple val(meta), path("bwamem2/${fasta}*"), emit: index
+    tuple val(meta),  path("bwamem2") emit: index
+    path("bwamem2/${fasta}*")
     path "versions.yml"             , emit: versions
 
     when:
