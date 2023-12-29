@@ -4,7 +4,8 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    tuple val(chr), val(meta), path(genome)
+    val(chr)
+    tuple val(meta), path(genome)
 
     output:
     tuple val(meta), path("split_genome/*"), emit: split_genome
