@@ -48,6 +48,8 @@ workflow BWA_IDX_BY_CHR {
     BWAMEM2_INDEX(SPLIT_FASTA.out.split_genome)
     
     // split genome by chromosome and index each
+    
+    BWAMEM2_INDEX.out.split_genome.view()
 
     emit:
     chr_out = BWAMEM2_INDEX.out.index
