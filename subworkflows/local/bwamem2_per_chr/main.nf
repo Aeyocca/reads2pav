@@ -23,12 +23,11 @@ workflow BWAMEM2_PER_CHR {
             dup
         }.set{adjusted_ch}
     
-    adjusted_ch.view()
+    // adjusted_ch.view()
     
-    // BWAMEM2_MEM(reads_per_chrom_ch[0] + reads_per_chrom_ch[2].id,sort_bam)
+    BWAMEM2_MEM(adjusted_ch[2], [adjusted_ch[0], adjusted_ch[1]],sort_bam)
 
     emit:
-    // chr_out = BWAMEM2_MEM.out.bam
-    tmp = reads_per_chrom_ch
+    bam = BWAMEM2_MEM.out.bam
     
 }

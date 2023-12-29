@@ -12,3 +12,6 @@ bwa_index
 - had to create a sub directory for indexing different chromosomes
 - it was overwriting other indicies,
 - shouldn't each channel be executed in a separate directory??
+
+bwamem2_mem
+- read from id_chr value we create to map to chromosomes separately
