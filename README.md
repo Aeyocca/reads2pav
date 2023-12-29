@@ -15,3 +15,5 @@ bwa_index
 
 bwamem2_mem
 - read from id_chr value we create to map to chromosomes separately
+- handle the way we feed channels in for chromosome splitting
+- sort_bam always true

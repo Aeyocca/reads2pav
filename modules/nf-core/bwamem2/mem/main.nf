@@ -8,9 +8,10 @@ process BWAMEM2_MEM {
         'biocontainers/mulled-v2-e5d375990341c5aef3c9aff74f96f66f65375ef6:6351200f24497efba12c219c2bea4bb0f69a9d47-0' }"
 
     input:
-    tuple val(meta), path(reads)
-    tuple val(meta2), path(index)
-    val   sort_bam
+    // tuple val(meta), path(reads)
+    // tuple val(meta2), path(index)
+    // val   sort_bam
+    tuple val(chr), path(index), val(meta), path(reads)
 
     output:
     tuple val(meta), path("*.bam"), emit: bam
@@ -23,6 +24,7 @@ process BWAMEM2_MEM {
     def args = task.ext.args ?: ''
     def args2 = task.ext.args2 ?: ''
     def prefix = task.ext.prefix ?: "${meta.id_chr}"
+    def sort_bam = true
     def samtools_command = sort_bam ? 'sort' : 'view'
     """
     INDEX=`find -L ./ -name "*.amb" | sed 's/\\.amb\$//'`
