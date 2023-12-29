@@ -41,7 +41,9 @@ workflow BWA_IDX_BY_CHR {
     // genome_ch.combine(chrom_ch)
     //     .set{split_ch}
     
-    split_ch = Channel.groupTuple(genome_ch,chrom_ch).view()
+    split_ch = Channel.groupTuple(genome_ch,chrom_ch)
+    
+    split_ch.view()
     
     SPLIT_FASTA(split_ch)
     
