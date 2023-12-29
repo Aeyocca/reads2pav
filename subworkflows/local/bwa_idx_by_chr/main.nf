@@ -11,7 +11,7 @@ process SPLIT_FASTA {
 
     script:
     chr_string = chr.replaceAll(/\[/, "").replaceAll(/\]/, "")
-    // output = genome.baseName + "_" + chr_string
+    output = genome_ch.genome.baseName + "_" + chr_string
     
     """
     
