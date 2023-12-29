@@ -4,8 +4,7 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    tuple val(meta), path(genome)
-    val(chr)
+    tuple val(meta), path(genome), val(chr)
 
     output:
     tuple val(meta), path("split_genome/*"), emit: split_genome
@@ -39,12 +38,12 @@ workflow BWA_IDX_BY_CHR {
     ch_versions = Channel.empty()
     
     // need to combine chrom and genome channels to properly parallelize, yes?
-    // genome_ch.combine(chrom_ch)
-    //     .set{split_ch}
+    genome_ch.combine(chrom_ch)
+        .set{split_ch}
     
     // split_ch.groupTuple().view()
     
-    SPLIT_FASTA(genome_ch, chrom_ch)
+    SPLIT_FASTA(split_ch)
     
     // tuple val(meta), path(fasta)
     
