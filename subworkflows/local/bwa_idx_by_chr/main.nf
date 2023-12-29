@@ -20,7 +20,7 @@ process SPLIT_FASTA {
     subset_fa.pl \\
     -f ${genome} \\
     -s ${chr_string} \\
-    -o split_genome/${params.ref_genome}_${chr_string}
+    -o split_genome/${genome}.baseName_${chr_string}
     
     """
 }
