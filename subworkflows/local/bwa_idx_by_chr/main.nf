@@ -12,8 +12,11 @@ process SPLIT_FASTA {
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
+    output = genome.baseName + "_" + chr_string
     
     """
+    
+    echo $output
     
     mkdir split_genome
     
