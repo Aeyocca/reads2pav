@@ -18,8 +18,8 @@ workflow BWAMEM2_PER_CHR {
     // can we just string concatenate?
     
     reads_per_chrom_ch.map { meta ->
-            def dup = reads_per_chrom_ch[2].clone()
-            dup.id = reads_per_chrom_ch[2].id + reads_per_chrom_ch[0]
+            def dup = meta.clone()
+            dup[2].id = dup[2].id + dup[0]
             dup
         }.set{adjusted_ch}
     
