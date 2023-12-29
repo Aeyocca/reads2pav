@@ -39,7 +39,6 @@ workflow BWA_IDX_BY_CHR {
     
     // need to combine chrom and genome channels to properly parallelize, yes?
     chrom_ch.combine(genome_ch)
-        .flatten()
         .set{split_ch}
     
     split_ch.view()
