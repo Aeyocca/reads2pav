@@ -54,6 +54,7 @@ workflow BWA_IDX_BY_CHR {
     // BWAMEM2_INDEX.out.index.view()
 
     emit:
-    chr_out = BWAMEM2_INDEX.out.index
+    idx_out = BWAMEM2_INDEX.out.index
+    chr_out = chrom_ch
     
 }
