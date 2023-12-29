@@ -48,12 +48,12 @@ workflow {
     reads_per_chrom_ch = BWA_IDX_BY_CHR.out.idx_out
         .combine(FETCHNGS.out.reads)
     
-    reads_per_chrom_ch.view()
+    // reads_per_chrom_ch.view()
     
     // need to edit the id value, but then what is our index channel?!?
     // wrapper this as well
     
-    // BWAMEM2_MEM_PER_CHR(reads_per_chrom_ch)
+    BWAMEM2_MEM_PER_CHR(reads_per_chrom_ch)
     
     // BWAMEM2_MEM( FETCHNGS.out.reads , BWA_IDX_BY_CHR.out.chr_out, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
