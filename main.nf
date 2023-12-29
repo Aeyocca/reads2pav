@@ -45,7 +45,7 @@ workflow {
     
     // split each reads channel by chromosome
     // 
-    reads_per_chrom_ch = BWA_IDX_BY_CHR.out.chr_out
+    reads_per_chrom_ch = BWA_IDX_BY_CHR.out.idx_out
         .combine(FETCHNGS.out.reads)
     
     reads_per_chrom_ch.view()

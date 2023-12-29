@@ -7,7 +7,7 @@ process SPLIT_FASTA {
     tuple val(chr), val(genome_ch)
     
     output:
-    tuple val(genome_ch.meta), path("split_genome/*"), emit: split_genome
+    tuple val(chr), path("split_genome/*"), emit: split_genome
 
     script:
     chr_string = chr.replaceAll(/\[/, "").replaceAll(/\]/, "")
@@ -52,9 +52,9 @@ workflow BWA_IDX_BY_CHR {
     // split genome by chromosome and index each
     
     // BWAMEM2_INDEX.out.index.view()
-
+    
     emit:
     idx_out = BWAMEM2_INDEX.out.index
-    chr_out = chrom_ch
+    // chr_out = chrom_ch
     
 }
