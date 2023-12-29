@@ -16,8 +16,7 @@ process SPLIT_FASTA {
     """
     
     mkdir split_genome
-    echo ${output}
-    echo ${chr_string}
+    
     subset_fa.pl \\
     -f ${genome} \\
     -s ${chr_string} \\
