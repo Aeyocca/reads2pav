@@ -4,7 +4,7 @@ include { BWAMEM2_INDEX      } from '../../../modules/nf-core/bwamem2/index/main
 
 process SPLIT_FASTA {
     input:
-    path genome
+    path(genome)
     val(chr)
 
     output:
@@ -19,7 +19,7 @@ process SPLIT_FASTA {
     echo ${output}
     echo ${chr_string}
     subset_fa.pl \\
-    -f ${params.ref_genome} \\
+    -f ${genome} \\
     -s ${chr_string} \\
     -o split_genome/${params.ref_genome}_${chr_string}
     
