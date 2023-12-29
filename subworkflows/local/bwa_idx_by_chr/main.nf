@@ -8,20 +8,21 @@ process SPLIT_FASTA {
     val(chr)
 
     output:
-    output
+    path("split_genome"), emit: split_genome
 
     script:
     chr_string = chr[0].replaceAll(/\[/, "").replaceAll(/\]/, "")
-    def output = ${params.ref_genome}_${chr_string}
+    output = ${params.ref_genome}_${chr_string}
     
     """
     
+    mkdir split_genome
     echo ${output}
     echo ${chr_string}
     subset_fa.pl \\
     -f ${params.ref_genome} \\
     -s ${chr_string} \\
-    -o ${output}
+    -o split_genome/${output}
     
     """
 }
@@ -38,7 +39,7 @@ workflow BWA_IDX_BY_CHR {
     
     SPLIT_FASTA(genome_ch,chrom_ch)
     
-    BWAMEM2_INDEX(SPLIT_FASTA.output)
+    BWAMEM2_INDEX(SPLIT_FASTA.out.split_genome)
     
     // split genome by chromosome and index each
 
