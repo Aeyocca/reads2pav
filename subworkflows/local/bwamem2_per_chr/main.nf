@@ -24,7 +24,8 @@ workflow BWAMEM2_PER_CHR {
     //    }
     
      adjusted_ch = reads_per_chrom_ch.map { meta ->
-            meta[4].id_chr = meta[2].id + "_" + meta[0]
+            meta[4] = meta[2].id + "_" + meta[0]
+            meta[2].id_chr = meta[4]
             meta
         }
     adjusted_ch.view()
