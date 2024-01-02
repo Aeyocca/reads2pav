@@ -74,9 +74,9 @@ workflow {
     // lets make this two separate tasks incase we have a single failed case
     
     // need to make a channel that is a list of CALC_PAV output files by meta.id
-    CALC_PAV.out.flatMap { sample, files ->
+    CALC_PAV.out.pav_output.flatMap { sample, files ->
         files
-            .groupBy { it }
+            .groupBy { extension }
             .collect { key, values ->
                 def cov_files = values.find { it.baseName.startsWith("${key}") }
             tuple( sample, cov_files )
