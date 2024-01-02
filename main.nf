@@ -79,6 +79,7 @@ workflow {
         file_list = meta[1]
         [sample_id, file_list] }
         .collect()
+        .groupTuple()
         .view()
     
     // pav_samples = CALC_PAV.out.pav_output
