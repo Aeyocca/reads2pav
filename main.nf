@@ -50,7 +50,7 @@ workflow {
         .combine(FETCHNGS.out.reads)
         .unique()
     
-    reads_per_chrom_ch.view()
+    // reads_per_chrom_ch.view()
     
     // need to edit the id value, but then what is our index channel?!?
     // wrapper this as well
