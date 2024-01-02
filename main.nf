@@ -74,14 +74,11 @@ workflow {
     // lets make this two separate tasks incase we have a single failed case
     
     // need to make a channel that is a list of CALC_PAV output files by meta.id
-    CALC_PAV.out.pav_output.flatMap { sample, files ->
-        files
-            .groupBy { it }
-            .collect { key, values ->
-                def cov_files = values.find { it.baseName.startsWith("${key}") }
-            tuple( sample, cov_files )
-        }
-    }.view()
+    CALC_PAV.out.pav_output.flatMap { by_id ->
+        meta[3] = meta[0].id
+        meta[4] = meta[1]
+        meta }
+        .view()
     
     // pav_samples = CALC_PAV.out.pav_output
     //     .join()
