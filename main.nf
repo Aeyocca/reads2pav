@@ -78,6 +78,7 @@ workflow {
         sample_id = meta[0].id
         file_list = meta[1]
         [sample_id, file_list] }
+        .collect()
         .view()
     
     // pav_samples = CALC_PAV.out.pav_output
