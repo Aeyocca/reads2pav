@@ -67,7 +67,7 @@ workflow {
     BEDTOOLS_GENOMECOV(BWAMEM2_PER_CHR.out.bam, sizes, extension)
     // ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
     
-    // CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov, file(params.ref_bed))
+    CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov, file(params.ref_bed))
     // ch_versions = ch_versions.mix(CALC_PAV.out.versions)
     
 }

@@ -4,7 +4,7 @@ process CALC_PAV {
     label 'error_retry'
     
     input:
-    tuple val(meta), path(genomecov)
+    tuple val(meta), path(genomecov), val(id_chr)
     path(ref_bed)
     
     output:
@@ -12,7 +12,7 @@ process CALC_PAV {
     path  "versions.yml"           , emit: versions
     
     script:
-    def prefix = task.ext.prefix ?: "${meta.id}"
+    def prefix = task.ext.prefix ?: "${id_chr}"
     """
     
     calc_pav.py --input ${genomecov} --bed ${ref_bed} \\
