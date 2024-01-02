@@ -70,5 +70,16 @@ workflow {
     CALC_PAV(BEDTOOLS_GENOMECOV.out.genomecov, file(params.ref_bed))
     // ch_versions = ch_versions.mix(CALC_PAV.out.versions)
     
+    // combine pav tables across chromosomes and samples?
+    // lets make this two separate tasks incase we have a single failed case
+    
+    // need to make a channel that is a list of CALC_PAV output files by meta.id
+    pav_samples = CALC_PAV.out.pav_output
+        .join()
+        .view()
+    
+    // MERGE_CHR(CALC_PAV.out.pav_output)
+    
+    // MERGE_SAMPLES(MERGE_CHR.out.samples)
 }
 
