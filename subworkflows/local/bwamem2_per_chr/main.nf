@@ -27,7 +27,7 @@ workflow BWAMEM2_PER_CHR {
             meta[2].id_chr = meta[2].id + "_" + meta[0]
             meta
         }
-    adjusted_ch.view()
+    reads_per_chrom_ch.view()
     
     BWAMEM2_MEM(adjusted_ch)
 
