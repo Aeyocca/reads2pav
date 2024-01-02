@@ -27,7 +27,7 @@ workflow BWAMEM2_PER_CHR {
             meta[4] = meta[2].id + "_" + meta[0]
             meta
         }
-    adjusted_ch.view()
+    // adjusted_ch.view()
     
     BWAMEM2_MEM(adjusted_ch)
 
