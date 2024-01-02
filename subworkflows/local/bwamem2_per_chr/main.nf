@@ -23,7 +23,7 @@ workflow BWAMEM2_PER_CHR {
             dup
         }
     
-    // adjusted_ch.view()
+    adjusted_ch.view()
     
     BWAMEM2_MEM(adjusted_ch)
 
