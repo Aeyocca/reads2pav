@@ -78,9 +78,11 @@ workflow {
         sample_id = meta[0].id
         split_file = meta[1]
         [sample_id, split_file] }
-        .collect()
-        .groupTuple(by: 0)
-        .view()
+    .view()
+    
+    //     .collect()
+    //     .groupTuple(by: 0)
+    //     .view()
     
     // pav_samples = CALC_PAV.out.pav_output
     //     .join()
