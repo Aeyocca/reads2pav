@@ -11,10 +11,10 @@ process BWAMEM2_MEM {
     // tuple val(meta), path(reads)
     // tuple val(meta2), path(index)
     // val   sort_bam
-    tuple val(chr), path(index), val(meta), path(reads)
+    tuple val(chr), path(index), val(meta), path(reads), val(id_chr)
 
     output:
-    tuple val(meta), path("*.bam"), emit: bam
+    tuple val(meta), path("*.bam"), val(id_chr), emit: bam
     path  "versions.yml"          , emit: versions
 
     when:
@@ -23,7 +23,7 @@ process BWAMEM2_MEM {
     script:
     def args = task.ext.args ?: ''
     def args2 = task.ext.args2 ?: ''
-    def prefix = task.ext.prefix ?: "${meta.id_chr}"
+    def prefix = task.ext.prefix ?: "${id_chr}"
     def sort_bam = true
     def samtools_command = sort_bam ? 'sort' : 'view'
     """
@@ -45,7 +45,7 @@ process BWAMEM2_MEM {
     """
 
     stub:
-    def prefix = task.ext.prefix ?: "${meta.id_chr}"
+    def prefix = task.ext.prefix ?: "${id_chr}"
     """
     touch ${prefix}.bam
     cat <<-END_VERSIONS > versions.yml
