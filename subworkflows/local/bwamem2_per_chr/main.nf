@@ -24,9 +24,8 @@ workflow BWAMEM2_PER_CHR {
     //    }
     
      adjusted_ch = reads_per_chrom_ch.map { meta ->
-            def dup = meta.clone()
-            dup[2].id_chr = dup[0]
-            dup
+            meta[2].id_chr = meta[0]
+            meta
         }
     adjusted_ch.view()
     
