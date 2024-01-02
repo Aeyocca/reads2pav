@@ -61,6 +61,8 @@ workflow {
     // BWAMEM2_MEM( FETCHNGS.out.reads , BWA_IDX_BY_CHR.out.chr_out, sort_bam )
     // ch_versions = ch_versions.mix(BWAMEM2_MEM.out.versions)
     
+    BWAMEM2_PER_CHR.out.bam.view()
+    
     BEDTOOLS_GENOMECOV(BWAMEM2_PER_CHR.out.bam, sizes, extension)
     // ch_versions = ch_versions.mix(BEDTOOLS_GENOMECOV.out.versions)
     
