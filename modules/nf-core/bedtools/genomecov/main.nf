@@ -1,5 +1,5 @@
 process BEDTOOLS_GENOMECOV {
-    tag "$meta.id"
+    tag "$meta.id_chr"
     label 'process_single'
 
     conda "${moduleDir}/environment.yml"
@@ -28,7 +28,7 @@ process BEDTOOLS_GENOMECOV {
     //     args += " -bg"
     // }
 
-    def prefix = task.ext.prefix ?: "${meta.id}"
+    def prefix = task.ext.prefix ?: "${meta.id_chr}"
     if (intervals.name =~ /\.bam/) {
         """
         bedtools \\

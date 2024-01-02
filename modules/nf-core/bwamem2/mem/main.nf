@@ -1,5 +1,5 @@
 process BWAMEM2_MEM {
-    tag "$meta.id"
+    tag "$meta.id_chr"
     label 'process_high'
 
     conda "${moduleDir}/environment.yml"
