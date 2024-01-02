@@ -9,12 +9,12 @@ process BEDTOOLS_GENOMECOV {
 
     input:
     // tuple val(meta), path(intervals), val(scale)
-    tuple val(meta), path(intervals)
+    tuple val(meta), path(intervals), val(id_chr)
     path  sizes
     val   extension
 
     output:
-    tuple val(meta), path("*.${extension}"), emit: genomecov
+    tuple val(meta), path("*.${extension}"), val(id_chr), emit: genomecov
     path  "versions.yml"                   , emit: versions
 
     when:
@@ -28,7 +28,7 @@ process BEDTOOLS_GENOMECOV {
     //     args += " -bg"
     // }
 
-    def prefix = task.ext.prefix ?: "${meta.id_chr}"
+    def prefix = task.ext.prefix ?: "${id_chr}"
     if (intervals.name =~ /\.bam/) {
         """
         bedtools \\
@@ -59,7 +59,7 @@ process BEDTOOLS_GENOMECOV {
     }
 
     stub:
-    def prefix = task.ext.prefix ?: "${meta.id}"
+    def prefix = task.ext.prefix ?: "${id_chr}"
     """
     touch  ${prefix}.${extension}
 
