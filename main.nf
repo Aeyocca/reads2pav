@@ -49,7 +49,7 @@ workflow {
     reads_per_chrom_ch = BWA_IDX_BY_CHR.out.idx_out
         .combine(FETCHNGS.out.reads)
     
-    // reads_per_chrom_ch.view()
+    reads_per_chrom_ch.view()
     
     // need to edit the id value, but then what is our index channel?!?
     // wrapper this as well
