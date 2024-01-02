@@ -75,9 +75,9 @@ workflow {
     
     // need to make a channel that is a list of CALC_PAV output files by meta.id
     CALC_PAV.out.pav_output.flatMap { meta ->
-        meta[3] = meta[0].id
-        meta[4] = meta[1]
-        meta }
+        sample_id = meta[0].id
+        file_list = meta[1]
+        [sample_id, file_list] }
         .view()
     
     // pav_samples = CALC_PAV.out.pav_output
