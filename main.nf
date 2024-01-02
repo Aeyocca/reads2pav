@@ -80,7 +80,6 @@ workflow {
         [sample_id, file_list] }
         .collect()
         .collate(2)
-        .groupTuple()
         .view()
     
     // pav_samples = CALC_PAV.out.pav_output
