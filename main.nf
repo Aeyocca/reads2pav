@@ -79,6 +79,7 @@ workflow {
         file_list = meta[1]
         [sample_id, file_list] }
         .collect()
+        .collate(2)
         .groupTuple()
         .view()
     
