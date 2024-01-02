@@ -76,7 +76,7 @@ workflow {
     // need to make a channel that is a list of CALC_PAV output files by meta.id
     CALC_PAV.out.pav_output.flatMap { sample, files ->
         files
-            .groupBy { extension }
+            .groupBy { it }
             .collect { key, values ->
                 def cov_files = values.find { it.baseName.startsWith("${key}") }
             tuple( sample, cov_files )
