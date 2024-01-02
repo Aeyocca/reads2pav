@@ -8,7 +8,7 @@ process CALC_PAV {
     path(ref_bed)
     
     output:
-    tuple val(meta), path("*.pav.txt"), emit: pav_output
+    tuple val(meta), path("*.pav.txt"), val(id_chr), emit: pav_output
     path  "versions.yml"           , emit: versions
     
     script:
