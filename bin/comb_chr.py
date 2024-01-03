@@ -21,7 +21,7 @@ args = parser.parse_args()
 
 out_dict = dict()
 
-for file in file_list.split(", "):
+for file in file_list.split(","):
 	with open(file) as fh:
 		next(fh)
 		for line in fh:

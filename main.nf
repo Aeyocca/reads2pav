@@ -15,6 +15,7 @@ include { BEDTOOLS_GENOMECOV  } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL  } from './subworkflows/local/setup_read_channel'
 include { CALC_PAV            } from './modules/local/calc_pav/main'
 include { BWAMEM2_PER_CHR     } from './subworkflows/local/bwamem2_per_chr/main'
+include { MERGE_PAV           } from './subworkflows/local/merge_pav/main'
 
 // index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel
@@ -74,7 +75,7 @@ workflow {
     // lets make this two separate tasks incase we have a single failed case
     
     // need to make a channel that is a list of CALC_PAV output files by meta.id
-    CALC_PAV.out.pav_output.map { meta ->
+    sample_ch = CALC_PAV.out.pav_output.map { meta ->
         sample_id = meta[0].id
         split_file = meta[1]
         [sample_id, split_file] }
@@ -89,7 +90,9 @@ workflow {
     //     .join()
     //     .view()
     
-    // MERGE_CHR(CALC_PAV.out.pav_output)
+    MERGE_PAV(CALC_PAV.out.pav_output)
+    
+    // I think within the above subworkflow we will merge each sample into a single output file
     
     // MERGE_SAMPLES(MERGE_CHR.out.samples)
 }
