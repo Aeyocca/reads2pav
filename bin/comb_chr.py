@@ -24,7 +24,9 @@ out_dict = dict()
 
 fl_clean = str(args.file_list).replace("[","").replace("]","")
 
-sys.exit(fl_clean)
+fl_list = fl_clean.strip().split()
+
+sys.exit(fl_list)
 
 for file in file_list.split(","):
 	with open(file) as fh:
