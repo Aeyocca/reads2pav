@@ -56,7 +56,7 @@ workflow MERGE_PAV {
     COMB_SAMPLES(all_ch)
     
     emit:
-    COMB_SAMPLES.out.final_out = final_out
+    // COMB_SAMPLES.out.final_out = final_out
     versions = ch_versions
     
 }
