@@ -1,27 +1,23 @@
 #!/usr/bin/env nextflow
 
-process SPLIT_FASTA {
+process COMB_CHR {
+
     input:
-    tuple val(chr), val(genome_ch)
-    
+    tuple val(id), val(file_list)
+
     output:
-    tuple val(chr), path("split_genome/*"), emit: split_genome
+    tuple path("*_comb_chr_pav.txt"), emit: comb_chr
 
     script:
-    chr_string = chr.replaceAll(/\[/, "").replaceAll(/\]/, "")
-    output = genome_ch.genome.baseName + "_" + chr_string
     
     """
     
-    mkdir split_genome
-    
-    subset_fa.pl \\
-    -f ${genome_ch.genome} \\
-    -s ${chr_string} \\
-    -o split_genome/${output}
+    comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
     
     """
+
 }
+
 
 workflow MERGE_PAV {
 
