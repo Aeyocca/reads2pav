@@ -36,7 +36,7 @@ with open(args.output, 'w') as out:
 	for feature in out_dict.keys():
 		tmp = out.write(feature + "\t")
 		#if a single sample was provided, outputting is different
-		if len(out_dict[feature] == 1):
+		if len(out_dict[feature]) == 1:
 			tmp = out.write(out_dict[feature] + "\n")
 		else:
 			for column in out_dict[feature][:-1]:
