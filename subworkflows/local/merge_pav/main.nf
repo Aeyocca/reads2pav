@@ -10,7 +10,7 @@ process COMB_CHR {
 
     script:
     
-    file_list_string = "${file_list}".join(",")
+    file_list_string = ${file_list.code.join(",")
     """
     
     echo $file_list_string
