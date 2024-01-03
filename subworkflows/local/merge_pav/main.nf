@@ -6,17 +6,15 @@ process COMB_CHR {
     tuple val(id), val(file_list)
 
     output:
-    path  "versions.yml"                   , emit: versions
+    path("*_comb_chr_pav.txt"), emit: comb_chr
+   //  path  "versions.yml"                   , emit: versions
 
     script:
     // split spaces from the file_list tuple
     def file_list_string = file_list.join(',')
     
     """
-    echo $file_list
-    echo $file_list_string
-    
-    #comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
+    comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
     """
 
 }
@@ -34,6 +32,7 @@ workflow MERGE_PAV {
     COMB_CHR(sample_ch)
     
     emit:
+    COMB_CHR.out.comb_chr = comb_chr
     versions = ch_versions
     
 }

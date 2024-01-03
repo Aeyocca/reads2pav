@@ -1,5 +1,5 @@
 process CALC_PAV {
-    tag "$meta.id"
+    tag "$id_chr"
     label 'process_low'
     label 'error_retry'
     
@@ -9,7 +9,7 @@ process CALC_PAV {
     
     output:
     tuple val(meta), path("*.pav.txt"), val(id_chr), emit: pav_output
-    path  "versions.yml"           , emit: versions
+    // path  "versions.yml"           , emit: versions
     
     script:
     def prefix = task.ext.prefix ?: "${id_chr}"
@@ -20,9 +20,5 @@ process CALC_PAV {
     --cov_threshold ${params.cov_threshold} \\
     --output ${prefix}.pav.txt
     
-    cat <<-END_VERSIONS > versions.yml
-    "${task.process}":
-        curl: \$(echo \$(curl --version | head -n 1 | sed 's/^curl //; s/ .*\$//'))
-    END_VERSIONS
     """
 }

@@ -80,7 +80,6 @@ workflow {
         split_file = meta[1]
         [sample_id, split_file] }
     .groupTuple()
-    .view()
     
     //     .collect()
     //     .groupTuple(by: 0)
@@ -91,6 +90,8 @@ workflow {
     //     .view()
     
     MERGE_PAV(CALC_PAV.out.pav_output)
+    
+    MERGE_PAV.out.comb_chr.view()
     
     // I think within the above subworkflow we will merge each sample into a single output file
     
