@@ -29,6 +29,9 @@ workflow MERGE_PAV {
     ch_versions = Channel.empty()
     
     // combine split chromosomes into a single file
+    
+    sample_ch.view()
+    
     COMB_CHR(sample_ch)
     
     emit:
