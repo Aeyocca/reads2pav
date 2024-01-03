@@ -3,11 +3,7 @@
 #01-02-24
 #comb_chr.py
 
-#Take orthofinder output and count number of elements in each orthogroup
-#also format output for CAFE5 count data format
-
 import argparse
-import sys
 
 parser = argparse.ArgumentParser(prog='PROG')
 parser.add_argument('--file_list', required=True, help='list of pav files')

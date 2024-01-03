@@ -18,6 +18,22 @@ process COMB_CHR {
 
 }
 
+process COMB_SAMPLES {
+    input:
+    val(file_list)
+
+    output:
+    path("readstopav.txt"), emit: final_out
+
+    script:
+    
+    """
+    
+    #actually I can probably just do this in awk... eh python is more fun
+    comb_samples.py --file_list '${file_list}' --out readstopav.txt
+    
+    """
+}
 
 workflow MERGE_PAV {
 
@@ -35,8 +51,12 @@ workflow MERGE_PAV {
     
     all_ch = COMB_CHR.out.comb_chr.collect()
     
+    all_ch.view()
+    
+    COMB_SAMPLES(all_ch)
+    
     emit:
-    // COMB_CHR.out.comb_chr = comb_chr
+    COMB_SAMPLES.out.final_out = final_out
     versions = ch_versions
     
 }

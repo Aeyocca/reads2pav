@@ -91,7 +91,7 @@ workflow {
     
     MERGE_PAV(sample_ch)
     
-    // MERGE_PAV.out.comb_chr.view()
+    MERGE_PAV.out.final_out.view()
     
     // I think within the above subworkflow we will merge 
     // each sample into a single output file
