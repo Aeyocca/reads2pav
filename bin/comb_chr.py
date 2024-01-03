@@ -22,7 +22,7 @@ args = parser.parse_args()
 
 out_dict = dict()
 
-fl_clean = list(args.file_list)
+fl_clean = args.file_list.replace("[","").replace("]","").split(", ")
 
 sys.exit(fl_clean)
 
