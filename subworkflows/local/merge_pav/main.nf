@@ -12,7 +12,8 @@ process COMB_CHR {
     
     """
     
-    comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
+    echo 'hello'
+    #comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
     
     
     """
