@@ -1,6 +1,10 @@
 #!/usr/bin/env nextflow
 
 process COMB_CHR {
+    tag "$id"
+    label 'process_low'
+    label 'error_retry'
+
     input:
     // tuple val(meta), path(intervals), val(scale)
     tuple val(id), val(file_list)
@@ -14,7 +18,9 @@ process COMB_CHR {
     // def file_list_string = file_list.join(',')
     
     """
+    
     comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
+    
     """
 
 }
