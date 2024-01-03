@@ -33,6 +33,8 @@ workflow MERGE_PAV {
 
     COMB_CHR(sample_ch)
     
+    COMB_CHR.out.comb_chr.view()
+    
     emit:
     // COMB_CHR.out.comb_chr = comb_chr
     versions = ch_versions
