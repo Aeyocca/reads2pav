@@ -11,7 +11,7 @@ process COMB_CHR {
 
     script:
     // split spaces from the file_list tuple
-    def file_list_string = file_list.join(',')
+    // def file_list_string = file_list.join(',')
     
     """
     comb_chr.py --file_list ${file_list} --out ${id}_comb_chr_pav.txt
