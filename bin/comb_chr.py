@@ -22,7 +22,7 @@ args = parser.parse_args()
 
 out_dict = dict()
 
-fl_clean = args.file_list.replace("cluster","")
+fl_clean = args.file_list.replace("\[","")
 
 sys.exit(fl_clean)
 
