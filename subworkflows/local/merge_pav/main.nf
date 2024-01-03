@@ -10,7 +10,6 @@ process COMB_CHR {
 
     script:
     
-    file_list_string = file_list.code.join(",")
     """
     
     comb_chr.py --file_list '${file_list}' --out ${id}_comb_chr_pav.txt
