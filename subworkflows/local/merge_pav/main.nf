@@ -29,12 +29,12 @@ workflow MERGE_PAV {
     
     // combine split chromosomes into a single file
     
-    sample_ch.view()
+    // sample_ch.view()
 
     COMB_CHR(sample_ch)
     
     emit:
-    // COMB_CHR.out.comb_chr = comb_chr
+    COMB_CHR.out.comb_chr = comb_chr
     versions = ch_versions
     
 }
