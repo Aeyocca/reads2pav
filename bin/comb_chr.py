@@ -24,7 +24,7 @@ out_dict = dict()
 
 fl_clean = str(args.file_list).replace("[","").replace("]","")
 
-fl_list = fl_clean.strip().split(",")
+fl_list = fl_clean.strip().split(", ")
 
 #sys.exit(fl_list)
 
