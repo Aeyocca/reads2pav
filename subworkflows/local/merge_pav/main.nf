@@ -6,7 +6,7 @@ process COMB_CHR {
     tuple val(id), val(file_list)
 
     output:
-    tuple path("*_comb_chr_pav.txt"), emit: comb_chr
+    path("*_comb_chr_pav.txt"), emit: comb_chr
 
     script:
     
