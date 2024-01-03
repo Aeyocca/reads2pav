@@ -7,6 +7,7 @@
 #also format output for CAFE5 count data format
 
 import argparse
+import sys
 
 parser = argparse.ArgumentParser(prog='PROG')
 parser.add_argument('--file_list', required=True, help='list of pav files')
@@ -20,6 +21,10 @@ args = parser.parse_args()
 #pandas is probably faster but then creates a dependency for the environment
 
 out_dict = dict()
+
+fl_clean = list(args.file_list)
+
+sys.exit(fl_clean)
 
 for file in file_list.split(","):
 	with open(file) as fh:
