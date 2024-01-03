@@ -26,9 +26,9 @@ fl_clean = str(args.file_list).replace("[","").replace("]","")
 
 fl_list = fl_clean.strip().split(",")
 
-sys.exit(fl_list)
+#sys.exit(fl_list)
 
-for file in file_list.split(","):
+for file in fl_list:
 	with open(file) as fh:
 		next(fh)
 		for line in fh:
