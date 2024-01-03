@@ -15,7 +15,7 @@ include { BEDTOOLS_GENOMECOV  } from './modules/nf-core/bedtools/genomecov/main'
 include { SETUP_READ_CHANNEL  } from './subworkflows/local/setup_read_channel'
 include { CALC_PAV            } from './modules/local/calc_pav/main'
 include { BWAMEM2_PER_CHR     } from './subworkflows/local/bwamem2_per_chr/main'
-include { MERGE_PAV           } from './subworkflows/local/merge_pav/main'
+include { MERGE_PAV           } from './subworkflows/local/merge_pav'
 
 // index_input = Channel.of([meta : [], ref_genome : file( params.ref_genome )])
 genome_ch = Channel

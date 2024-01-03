@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
  
-include { COMB_CHR } from '../../../modules/local/comb_chr'
+include { COMB_CHR } from '../../../modules/local/comb_chr/main'
 
 workflow MERGE_PAV {
 
