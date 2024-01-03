@@ -22,9 +22,11 @@ args = parser.parse_args()
 
 out_dict = dict()
 
-fl_clean = str(args.file_list).replace("[","").replace("]","").split(" ,")
+fl_clean = str(args.file_list).replace("[","").replace("]","")
 
-for file in fl_clean:
+sys.exit(fl_clean)
+
+for file in file_list.split(","):
 	with open(file) as fh:
 		next(fh)
 		for line in fh:
