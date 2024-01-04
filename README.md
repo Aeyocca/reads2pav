@@ -5,8 +5,11 @@
 
 
 List of changes to nf-core modules/workflows:
+prefetch
+- add '--max-size 1000GB' parameter
+
 genomecov
-- don't remember atm, but I definitely changed something
+- removing size specification
 
 bwa_index
 - had to create a sub directory for indexing different chromosomes
