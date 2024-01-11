@@ -34,6 +34,7 @@ process BEDTOOLS_GENOMECOV {
         bedtools \\
             genomecov \\
             -ibam $intervals \\
+            -bg \\
             $args \\
             > ${prefix}.${extension}
 
