@@ -76,7 +76,7 @@ def load_bed(bed = ""):
 			#should be initialized at the same time so just check one
 			if trans_id in cov_bed:
 				for bp in range(int(la[1]),int(la[2]) + 1):
-					cov_gff[trans_id]["Length"] += 1
+					cov_bed[trans_id]["Length"] += 1
 					#if overlapping gene
 					if str(bp) in ref_bed[la[0]].keys():
 						ref_bed[la[0]][str(bp)].append(trans_id)
